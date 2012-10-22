@@ -125,21 +125,10 @@ div.charge {
     @include transition(opacity .3s ease-out);
     display: block;
     margin: 10px auto;
-    width: 94px;
-    &:after {
-      opacity: 0;
-      content: "StillAlive.com";
-      text-align: center;
-      background-color: rgb(51,124,128);
-      padding: 3px;
-      @include border-radius(3px);
-      color: white;
-      font-size: 1.5em;
-      position: relative;
-      left: -2px;
-    }
-    &:hover:after {
-      opacity: 1;
-    }
+    background-color: rgb(168,208,209);
+    width: 123px;
+    padding: 10px;
+    border: 3px solid rgb(51,124,128);
+    @include border-radius(10px);
   }
 }
