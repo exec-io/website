@@ -7,8 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class='container'>
 
-<%= yield %>
+    <h1 class='logo'>exec.io</h1>
+    
+    <%= yield %>
+    
+    <footer>
+      <div class='column'>
+        <p>
+          <strong>Email:</strong>
+          <a href='mailto:info@exec.io' type='email'>info@exec.io</a>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          +61 2 8019 7252
+        </p>
+      </div>
+      <div class='column last'>
+        <p>
+          <strong>Address:</strong>
+          Level 32, 101 Miller Street,<br>
+          North Sydney, NSW, 2060
+        </p>
+      </div> 
+    </footer>
 
+  </div>
 </body>
 </html>
