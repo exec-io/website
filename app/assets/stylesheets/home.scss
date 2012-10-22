@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: "Museo Sans", helvetica, sans-serif;
   font-size: 62.5%;
+  color: #333;
 }
 
 div.container {
@@ -27,6 +28,22 @@ h1.logo {
   font-size: 4em;
   text-align: center;
   margin: 50px 0 30px;
+  a {
+    display: block;
+    margin: 0 auto;
+    height: 60px;
+    width: 190px;
+  }
+}
+
+h2 {
+  font-size: 2.4em;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1.2em;
 }
 
 p {
@@ -94,6 +111,35 @@ footer {
     }
     &.last {
       margin-right: 0;
+    }
+  }
+}
+
+// Charge Page
+
+div.charge {
+  h2, h3 {
+    margin: 20px 0 3px;
+  }
+  a.product-link {
+    @include transition(opacity .3s ease-out);
+    display: block;
+    margin: 10px auto;
+    width: 94px;
+    &:after {
+      opacity: 0;
+      content: "StillAlive.com";
+      text-align: center;
+      background-color: rgb(51,124,128);
+      padding: 3px;
+      @include border-radius(3px);
+      color: white;
+      font-size: 1.5em;
+      position: relative;
+      left: -2px;
+    }
+    &:hover:after {
+      opacity: 1;
     }
   }
 }
