@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   private
 
   def redirect_to_charges_page
-    if 'exec-io.com$' =~ request.host
+    if /exec-io.com$/ =~ request.host
       redirect_to 'http://exec.io/charges'
       return false
     end
