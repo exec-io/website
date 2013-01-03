@@ -8,8 +8,64 @@ body {
 }
 
 div.container {
+  margin: 0 auto;
+  width: 760px;
+}
+
+header, footer {
   width: 500px;
   margin: 0 auto;
+  p.description {
+    text-align: center;
+    margin: 30px 0 30px;
+  }
+}
+
+section#products {
+  @include clearfix;
+  article.product {
+    @include border-radius(10px);
+    @include clearfix;
+    width: 214px; // 240px - border, padding
+    border: 3px solid #808080;
+    color: #808080;
+    padding: 10px;
+    margin-right: 20px;
+    float: left;
+    height: 200px;
+    a {
+      padding: 140px 0 10px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+    &.last {
+      margin-right: 0;
+    }
+    &#still-alive {
+      background: rgb(168,208,209) image-url('stillalive-logo.png') no-repeat 50% 10px;
+      border-color: rgb(51,124,128);
+      p {
+        color: rgb(51,124,128);
+      }
+    }
+    &#tell-them-when {
+      background: rgb(255,243,194) image-url('ttw-logo.png') no-repeat 50% 10px;
+      border-color: #EDD366;
+      p {
+        color: rgb(223,138,50);
+      }
+    }
+    &#coming-soon {
+      background: #e6e6e6 image-url('comingsoon-logo.png') no-repeat 50% 25px;
+      h2 {
+        font-size: 3em;
+        text-align: center;
+        margin: 130px 0 10px;
+        color: #ccc;
+      }
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -51,52 +107,8 @@ p {
   line-height: 1.2em;
 }
 
-p.description {
-  text-align: center;
-  margin: 30px 0 30px;
-}
-
-article.product {
-  @include border-radius(10px);
-  @include clearfix;
-  width: 214px; // 240px - border, padding
-  border: 3px solid #808080;
-  color: #808080;
-  padding: 10px;
-  margin-right: 20px;
-  float: left;
-  height: 200px;
-  a {
-    padding: 140px 0 10px;
-    display: block;
-    text-decoration: none;
-  }
-  &.last {
-    margin-right: 0;
-  }
-  &#still-alive {
-    background: rgb(168,208,209) image-url('stillalive-logo.png') no-repeat 50% 10px;
-    border-color: rgb(51,124,128);
-    p {
-      text-align: center;
-      color: rgb(51,124,128);
-    }
-  }
-  &#coming-soon {
-    background: #e6e6e6 image-url('comingsoon-logo.png') no-repeat 50% 25px;
-    h2 {
-      font-size: 3em;
-      text-align: center;
-      margin: 130px 0 10px;
-      color: #ccc;
-    }
-  }
-}
-
 footer {
-  clear: both;
-  float: left;
-  margin: 40px 0;
+  margin: 40px auto;
   padding-top: 10px;
   border-top: 1px solid #333;
   .column {

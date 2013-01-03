@@ -8,12 +8,17 @@
 </head>
 <body>
   <div class='container'>
-
-    <h1 class='logo'>
-      <a href="<%= root_path %>">exec.io</a>
-    </h1>
-
+    <header>
+      <h1 class='logo'>
+        <a href="<%= root_path %>">exec.io</a>
+      </h1>
+      <p class='description'>
+        Exec.io is a new company with a simple goal, to build excellent online applications to help your business flourish! Watch this space for our new, exciting offerings!
+      </p>
+    </header>
+    
     <%= yield %>
+
 
     <footer>
       <div class='column'>
