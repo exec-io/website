@@ -12,4 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.carousel-1.1
 //= require_tree .
+
+$(document).ready(function(){        
+  $('.carousel').carousel({hAlign:'left', directionNav:true, carouselWidth:480, carouselHeight:320, 
+                          slidesPerScroll:3, top:10, hMargin:0.2, frontWidth:350, 
+                          description:true, descriptionContainer:'.description'});
+
+});
+
+ // $('.carousel').carousel({hAlign:'right', directionNav:false, buttonNav:'bullets', carouselWidth:480, carouselHeight:320, 
+ //                                    slidesPerScroll:3, top:10, hMargin:0.2, frontWidth:350, 
+ //                                    description:true, descriptionContainer:'.description'});
