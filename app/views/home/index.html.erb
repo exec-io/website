@@ -1,26 +1,9 @@
-<section class="carousel"> <!-- BEGIN CAROUSEL -->
-  
-  <div class="description"> <!-- BEGIN DESCRIPTION -->
-    <div> <!-- DESCRIPTION ITEM -->
-      <h2>StillAlive</h2>
-      <p>Catch bugs on your website, before your users do!</p>
-      <p>StillAlive is a cloud-based, feature testing platform for your web applications.</p>
-      <p>Some other text should go here.</p>
-    </div>
-    <div>
-      <h2>StatusHub</h2>
-    </div>
-    <div>
-      <h2>TellThemWhen</h2>
-    </div>
-    <div>
-      <h2>Coming Soon!</h2>
-    </div>
-  </div>
-    
+<div class="carousel"> <!-- BEGIN CAROUSEL -->
+   
   <div class="slides">
+    <% 2.times do %>
     <div>
-      <a class="video" href="https://stillalive.com">
+      <a class="" href="https://stillalive.com">
         <%= image_tag('gallery/stillalive.png', :alt => "StillAlive") %>
       </a>            
     </div>
@@ -30,40 +13,24 @@
       </a>
     </div>
     <div>
-      <a class="video" href="http://www.youtube.com/watch?v=pQo8LMaeE8s">
+      <a class="" href="http://www.youtube.com/watch?v=pQo8LMaeE8s">
         <%= image_tag('gallery/tellthemwhen.png', :alt => "TellThemWhen") %>
       </a>
     </div>
-    <div>
-      <a href="#">
-        <%= image_tag('gallery/comingsoon.png', :alt => "It's still a secret!") %>
-      </a>
-    </div>            
+    <% end %>       
   </div>
-  <nav class='buttonNav' style="position: absolute;">
-    <div class='nextButton'>Next Product</div>
-  </nav>
+  <div class="description">
+    <% 2.times do %>
+      <div>
+        <p>Advanced 24/7 feature testing for your web applications! Ensure your site is Still Alive!</p>
+      </div>
+      <div>
+        <p>Bulletproof hosted status pages for your web applications! Create beautiful, customised status pages to alert your users when your site goes offline.</p>
+      </div>
+      <div>
+        <p>Timezones made simple! Create pages to coordinate people worldwide!</p>
+      </div>
+    <% end %>
+  </div>
        
-</section>
-
-
-
-<!-- <section id='products'>
-  <article class='product' id="tell-them-when">
-    <a href='http://tellthemwhen.com'>
-      <p>
-        Timezones made simple, create pages to coordinate people across the world.
-      </p>
-    </a>
-  </article>
-  <article class='product' id="still-alive">
-    <a href='https://stillalive.com'>
-      <p>
-        Advanced, 24/7 feature testing for your web applications. Ensure your site is still alive! 
-      </p>
-    </a>
-  </article>
-  <article class='product last' id="coming-soon">
-    <h2>Coming soon!</h2>
-  </article>
-</section> -->
+</div>

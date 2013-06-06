@@ -14,7 +14,7 @@ Version: 1.1
 {
   position :relative ;
   margin :0 auto;
-  width :960px;
+  /*width :960px;*/
   height :auto;
   border :none;
   overflow :hidden ;
@@ -28,8 +28,8 @@ Version: 1.1
 /* slide container */
 .carousel .slides
 {
-  float :left ;
-  margin :0;
+  /*float :left ;*/
+  margin :0 auto;
   padding :0;
   border :none;
   list-style :none;
@@ -85,7 +85,7 @@ Version: 1.1
   top :133px;
   width :35px;
   height: 35px;   
-  background : url("../images/prev_button.png");
+  background : url("../assets/prev_button.png");
   cursor :pointer ;
   z-index :9999;
 }
@@ -128,7 +128,9 @@ Version: 1.1
   color :#000;
   cursor :default ;
 }
-
+body {
+  background : url(gallery/Bullet-White.png) no-repeat center ;
+}
 /* bullets */
 .carousel .buttonNav .bullet
 {
@@ -136,7 +138,7 @@ Version: 1.1
   float :left ;
   width :16px;
   height :16px;
-  background : url(../images/Bullet-White.png) no-repeat center ;
+  background : url(gallery/Bullet-White.png) no-repeat center ;
   margin :5px;
   float :left ;
   cursor :pointer ;
@@ -144,12 +146,12 @@ Version: 1.1
 
 .carousel .buttonNav .bullet:hover
 {
-  background : url(../images/Bullet-Black.png) no-repeat center ;
+  background : url(gallery/Bullet-Black.png) no-repeat center ;
 }
 
 .carousel .buttonNav .bulletActive
 {
-  background : url(../images/Bullet-Black.png) no-repeat center ;
+  background : url(gallery/Bullet-Black.png) no-repeat center ;
   cursor :default ;
 }
 
@@ -176,12 +178,11 @@ Version: 1.1
 .carousel .description
 {
   position :relative ;
-  float :left ;
   width :470px;
   height :300px;
-  margin :0;
-  margin-left :10px;
+  margin: 10px auto -230px;
   padding :0px;
+  text-align: center;
 }
 
 .carousel .description div
@@ -198,7 +199,7 @@ Version: 1.1
 /* gradient color for old Opera */
 .carousel .gradient
 {
-  background-image :url(../scripts/gradient.svg);
+  background-image :url(gallery/gradient.svg);
 }
 
 /* _____________________________ *

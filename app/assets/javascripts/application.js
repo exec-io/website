@@ -16,12 +16,16 @@
 //= require_tree .
 
 $(document).ready(function(){        
-  $('.carousel').carousel({hAlign:'left', directionNav:true, carouselWidth:480, carouselHeight:320, 
-                          slidesPerScroll:3, top:10, hMargin:0.2, frontWidth:350, 
-                          description:true, descriptionContainer:'.description'});
-
+  $('.carousel').carousel({ 
+                            hAlign:'center', 
+                            carouselWidth:480, 
+                            carouselHeight:320, 
+                            slidesPerScroll:3, 
+                            top:5, 
+                            hMargin:0.3, 
+                            frontWidth:350,
+                            speed: 500,
+                            description:true, 
+                            descriptionContainer:'.description'
+                          });
 });
-
- // $('.carousel').carousel({hAlign:'right', directionNav:false, buttonNav:'bullets', carouselWidth:480, carouselHeight:320, 
- //                                    slidesPerScroll:3, top:10, hMargin:0.2, frontWidth:350, 
- //                                    description:true, descriptionContainer:'.description'});
