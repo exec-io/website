@@ -22,7 +22,7 @@ $(document).ready(function(){
                             carouselHeight:320, 
                             slidesPerScroll:3, 
                             top:5, 
-                            hMargin:0.3, 
+                            hMargin: .5, 
                             frontWidth:350,
                             speed: 300,
                             description:true, 
