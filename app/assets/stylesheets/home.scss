@@ -111,7 +111,7 @@ h3 {
 
 p {
   font-size: 1.5em;
-  line-height: 1.2em;
+  line-height: 1.4em;
 }
 
 footer {
@@ -138,17 +138,29 @@ footer {
 // Charge Page
 
 div.charge {
+  width: 600px;
+  margin: 0 auto;
   h2, h3 {
     margin: 20px 0 3px;
   }
   a.product-link {
-    @include transition(opacity .3s ease-out);
-    display: block;
-    margin: 10px auto;
-    background-color: rgb(168,208,209);
+    display: inline-block;
+    margin: 10px 5px;
     width: 123px;
     padding: 10px;
-    border: 3px solid rgb(51,124,128);
+    border: 3px solid;
     @include border-radius(10px);
+    img {
+      width: 122px;
+      display: block;
+    }
+    &.still-alive {
+      background-color: rgb(168,208,209);
+      border-color: rgb(51,124,128);
+    }
+    &.status-hub {
+      background-color: #37414f;
+      border-color: #16191c;
+    }
   }
 }
