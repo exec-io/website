@@ -24,7 +24,7 @@ $(document).ready(function(){
                             top:5, 
                             hMargin:0.3, 
                             frontWidth:350,
-                            speed: 500,
+                            speed: 300,
                             description:true, 
                             descriptionContainer:'.description'
                           });
