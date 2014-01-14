@@ -1,45 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exec-Io</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>ExecIo</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class='container'>
-    <header>
-      <h1 class='logo'>
-        <a href="<%= root_path %>">exec.io</a>
-      </h1>
-      <p class='description'>
-        Exec.io is a new company with a simple goal, to build excellent online applications to help your business flourish! Watch this space for our new, exciting offerings!
-      </p>
-    </header>
-    
-    <%= yield %>
 
+<%= yield %>
 
-    <footer>
-      <div class='column'>
-        <p>
-          <strong>Email:</strong>
-          <a href='mailto:info@exec.io' type='email'>info@exec.io</a>
-        </p>
-        <p>
-          <strong>Phone:</strong>
-          +61 2 8912 2197
-        </p>
-      </div>
-      <div class='column last'>
-        <p>
-          <strong>Address:</strong>
-          Level 32, 101 Miller Street,<br>
-          North Sydney, NSW, 2060
-        </p>
-      </div>
-    </footer>
-
-  </div>
 </body>
 </html>
