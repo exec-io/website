@@ -8,7 +8,17 @@
 </head>
 <body>
 
-<%= yield %>
+  <nav>
+    <ul>
+      <li><%= link_to(t('.blog'), blog_path) %></li>
+      <li><%= t('.information') %></li>
+      <li><%= t('.prosperity_planner') %></li>
+      <li><%= t('.locations') %></li>
+      <li><%= t('.contact') %></li>
+    </ul>
+  </nav>
+
+  <%= yield %>
 
 </body>
 </html>

@@ -1,14 +1,12 @@
-<h1>Exec.IO<h1>
-<q>
-  "Our goal is to change the way the world operates by creating and providing
-  tools that are effective, efficient and simple to use."
-</q>
-<p>Mikel Lindsaar, Founder of Exec.IO</p>
+<section>
+  <h1><%= t('.exec_io') %></h1>
+  <q>
+    <%= t('.quote') %>
+  </q>
+  <p><%= t('.founder') %></p>
+</section>
 
-<ul>
-  <li>Information</li>
-  <li>Prosperity Planner</li>
-  <li>Locations</li>
-  <li>Contact</li>
-</ul>
-
+<section id="LatestBlog">
+  <h3><%= t('.latest_from_the_blog') %></h3>
+  <%= render Post.latest(I18n.locale) %>
+</section>
