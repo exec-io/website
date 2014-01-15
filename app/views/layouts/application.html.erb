@@ -10,11 +10,12 @@
 
   <nav>
     <ul>
-      <li><%= link_to(t('.blog'), blog_path) %></li>
-      <li><%= t('.information') %></li>
-      <li><%= t('.prosperity_planner') %></li>
-      <li><%= t('.locations') %></li>
-      <li><%= t('.contact') %></li>
+      <li><%= link_to_unless_current(t('.home'), root_path) %></li>
+      <li><%= link_to_unless_current(t('.blog'), blog_path) %></li>
+      <li><%= link_to_unless_current(t('.about_us'), about_us_path) %></li>
+      <li><%= link_to_unless_current(t('.prosperity_planner'), prosperity_planner_path) %></li>
+      <li><%= link_to_unless_current(t('.locations'), locations_path) %></li>
+      <li><%= link_to_unless_current(t('.contact'), contact_path) %></li>
     </ul>
   </nav>
 

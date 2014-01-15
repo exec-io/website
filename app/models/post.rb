@@ -18,7 +18,7 @@ class Post
   attr_accessor :id, :title, :body_html, :author_name, :created_at
 
   def self.latest(locale)
-    sorted_posts(locale).last
+    sorted_posts(locale).first
   end
 
   def self.sorted_posts(locale)
