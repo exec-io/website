@@ -1,43 +1,58 @@
-class Post
-  include ActiveModel::Model
-  include ActiveModel::Naming
-  include ActiveModel::Validations
+class Post < ActiveRecord::Base
 
-  I18n.backend.send(:init_translations)
-  @@locales = I18n.backend.send(:translations).keys
-  @@posts = {}
+  validates :title, :body_html, :author_name, :locale, :presence => true
 
-  def initialize(hash)
-    @id          = hash[:id]
-    @title       = hash[:title]
-    @body_html   = hash[:body_html]
-    @created_at  = hash[:created_at]
-    @author_name = hash[:author_name]
-  end
-
-  attr_accessor :id, :title, :body_html, :author_name, :created_at
-
-  def self.latest(locale)
-    sorted_posts(locale).first
-  end
-
-  def self.sorted_posts(locale)
-    posts(locale).sort { |a,b| b.created_at <=> a.created_at }
-  end
-
-  def self.posts(locale)
-    @@posts[locale] ||= begin
-      posts = I18n.backend.send(:translations)[locale.to_sym][:posts]
-      posts.map { |post_hash| Post.new(hash_from_post_hash(post_hash)) }
+  def publish_to_translation_system!
+    [:title, :body_html, :author_name, :created_at, :updated_at].each do |key|
+      TranslationSystem.create!(locale, "posts.#{id}", key, send(key))
     end
   end
 
-  def self.hash_from_post_hash(post_hash)
-    { :id => post_hash.first.to_s.to_i,
-      :title => post_hash.last[:title],
-      :body_html => post_hash.last[:body_html],
-      :created_at => post_hash.last[:created_at],
-      :author_name => post_hash.last[:author_name] }
+  def self.update_posts
+    I18n.backend.send(:init_translations)
+    locales = I18n.backend.send(:translations).keys
+    locales.each do |locale|
+      post_attributes = find_translations(locale)
+      post_attributes.each do |attributes|
+        post = Post.where(:id => attributes[:id], :locale => locale).first
+        if post.present?
+          post.attributes = attributes
+        else
+          post = Post.new(attributes)
+        end
+        post.save
+      end
+    end
+  end
+
+  def self.recent
+    ordered_posts('en').limit(5)
+  end
+
+  def self.latest(locale)
+    ordered_posts(locale).first
+  end
+
+  def self.ordered_posts(locale)
+    where(:locale => locale).order('created_at DESC')
+  end
+
+  def self.find_translations(locale)
+    posts = I18n.backend.send(:translations)[locale.to_sym][:posts]
+    if posts.present?
+      posts.map { |translation| hash_from_translation(locale, translation) }
+    else
+      []
+    end
+  end
+
+  def self.hash_from_translation(locale, translation)
+    { :id => translation.first.to_s.to_i,
+      :locale => locale.to_s,
+      :title => translation.last[:title],
+      :body_html => translation.last[:body_html],
+      :created_at => translation.last[:created_at],
+      :author_name => translation.last[:author_name] }
   end
 
 end

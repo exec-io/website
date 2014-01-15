@@ -4,6 +4,9 @@ gem 'rails', '4.0.2'
 
 gem 'pg'
 
+# Waiting for Rails 4 version to be released
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 gem 'localeapp'
 
 # Use unicorn as the app server
