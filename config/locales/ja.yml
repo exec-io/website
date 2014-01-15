@@ -1,10 +1,21 @@
 ja:
   about_us:
     show:
+      address: 
+      contact_us: 
+      email: 
+      facebook: 
       page_html: 
+      phone: 
   contact:
     show:
       title: 
+  contact_details:
+    address_html: "北大塚3-20-2 カーザＵ103<br>Toshima-ku, Tokyo, Japan<br>170-0004"
+    email: japanese@exec.io
+    facebook_url: https://www.facebook.com/execiojapan
+    name: Exec.IOジャパン
+    phone: "+61 2 8912 2197"
   date:
     abbr_day_names:
     - "日"
@@ -226,9 +237,9 @@ ja:
           quadrillion: "千兆"
           thousand: "千"
           trillion: "兆"
-          unit: ''
+          unit: 
       format:
-        delimiter: ''
+        delimiter: 
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -242,10 +253,10 @@ ja:
           tb: "テラバイト"
     percentage:
       format:
-        delimiter: ''
+        delimiter: 
     precision:
       format:
-        delimiter: ''
+        delimiter: 
   posts:
     '1':
       author_name: 

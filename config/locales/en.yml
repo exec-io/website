@@ -1,6 +1,10 @@
 en:
   about_us:
     show:
+      address: Address
+      contact_us: Get in touch with us
+      email: Email
+      facebook: Facebook
       page_html: |
         <h1>About Exec.IO</h1>
         <p>
@@ -21,9 +25,16 @@ en:
           Now the Prosperity Planner is live, we are using the knowledge gained to release
           more quality online organisational tools to the world.
         </p>
+      phone: Phone
   contact:
     show:
-      title: Get in touch with us
+      title: 
+  contact_details:
+    address_html: Level 32, 101 Miller Street,<br>North Sydney,<br>NSW, 2060, Australia
+    email: info@exec.io
+    facebook_url: https://facebook.com/execiohq
+    name: Exec.IO International
+    phone: "+61 2 8912 2197"
   date:
     abbr_day_names:
     - Sun
@@ -269,9 +280,9 @@ en:
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
-          unit: 
+          unit: ''
       format:
-        delimiter: 
+        delimiter: ''
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -287,10 +298,10 @@ en:
           tb: TB
     percentage:
       format:
-        delimiter: 
+        delimiter: ''
     precision:
       format:
-        delimiter: 
+        delimiter: ''
   posts:
     '1':
       author_name: Mikel Lindsaar

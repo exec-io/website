@@ -1,10 +1,21 @@
 it:
   about_us:
     show:
+      address: 
+      contact_us: 
+      email: 
+      facebook: 
       page_html: 
+      phone: 
   contact:
     show:
       title: 
+  contact_details:
+    address_html: 
+    email: 
+    facebook_url: 
+    name: 
+    phone: 
   date:
     abbr_day_names:
     - Dom

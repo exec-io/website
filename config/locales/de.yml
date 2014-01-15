@@ -1,10 +1,21 @@
 de:
   about_us:
     show:
+      address: 
+      contact_us: 
+      email: 
+      facebook: 
       page_html: 
+      phone: 
   contact:
     show:
       title: 
+  contact_details:
+    address_html: 
+    email: 
+    facebook_url: 
+    name: 
+    phone: 
   date:
     abbr_day_names:
     - So
@@ -232,9 +243,9 @@ de:
             other: Billiarden
           thousand: Tausend
           trillion: Billionen
-          unit: 
+          unit: ''
       format:
-        delimiter: 
+        delimiter: ''
         precision: 1
         significant: true
         strip_insignificant_zeros: true
@@ -250,10 +261,10 @@ de:
           tb: TB
     percentage:
       format:
-        delimiter: 
+        delimiter: ''
     precision:
       format:
-        delimiter: 
+        delimiter: ''
   posts:
     '1':
       author_name: 

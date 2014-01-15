@@ -10,7 +10,6 @@ ExecIo::Application.routes.draw do
     get '/about_us' => 'about_us#show', :as => :about_us
     get '/prosperity_planner' => 'prosperity_planner#show', :as => :prosperity_planner
     get '/locations' => 'locations#show', :as => :locations
-    get '/contact' => 'contact#show', :as => :contact
   end
 
 end

@@ -1,10 +1,21 @@
 zh-TW:
   about_us:
     show:
+      address: 
+      contact_us: 
+      email: 
+      facebook: 
       page_html: 
+      phone: 
   contact:
     show:
       title: 
+  contact_details:
+    address_html: "華美街63號, 台中市西區 403"
+    email: taiwanese@exec.io
+    facebook_url: https://www.facebook.com/execiotaiwan
+    name: ExecIO 台湾
+    phone: "+886 918914820"
   date:
     abbr_day_names:
     - "日"
@@ -228,9 +239,9 @@ zh-TW:
           quadrillion: "千兆"
           thousand: "千"
           trillion: "兆"
-          unit: ''
+          unit: 
       format:
-        delimiter: ''
+        delimiter: 
         precision: 1
         significant: false
         strip_insignificant_zeros: false
@@ -246,10 +257,10 @@ zh-TW:
           tb: TB
     percentage:
       format:
-        delimiter: ''
+        delimiter: 
     precision:
       format:
-        delimiter: ''
+        delimiter: 
   posts:
     '1':
       author_name: 
