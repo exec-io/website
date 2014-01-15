@@ -1,0 +1,284 @@
+hu:
+  about_us:
+    show:
+      page_html: 
+  contact:
+    show:
+      title: 
+  date:
+    abbr_day_names:
+    - v.
+    - h.
+    - k.
+    - sze.
+    - cs.
+    - p.
+    - szo.
+    abbr_month_names:
+    - 
+    - jan.
+    - febr.
+    - márc.
+    - "ápr."
+    - máj.
+    - jún.
+    - júl.
+    - aug.
+    - szept.
+    - okt.
+    - nov.
+    - dec.
+    day_names:
+    - vasárnap
+    - hétfő
+    - kedd
+    - szerda
+    - csütörtök
+    - péntek
+    - szombat
+    formats:
+      default: "%Y.%m.%d."
+      long: "%Y. %B %e."
+      short: "%b %e."
+    month_names:
+    - 
+    - január
+    - február
+    - március
+    - "április"
+    - május
+    - június
+    - július
+    - augusztus
+    - szeptember
+    - október
+    - november
+    - december
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: kb 1 óra
+        other: kb %{count} óra
+      about_x_months:
+        one: kb 1 hónap
+        other: kb %{count} hónap
+      about_x_years:
+        one: kb 1 év
+        other: kb %{count} év
+      almost_x_years:
+        one: majdnem 1 év
+        other: majdnem %{count} év
+      half_a_minute: fél perc
+      less_than_x_minutes:
+        one: kevesebb, mint 1 perc
+        other: kevesebb, mint %{count} perc
+      less_than_x_seconds:
+        one: kevesebb, mint 1 másodperc
+        other: kevesebb, mint %{count} másodperc
+      over_x_years:
+        one: több, mint 1 év
+        other: több, mint %{count} év
+      x_days:
+        one: 1 nap
+        other: "%{count} nap"
+      x_minutes:
+        one: 1 perc
+        other: "%{count} perc"
+      x_months:
+        one: 1 hónap
+        other: "%{count} hónap"
+      x_seconds:
+        one: 1 másodperc
+        other: "%{count} másodperc"
+    prompts:
+      day: Nap
+      hour: "Óra"
+      minute: Perc
+      month: Hónap
+      second: Másodperc
+      year: "Év"
+  devise:
+    confirmations:
+      confirmed: Fiók megerősítve. Bejelentkezve a felhasználói fiókba.
+      send_instructions: A megadott címre egy email érkezik a megerősítő linkkel.
+      send_paranoid_instructions: Ha az email cím már létezik az adatbázisban, egy emailt küldtünk a további teendőkkel a fiók megerősítéséhez.
+    failure:
+      already_authenticated: Már belépett.
+      inactive: A fiók még nincs aktiválva.
+      invalid: Hibás email cím vagy jelszó.
+      last_attempt: 
+      locked: A fiók zárolva lett.
+      not_found_in_database: 
+      timeout: A munkafolyamat lejárt. Újboli bejelentkezés szükséges.
+      unauthenticated: A folytatáshoz bejelentkezés szükséges.
+      unconfirmed: A folytatáshoz az email cím megerősítése szükséges.
+    mailer:
+      confirmation_instructions:
+        subject: Email cím megerősítés
+      reset_password_instructions:
+        subject: Jelszó megváltoztatása
+      unlock_instructions:
+        subject: Fiók zárolásának megszüntetése
+    omniauth_callbacks:
+      failure: 'Nem sikerült azonosítani %{kind} fiókkal, az ok: "%{reason}".'
+      success: Sikeres azonosítás %{kind} fiókkal.
+    passwords:
+      no_token: Ezt az oldalt csak a jelszóváltoztató e-mailben küldött linkre kattintva lehet elérni, és ellenőrizni kell, hogy a címsorban az e-mailben található teljes webcím szerepel-e.
+      send_instructions: A megadott címre egy email érkezik hamarosan a további teendőkről.
+      send_paranoid_instructions: Ha az email cím már létezik az adatbázisban, egy jelszó-visszaállító emailt küldtünk a megadott címre.
+      updated: A jelszó megváltozott. Bejelentkezve a felhasználói fiókba
+      updated_not_active: A jelszó megváltozott
+    registrations:
+      destroyed: Felhasználói fiók törölve. Reméljük, még visszatér hozzánk.
+      signed_up: Sikeres regisztráció.
+      signed_up_but_inactive: A regisztráció sikerült, azonban a bejelentkezés még nem lehetséges, mert a fiók nincs aktiválva.
+      signed_up_but_locked: A regisztráció sikerült, azonban a bejelentkezés még nem lehetséges, mert a fiók zárolt.
+      signed_up_but_unconfirmed: Egy megerősítő linket küldtünk a megadott e-mail címre. Nézze meg az e-mailjeit, és kattintson a küldött linkre a fiók aktiválásához.
+      update_needs_confirmation: A fiók módosítása sikeres, de meg kell erősíteni az e-mail címet. Nézze meg az e-mailjeit, és kattintson a küldött linkre hogy megerősítse az e-mail cím létezését.
+      updated: Sikeres fiók módosítás.
+    sessions:
+      signed_in: Sikeres bejelentkezés.
+      signed_out: A kijelentkezés sikeres.
+    unlocks:
+      send_instructions: Hamarosan a megadott címre érkezik egy email a fiók zárolásának megszüntetésével kapcsolatban.
+      send_paranoid_instructions: Ha a fiók létezik, egy emailt küldtünk a további teendőkkel a fiók zárolásának megszüntetéséhez.
+      unlocked: A felhasználói fiók zárolása megszűnt. Bejelentkezve a felhasználói fiókba.
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: nincs elfogadva
+      already_confirmed: már meg van erősítve
+      blank: nincs megadva
+      confirmation: nem egyezik
+      confirmation_period_expired: 
+      empty: nincs megadva
+      equal_to: pontosan %{count} kell legyen
+      even: páros kell legyen
+      exclusion: nem elérhető
+      expired: lejárt, igényelj egy újat
+      greater_than: nagyobb kell legyen, mint %{count}
+      greater_than_or_equal_to: legalább %{count} kell legyen
+      inclusion: nincs a listában
+      invalid: nem megfelelő
+      less_than: kevesebb, mint %{count} kell legyen
+      less_than_or_equal_to: legfeljebb %{count} lehet
+      not_a_number: nem szám
+      not_an_integer: egész számnak kell lennie
+      not_found: nem található
+      not_locked: nincs zárolva
+      not_saved:
+        one: '1 hiba miatt %{resource} mentése nem lehetséges:'
+        other: "%{count} hiba miatt %{resource} mentése nem lehetsésges:"
+      odd: páratlan kell legyen
+      record_invalid: Sikertelen validálás %{errors}
+      taken: már foglalt
+      too_long: túl hosszú (nem lehet több %{count} karakternél)
+      too_short: túl rövid (legalább %{count} karakter kell legyen)
+      wrong_length: nem megfelelő hosszúságú (%{count} karakter szükséges)
+    template:
+      body: 'Problémás mezők:'
+      header:
+        one: '1 hiba miatt nem menthető a következő: %{model}'
+        other: "%{count} hiba miatt nem menthető a következő: %{model}"
+  helpers:
+    select:
+      prompt: Válasszon
+    submit:
+      create: "Új %{model}"
+      submit: "%{model} Mentése"
+      update: "%{model} Módosítása"
+  layouts:
+    application:
+      about_us: 
+      blog: 
+      contact: 
+      footer_text_html: 
+      home: 
+      locations: 
+      prosperity_planner: 
+  locations:
+    show:
+      page_html: 
+  number:
+    currency:
+      format:
+        delimiter: ''
+        format: "%n %u"
+        precision: 0
+        separator: ","
+        significant: true
+        strip_insignificant_zeros: true
+        unit: Ft
+    format:
+      delimiter: " "
+      precision: 2
+      separator: ","
+      significant: true
+      strip_insignificant_zeros: true
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: Milliárd
+          million: Millió
+          quadrillion: Kvadrillió
+          thousand: Ezer
+          trillion: Trillió
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: bájt
+            other: bájt
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  posts:
+    '1':
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
+    '2':
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
+  prosperity_planner:
+    show:
+      page_html: 
+  support:
+    array:
+      last_word_connector: " és "
+      two_words_connector: " és "
+      words_connector: ", "
+  time:
+    am: de.
+    formats:
+      default: "%Y. %b %e., %H:%M"
+      long: "%Y. %B %e., %A, %H:%M"
+      short: "%b %e., %H:%M"
+    pm: du.
+  welcome:
+    show:
+      exec_io: 
+      founder: 
+      latest_from_the_blog: 
+      quote: 

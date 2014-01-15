@@ -1,72 +1,29 @@
 en:
-  devise:
-    confirmations:
-      confirmed: "Your account was successfully confirmed."
-      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes."
-    failure:
-      already_authenticated: "You are already signed in."
-      inactive: "Your account is not activated yet."
-      invalid: "Invalid email or password."
-      locked: "Your account is locked."
-      last_attempt: "You have one more attempt before your account will be locked."
-      not_found_in_database: "Invalid email or password."
-      timeout: "Your session expired. Please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your account before continuing."
-    mailer:
-      confirmation_instructions:
-        subject: "Confirmation instructions"
-      reset_password_instructions:
-        subject: "Reset password instructions"
-      unlock_instructions:
-        subject: "Unlock Instructions"
-    omniauth_callbacks:
-      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
-      success: "Successfully authenticated from %{kind} account."
-    passwords:
-      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
-      send_instructions: "You will receive an email with instructions about how to reset your password in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password was changed successfully. You are now signed in."
-      updated_not_active: "Your password was changed successfully."
-    registrations:
-      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
-      signed_up: "Welcome! You have signed up successfully."
-      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
-      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
-      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
-      updated: "You updated your account successfully."
-    sessions:
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
-    unlocks:
-      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
-  errors:
-    messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
-      not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
-  layouts:
-    application:
-      home: Home
-      blog: Blog
-      contact: Contact
-      about_us: About Exec.IO
-      locations: Locations
-      prosperity_planner: Prosperity Planner
-      footer_text_html: |
-        You can follow our <a href="%{blog_path}">blog</a> or find us on our
-        <a href="%{facebook_url}">Facebook</a> and <a href="%{twitter_url}">Twitter</a>
-        pages for more information and updates as we release them.
+  about_us:
+    show:
+      page_html: |
+        <h1>About Exec.IO</h1>
+        <p>
+          Exec.IO was founded in Sydney Australia on the 20th of September, 2012 with the goal to
+          change the way the world operates by creating and providing organisational tools that are effective, efficient and simple to use.
+        </p>
+        <p>
+          From the beginning, we wanted to make systems that were easy to use, but multi lingual by
+          design.  We didn't want to make internationalization an after thought, instead all of our
+          products are built from the ground up to work in any language.
+        </p>
+        <p>
+          For our first project, we teamed up with <a href="%{wise_url}">WISE</a> to produce
+          their online <a href="%{prosperity_planner_path}">Prosperity Planner</a> and over
+          the coming year tweaked and improved the design until launch.
+        </p>
+        <p>
+          Now the Prosperity Planner is live, we are using the knowledge gained to release
+          more quality online organisational tools to the world.
+        </p>
+  contact:
+    show:
+      title: Get in touch with us
   date:
     abbr_day_names:
     - Sun
@@ -77,7 +34,7 @@ en:
     - Fri
     - Sat
     abbr_month_names:
-    -
+    - 
     - Jan
     - Feb
     - Mar
@@ -103,7 +60,7 @@ en:
       long: "%B %d, %Y"
       short: "%b %d"
     month_names:
-    -
+    - 
     - January
     - February
     - March
@@ -163,16 +120,65 @@ en:
       month: Month
       second: Seconds
       year: Year
+  devise:
+    confirmations:
+      confirmed: Your account was successfully confirmed.
+      send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.
+    failure:
+      already_authenticated: You are already signed in.
+      inactive: Your account is not activated yet.
+      invalid: Invalid email or password.
+      last_attempt: You have one more attempt before your account will be locked.
+      locked: Your account is locked.
+      not_found_in_database: Invalid email or password.
+      timeout: Your session expired. Please sign in again to continue.
+      unauthenticated: You need to sign in or sign up before continuing.
+      unconfirmed: You have to confirm your account before continuing.
+    mailer:
+      confirmation_instructions:
+        subject: Confirmation instructions
+      reset_password_instructions:
+        subject: Reset password instructions
+      unlock_instructions:
+        subject: Unlock Instructions
+    omniauth_callbacks:
+      failure: Could not authenticate you from %{kind} because "%{reason}".
+      success: Successfully authenticated from %{kind} account.
+    passwords:
+      no_token: You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided.
+      send_instructions: You will receive an email with instructions about how to reset your password in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes.
+      updated: Your password was changed successfully. You are now signed in.
+      updated_not_active: Your password was changed successfully.
+    registrations:
+      destroyed: Bye! Your account was successfully cancelled. We hope to see you again soon.
+      signed_up: Welcome! You have signed up successfully.
+      signed_up_but_inactive: You have signed up successfully. However, we could not sign you in because your account is not yet activated.
+      signed_up_but_locked: You have signed up successfully. However, we could not sign you in because your account is locked.
+      signed_up_but_unconfirmed: A message with a confirmation link has been sent to your email address. Please open the link to activate your account.
+      update_needs_confirmation: You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address.
+      updated: You updated your account successfully.
+    sessions:
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
+    unlocks:
+      send_instructions: You will receive an email with instructions about how to unlock your account in a few minutes.
+      send_paranoid_instructions: If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.
+      unlocked: Your account has been unlocked successfully. Please sign in to continue.
   errors:
     format: "%{attribute} %{message}"
     messages:
       accepted: must be accepted
+      already_confirmed: was already confirmed, please try signing in
       blank: can't be blank
       confirmation: doesn't match confirmation
+      confirmation_period_expired: needs to be confirmed within %{period}, please request a new one
       empty: can't be empty
       equal_to: must be equal to %{count}
       even: must be even
       exclusion: is reserved
+      expired: has expired, please request a new one
       greater_than: must be greater than %{count}
       greater_than_or_equal_to: must be greater than or equal to %{count}
       inclusion: is not included in the list
@@ -181,6 +187,11 @@ en:
       less_than_or_equal_to: must be less than or equal to %{count}
       not_a_number: is not a number
       not_an_integer: must be an integer
+      not_found: not found
+      not_locked: was not locked
+      not_saved:
+        one: '1 error prohibited this %{resource} from being saved:'
+        other: "%{count} errors prohibited this %{resource} from being saved:"
       odd: must be odd
       record_invalid: 'Validation failed: %{errors}'
       taken: has already been taken
@@ -205,6 +216,34 @@ en:
       create: Create %{model}
       submit: Save %{model}
       update: Update %{model}
+  layouts:
+    application:
+      about_us: About Exec.IO
+      blog: Blog
+      contact: Contact
+      footer_text_html: |
+        You can follow our <a href="%{blog_path}">blog</a> or find us on our
+        <a href="%{facebook_url}">Facebook</a> and <a href="%{twitter_url}">Twitter</a>
+        pages for more information and updates as we release them.
+      home: Home
+      locations: Locations
+      prosperity_planner: Prosperity Planner
+  locations:
+    show:
+      page_html: |
+        <h1>Exec.IO around the world</h1>
+        <p>
+          <img src="%{world_map}" />
+        </p>
+        <p>
+          We are a multi lingual company, focusing on bringing the best organisational tools
+          in the world to as many languages as we can.
+        </p>
+        <p>
+          With our Language Managers spanning the globe, we can provide organisational software
+          allowing you to expand to any corner and still keep your staff informed, efficient
+          and online.
+        </p>
   number:
     currency:
       format:
@@ -230,9 +269,9 @@ en:
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
-          unit:
+          unit: 
       format:
-        delimiter:
+        delimiter: 
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -248,46 +287,21 @@ en:
           tb: TB
     percentage:
       format:
-        delimiter:
+        delimiter: 
     precision:
       format:
-        delimiter:
+        delimiter: 
   posts:
-    '2':
-      body_html: "<p>This is the 2nd test post</p>"
-      title: Welcome to our 2nd post
-      created_at: 2014-01-14 23:31:35 +1100
-      author_name: Mikel Lindsaar
     '1':
-      body_html: "<p>This is a test post</p>"
-      title: Welcome to our first post
-      created_at: 2014-01-13 19:24:01 +1100
       author_name: Mikel Lindsaar
-  contact:
-    show:
-      title: Get in touch with us
-  about_us:
-    show:
-      page_html: |
-        <h1>About Exec.IO</h1>
-        <p>
-          Exec.IO was founded in Sydney Australia on the 20th of September, 2012 with the goal to
-          change the way the world operates by creating and providing organisational tools that are effective, efficient and simple to use.
-        </p>
-        <p>
-          From the beginning, we wanted to make systems that were easy to use, but multi lingual by
-          design.  We didn't want to make internationalization an after thought, instead all of our
-          products are built from the ground up to work in any language.
-        </p>
-        <p>
-          For our first project, we teamed up with <a href="%{wise_url}">WISE</a> to produce
-          their online <a href="%{prosperity_planner_path}">Prosperity Planner</a> and over
-          the coming year tweaked and improved the design until launch.
-        </p>
-        <p>
-          Now the Prosperity Planner is live, we are using the knowledge gained to release
-          more quality online organisational tools to the world.
-        </p>
+      body_html: "<p>This is a test post</p>"
+      created_at: 2014-01-13 19:24:01.000000000 +11:00
+      title: Welcome to our first post
+    '2':
+      author_name: Mikel Lindsaar
+      body_html: "<p>This is the 2nd test post</p>"
+      created_at: 2014-01-14 23:31:35.000000000 +11:00
+      title: Welcome to our 2nd post
   prosperity_planner:
     show:
       page_html: |
@@ -310,22 +324,6 @@ en:
         <p>
           Use of the Prosperity Planner App is free for all WISE members and comes
           with a 30 day free trial for anyone looking to become a WISE member.
-        </p>
-  locations:
-    show:
-      page_html: |
-        <h1>Exec.IO around the world</h1>
-        <p>
-          <img src="%{world_map}" />
-        </p>
-        <p>
-          We are a multi lingual company, focusing on bringing the best organisational tools
-          in the world to as many languages as we can.
-        </p>
-        <p>
-          With our Language Managers spanning the globe, we can provide organisational software
-          allowing you to expand to any corner and still keep your staff informed, efficient
-          and online.
         </p>
   support:
     array:

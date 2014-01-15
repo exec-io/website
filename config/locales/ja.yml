@@ -1,11 +1,10 @@
 ja:
-  application:
-    nav:
-      blog: 
-      contact: 
-      information: 
-      locations: 
-      prosperity_planner: 
+  about_us:
+    show:
+      page_html: 
+  contact:
+    show:
+      title: 
   date:
     abbr_day_names:
     - "日"
@@ -102,16 +101,65 @@ ja:
       month: "月"
       second: "秒"
       year: "年"
+  devise:
+    confirmations:
+      confirmed: "アカウントを登録しました。"
+      send_instructions: "登録方法を数分以内にメールでご連絡します。"
+      send_paranoid_instructions: "メールアドレスが登録されていれば、数分以内にアカウントを確認する方法が記載されているメールが届きます。"
+    failure:
+      already_authenticated: "既にログインしています。"
+      inactive: "アカウントが有効化されていません。"
+      invalid: "メールアドレスまたはパスワードが違います。"
+      last_attempt: "あと一回間違えるとアカウントが凍結されます。"
+      locked: "アカウントが凍結されています。"
+      not_found_in_database: "メールアドレスまたはパスワードが違います。"
+      timeout: "セッションがタイムアウトしました。もう一度ログインしてください。"
+      unauthenticated: "続けるにはログインまたはアカウントを登録してください。"
+      unconfirmed: "本登録を行ってください。"
+    mailer:
+      confirmation_instructions:
+        subject: "アカウントの登録方法"
+      reset_password_instructions:
+        subject: "パスワードの再設定"
+      unlock_instructions:
+        subject: "アカウントの凍結解除"
+    omniauth_callbacks:
+      failure: "「%{reason}」のため、%{kind}による認証ができませんでした。"
+      success: "%{kind}による認証に成功しました。"
+    passwords:
+      no_token: "パスワード再設定のメール以外からこのページへアクセスする事はできません。もしパスワード再設定のメールに記載されたリンクをクリックしてこのページへ訪れた場合、不完全なURLのリンクをクリックしていないか確認してください。メーラーによっては、リンクのURLが途中で切れる可能性があります。"
+      send_instructions: "パスワードの再設定方法を数分以内にメールでご連絡します。"
+      send_paranoid_instructions: "メールアドレスが登録されていれば、数分以内にパスワード再設定のメールが届きます。"
+      updated: "パスワードを変更し、ログインしました。"
+      updated_not_active: "パスワードを変更しました。"
+    registrations:
+      destroyed: "アカウントを削除しました。またのご利用をお待ちしております。"
+      signed_up: "アカウント登録を受け付けました。"
+      signed_up_but_inactive: "登録に成功しました。しかし、アカウントが有効になっていないためログインできません。"
+      signed_up_but_locked: "登録に成功しました。しかし、アカウントがロックされているためログインできません。"
+      signed_up_but_unconfirmed: "アカウント確認のリンクが入っているメールを送りました。 メール内のリンクでアカウントを有効にしてください。"
+      update_needs_confirmation: "アカウント情報を変更しました。しかし、メールアドレスを確認する必要があります。メール内のリンクで新しいメールアドレスを確認してください。"
+      updated: "アカウント情報を更新しました。"
+    sessions:
+      signed_in: "ログインしました。"
+      signed_out: "ログアウトしました。"
+    unlocks:
+      send_instructions: "アカウントの凍結解除方法を数分以内にメールでご連絡します。"
+      send_paranoid_instructions: "アカウントが登録されていれば、数分以内にアカウントの凍結解除方法が登録しているアドレスに届きます。"
+      unlocked: "アカウントを凍結解除しました。続けるにはログインしてください。"
   errors:
     format: "%{attribute}%{message}"
     messages:
       accepted: "を受諾してください。"
+      already_confirmed: "は既に登録済みです"
       blank: "を入力してください。"
       confirmation: "と確認の入力が一致しません。"
+      confirmation_period_expired: "は%{period}以内に確認が必要です。もう一度要求してください。"
       empty: "を入力してください。"
       equal_to: "は%{count}にしてください。"
       even: "は偶数にしてください。"
       exclusion: "は予約されています。"
+      expired: "は期限が切れたため、新しく取得する必要があります"
       greater_than: "は%{count}より大きい値にしてください。"
       greater_than_or_equal_to: "は%{count}以上の値にしてください。"
       inclusion: "は一覧にありません。"
@@ -120,6 +168,9 @@ ja:
       less_than_or_equal_to: "は%{count}以下の値にしてください。"
       not_a_number: "は数値で入力してください。"
       not_an_integer: "は整数で入力してください。"
+      not_found: "は見つかりませんでした"
+      not_locked: "は凍結されていません"
+      not_saved: "%{count}個のエラーにより%{resource}を保存することができませんでした。"
       odd: "は奇数にしてください。"
       record_invalid: "バリデーションに失敗しました。 %{errors}"
       taken: "はすでに存在します。"
@@ -138,6 +189,18 @@ ja:
       create: "%{model}を作成"
       submit: "%{model}を保存"
       update: "%{model}を更新"
+  layouts:
+    application:
+      about_us: 
+      blog: 
+      contact: 
+      footer_text_html: 
+      home: 
+      locations: 
+      prosperity_planner: 
+  locations:
+    show:
+      page_html: 
   number:
     currency:
       format:
@@ -185,8 +248,18 @@ ja:
         delimiter: ''
   posts:
     '1':
+      author_name: 
       body_html: 
+      created_at: 
       title: 
+    '2':
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
+  prosperity_planner:
+    show:
+      page_html: 
   support:
     array:
       last_word_connector: "と"
