@@ -26,14 +26,14 @@ class Post < ActiveRecord::Base
   end
 
   def self.recent
-    ordered_posts('en').limit(5)
+    ordered('en').limit(5)
   end
 
   def self.latest(locale)
-    ordered_posts(locale).first
+    ordered(locale).first
   end
 
-  def self.ordered_posts(locale)
+  def self.ordered(locale)
     where(:locale => locale).order('created_at DESC')
   end
 

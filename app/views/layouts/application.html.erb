@@ -21,5 +21,13 @@
 
   <%= yield %>
 
+
+  <footer>
+    <p>
+      <%= t('.footer_text_html', { :blog_path => blog_path,
+                                   :facebook_url => 'https://www.facebook.com/execiohq',
+                                   :twitter_url => 'https://www.twitter.com/exec_io' }) %>
+    </p>
+  </footer>
 </body>
 </html>
