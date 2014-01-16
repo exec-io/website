@@ -7,9 +7,6 @@ zh-TW:
       facebook: 
       page_html: 
       phone: 
-  contact:
-    show:
-      title: 
   contact_details:
     address_html: "華美街63號, 台中市西區 403"
     email: taiwanese@exec.io
@@ -239,9 +236,9 @@ zh-TW:
           quadrillion: "千兆"
           thousand: "千"
           trillion: "兆"
-          unit: 
+          unit: ''
       format:
-        delimiter: 
+        delimiter: ''
         precision: 1
         significant: false
         strip_insignificant_zeros: false
@@ -257,10 +254,10 @@ zh-TW:
           tb: TB
     percentage:
       format:
-        delimiter: 
+        delimiter: ''
     precision:
       format:
-        delimiter: 
+        delimiter: ''
   posts:
     '1':
       author_name: 
