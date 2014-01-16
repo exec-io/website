@@ -16,3 +16,6 @@ end
 a.password = password
 a.password_confirmation = password
 a.save!
+
+
+Post.update_posts
