@@ -12,6 +12,6 @@ test:
   database: exec_io_test
   encoding: unicode
   pool: 15
-  username: mikel
-  host: root
+  username: root
+  host: localhost
   min_messages: warning
