@@ -1,12 +1,8 @@
-<section>
-  <h1><%= t('.exec_io') %></h1>
-  <q>
-    <%= t('.quote') %>
-  </q>
-  <p><%= t('.founder') %></p>
-</section>
-
-<section id="LatestBlog">
-  <h3><%= t('.latest_from_the_blog') %></h3>
-  <%= render Post.latest(I18n.locale) %>
-</section>
+<div class='row'>
+  <section class='col-md-12'>
+    <p class='quote'>
+      <%= t('.quote') %>
+    </p>
+    <p><%= t('.founder') %></p>
+  </section>
+</div>
