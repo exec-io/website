@@ -37,7 +37,7 @@ en:
     address_html: Level 32, 101 Miller Street,<br>North Sydney,<br>NSW, 2060, Australia
     email: info@exec.io
     facebook_url: https://facebook.com/execiohq
-    name: Exec.IO International
+    name: Exec i/o International
     phone: "+61 2 8912 2197"
   date:
     abbr_day_names:
@@ -233,7 +233,7 @@ en:
       update: Update %{model}
   layouts:
     application:
-      about_us: About Exec.IO
+      about_us: About Exec i/o
       blog: Blog
       contact: Contact
       footer_text_html: |
@@ -245,8 +245,8 @@ en:
       prosperity_planner: Prosperity Planner
   locations:
     show:
-      page_html: |
-        <h1>Exec.IO around the world</h1>
+      page_html: |-
+        <h1>Exec i/o around the world</h1>
         <p>
           <img src="%{world_map}" />
         </p>
@@ -319,10 +319,10 @@ en:
       title: Welcome to our 2nd post
   prosperity_planner:
     show:
-      page_html: |
+      page_html: |-
         <h1>The Prosperity Planner</h1>
         <p>
-          In late 2012, Exec.IO and <a href="%{wise_url}">WISE</a> met to discuss the creating of
+          In late 2012, Exec i/o and <a href="%{wise_url}">WISE</a> met to discuss the creating of
           an online version of their successful <a href="%{prosperity_planner_physical_url}">Prosperity
           Planner diary</a> distributed to all WISE members as a membership benefit.
         </p>
@@ -354,7 +354,7 @@ en:
     pm: pm
   welcome:
     show:
-      exec_io: Exec.IO
-      founder: Mikel Lindsaar, Founder of Exec.IO
-      latest_from_the_blog: Latest from the Exec.IO Blog
+      exec_io: Exec i/o
+      founder: Mikel Lindsaar, Founder of Exec i/o
+      latest_from_the_blog: Latest from the Exec i/o Blog
       quote: Our goal is to change the way the world operates by creating and providing tools that are effective, efficient and simple to use.

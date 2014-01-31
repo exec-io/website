@@ -1,8 +1,60 @@
-<div class='row'>
-  <section class='col-md-12'>
-    <p class='quote'>
-      <%= t('.quote') %>
-    </p>
-    <p><%= t('.founder') %></p>
+<section id='quote'>
+  <div class='container'>
+    <div class='row'>
+      <section class='col-md-12'>
+        <h1 class='title'>
+          <%= t('.quote') %>
+        </h1>
+        <p class='sub-title'>
+          <%= t('.founder') %>
+        </p>
+      </section>
+    </div>
+  </div>
+</section>
+
+<div class='container'>
+
+  <section id="about-pp" class='row'>
+    <article id='about-pp-text' class="col-md-7 col-sm-9 col-xs-12">
+      <h1>Cutting-edge applications that help to structure your organisations.</h1>
+      <p>
+        We at Exec i/o understand business. We use cutting edge administrative philosophy to create applications which can help your organisation reach new levels of efficiency and productivity.
+      </p>
+      <p>
+        Our flagship product, the <%= link_to(t('.prosperity_planner'), prosperity_planner_path, :class => 'green') %>, is an indispensable tool in this arsenal. Marrying organisational tools with high-concept business philosophy, this application can help you organise yourself, your team, or your entire company.
+      </p>
+      <p>
+        Check back here often for updates on new products and features on our <%= link_to(t('.blog'), blog_path, :class => 'red') %>.
+      </p>
+    </article>
+    <%= image_tag "pp-example.png", :class => 'col-md-4 col-md-offset-1 col-sm-3 col-xs-12' %>
   </section>
+
+  <section id="feeds" class='row'>
+    <div class='col-md-6 col-sm-6'>
+      <article id="blog">
+        <h3>From the Exec i/o Blog</h3>
+        <p>Some content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+    </div>
+    <div class='col-md-6 col-sm-6'>
+      <article id="tweets">
+        <h3>Tweet @exec_io</h3>
+        <p>Some content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+    </div>
+  </section>
+
 </div>
+

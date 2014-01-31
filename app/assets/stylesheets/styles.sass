@@ -1,37 +1,117 @@
-body, h1, h2, h3, h4, h5, h6
+@import "compass"
+
+$light-blue: #126AAE
+$dark-blue: #0A3456
+$light-green: #588F40
+$dark-green: #245028
+$light-orange: #EE9622
+$dark-orange: #A15724
+$light-red: #CB214F
+$dark-red: #5B103B
+
+$bg-color: #efefed
+$twitter-blue: #2BA9E1
+
+html
+  background-color: $bg-color
+
+body
+  padding-top: 20px
+  background-color: transparent
+  font-family: "Ubuntu"
+
+
+=colorful-links($dark-color, $light-color)
+  color: $dark-color
+  border-bottom: 1px solid $light-color
+  text-decoration: none
+  +transition(all 50ms linear)
+  &:hover, &:active, &:focus
+    background-color: $dark-color
+    color: white
+    border-bottom-width: 5px
+
+a.blue
+  +colorful-links($dark-blue, $light-blue)  
+a.red
+  +colorful-links($dark-red, $light-red)
+a.orange
+  +colorful-links($dark-orange, $light-orange)
+a.green
+  +colorful-links($dark-green, $light-green)
+a.disabled
+  color: #333
+  text-decoration: none
+  cursor: default
+
+
+h1, h2, h3, h4, h5, h6
   font-family: "Lato"
+  font-weight: 200
 
+header
+  margin-bottom: 17px
+  nav#logo a
+    background: transparent image-url('logo.png') no-repeat left 50%
+    background-size: auto 50px
+    height: 50px
+    color: transparent
+    display: block
 
-#maincontent, nav, footer
-  max-width: 1100px
-  padding: 20px
-
-h1.logo
-  color: transparent
-  background: transparent image-url('logo.jpg') no-repeat left 50%
-  display: block
-  margin: 0 0 10px
-  height: 50px
-  background-size: auto 50px
-
-nav ul
-  margin: 0
-  padding: 0
-  li
-    display: inline-block
-    list-style: none
-    padding: 10px
-    background: #ccc
-    margin: 10px 10px 10px 0
+  nav#links
+    position: relative
+    margin: 11px 0 0
+    text-align: right
+    font-size: 1.1em
     a
-      color: white
-      text-decoration: none
+      padding: 0 2px
+      font-weight: 200
+      margin-left: 5px
+      display: inline-block
 
-p.quote
-  font-family: 'Serial Sue W04 Reg'
-  font-size: 3em
-  line-height: 1.3em
-  margin: 0
 
-section#LatestBlog *
-  font-size: .95em
+section#quote
+  background: black image-url('earth.jpg') no-repeat 100% top
+  background-size: cover
+  padding: 30px 0
+  h1
+    text-shadow: 2px 2px 3px #000
+    margin-top: 10px
+    max-width: 765px
+    color: white
+    line-height: 1.3em
+  p.sub-title
+    text-shadow: 1px 1px 2px #000
+    color: #ccc
+
+section#about-pp
+  margin-top: 30px
+  img
+    padding-top: 23px
+
+section#feeds
+  margin-top: 30px
+  #blog, #tweets
+    padding: 10px
+    margin-bottom: 20px
+    h3
+      width: auto
+      padding: 0 5px 5px 40px
+      border: none
+      font-weight: 400
+      margin: -22px 0 5px -5px
+      float: left
+      background: #EFEFED url(/assets/bubbles.png) no-repeat 5px -35px
+      background-size: 30px auto
+      color: #5b103b
+    p
+      clear: both
+  #blog
+    border: 1px solid $dark-red
+    h3
+      color: $dark-red
+  #tweets
+    border: 1px solid $twitter-blue
+    h3
+      color: $twitter-blue
+      background-position: 5px 3px

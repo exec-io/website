@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ExecIo</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <script type="text/javascript" src="http://fast.fonts.net/jsapi/aa402fef-5d8d-474d-ac01-d479c210d7cd.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:200,400,700|Ubuntu:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-  <nav>
-    <h1 class='logo'><%= t('.exec_io') %></h1>
-    <ul>
-      <li><%= link_to_unless_current(t('.home'), root_path) %></li>
-      <li><%= link_to_unless_current(t('.blog'), blog_path) %></li>
-      <li><%= link_to_unless_current(t('.about_us'), about_us_path) %></li>
-      <li><%= link_to_unless_current(t('.prosperity_planner'), prosperity_planner_path) %></li>
-      <li><%= link_to_unless_current(t('.locations'), locations_path) %></li>
-    </ul>
-  </nav>
+  <header class='container'>
+    <div class='row'>
+      <nav id="logo" class='col-md-3 col-sm-4'>
+        <%= link_to t('.exec_io'), root_path %>
+      </nav>
+      <nav id="links" class='col-md-9 col-sm-8'>
+        <%= link_to_unless_current(t('.prosperity_planner'), prosperity_planner_path, :class => 'green') do
+            link_to(t('.prosperity_planner'), prosperity_planner_path, :class => 'disabled', :disabled => true)
+        end %>
 
-  <div id='maincontent'>
-    <%= yield %>
-  </div>
+        <%= link_to_unless_current(t('.about_us'), about_us_path, :class => 'blue') do
+          link_to(t('.about_us'), about_us_path, :class => 'disabled', :disabled => true)
+        end %>
+        
+        <%= link_to_unless_current(t('.locations'), locations_path, :class => 'orange') do
+          link_to(t('.locations'), locations_path, :class => 'disabled', :disabled => true)
+        end %>
+
+        <%= link_to_unless_current(t('.blog'), blog_path, :class => 'red') do 
+          link_to(t('.blog'), blog_path, :class => 'disabled', :disabled => true)
+        end %>
+      </nav>
+    </div>
+  </header>
+
+  <%= yield %>
 
 
-  <footer>
-    <p>
-      <%= t('.footer_text_html', { :blog_path => blog_path,
-                                   :facebook_url => 'https://www.facebook.com/execiohq',
-                                   :twitter_url => 'https://www.twitter.com/exec_io' }) %>
-    </p>
+  <footer class='container'>
+    <div class='row'>
+      <p class='col-md-12'>
+        <%#= t('.footer_text_html', { :blog_path => blog_path,
+                                     :facebook_url => 'https://www.facebook.com/execiohq',
+                                     :twitter_url => 'https://www.twitter.com/exec_io' }) %>
+      </p>
+    </div>
   </footer>
 </body>
 </html>

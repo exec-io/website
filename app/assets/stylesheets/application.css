@@ -12,4 +12,5 @@
  *= require bootstrap-theme
  *= require bootstrap
  *= require styles
+ *= require media_queries
  */
