@@ -6,7 +6,12 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
   before_filter :set_browser_type
+  require 'twitter'
 
+  def exec_io_twitter
+    Twitter.user_timeline("exec_io")
+  end
+  
   def default_url_options(options={})
     logger.debug "default_url_options is passed options: #{options.inspect}\n"
     { :locale => I18n.locale }

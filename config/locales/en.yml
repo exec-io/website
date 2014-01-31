@@ -5,7 +5,7 @@ en:
       contact_us: Get in touch with us
       email: Email
       facebook: Facebook
-      page_html: |
+      page_html: |-
         <h1>About Exec.IO</h1>
         <p>
           Exec.IO was founded in Sydney Australia on the 20th of September, 2012 with the goal to
@@ -24,8 +24,8 @@ en:
           products are built from the ground up to work in any language.
         </p>
         <p>
-          For our first project, we teamed up with <a href="%{wise_url}">WISE</a> to produce
-          their online <a href="%{prosperity_planner_path}">Prosperity Planner</a> and over
+          For our first project, we teamed up with <a href="%{wise_url}" class="orange">WISE</a> to produce
+          their online <a href="%{prosperity_planner_path}" class="blue">Prosperity Planner</a> and over
           the coming year tweaked and improved the design until launch.
         </p>
         <p>
@@ -245,20 +245,7 @@ en:
       prosperity_planner: Prosperity Planner
   locations:
     show:
-      page_html: |-
-        <h1>Exec i/o around the world</h1>
-        <p>
-          <img src="%{world_map}" />
-        </p>
-        <p>
-          We are a multi lingual company, focusing on bringing the best organisational tools
-          in the world to as many languages as we can.
-        </p>
-        <p>
-          With our Language Managers spanning the globe, we can provide organisational software
-          allowing you to expand to any corner and still keep your staff informed, efficient
-          and online.
-        </p>
+      page_html: "<article id=\"locations-text\" class='col-md-6'>\n  <h1>Exec i/o around the world</h1>\n  \n  <p>\n    We are a multi lingual company, focusing on bringing the best organisational tools\n    in the world to as many languages as we can.\n  </p>\n  <p>\n    With our Language Managers spanning the globe, we can provide organisational software\n    allowing you to expand to any corner and still keep your staff informed, efficient\n    and online.\n  </p>\n</article>\n<div class='col-md-4 col-md-offset-2'>\n  <img src=\"%{world_map}\" id='globe' />\n</div>"
   number:
     currency:
       format:
@@ -322,12 +309,12 @@ en:
       page_html: |-
         <h1>The Prosperity Planner</h1>
         <p>
-          In late 2012, Exec i/o and <a href="%{wise_url}">WISE</a> met to discuss the creating of
-          an online version of their successful <a href="%{prosperity_planner_physical_url}">Prosperity
+          In late 2012, Exec i/o and <a href="%{wise_url}" class="orange">WISE</a> met to discuss the creating of
+          an online version of their successful <a href="%{prosperity_planner_physical_url}" class="red">Prosperity
           Planner diary</a> distributed to all WISE members as a membership benefit.
         </p>
         <p>
-          From this, the <a href="%{prosperity_planner_app_url}">Prosperity Planner App</a> was born
+          From this, the <a href="%{prosperity_planner_app_url}" class="green">Prosperity Planner App</a> was born
           and released as a free Membership benefit to WISE members around the world in
           late 2013.
         </p>

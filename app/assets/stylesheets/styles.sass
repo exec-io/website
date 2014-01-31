@@ -29,7 +29,7 @@ body
   &:hover, &:active, &:focus
     background-color: $dark-color
     color: white
-    border-bottom-width: 5px
+    border-bottom-width: 3px
 
 a.blue
   +colorful-links($dark-blue, $light-blue)  
@@ -40,15 +40,16 @@ a.orange
 a.green
   +colorful-links($dark-green, $light-green)
 a.disabled
-  color: #333
+  color: #818181
+  border-bottom: 1px solid #ccc !important
   text-decoration: none
   cursor: default
 
 
 h1, h2, h3, h4, h5, h6
   font-family: "Lato"
+h1, h2, h3
   font-weight: 200
-
 header
   margin-bottom: 17px
   nav#logo a
@@ -68,6 +69,8 @@ header
       font-weight: 200
       margin-left: 5px
       display: inline-block
+      &:hover, &:active, &:focus
+        border-bottom-width: 5px
 
 
 section#quote
@@ -85,33 +88,119 @@ section#quote
     color: #ccc
 
 section#about-pp
-  margin-top: 30px
-  img
+  margin: 30px 0 60px
+  &.show-page
+    margin: 0 -15px 20px
+  img#pp-example
+    width: 100%
     padding-top: 23px
 
 section#feeds
   margin-top: 30px
-  #blog, #tweets
-    padding: 10px
-    margin-bottom: 20px
-    h3
-      width: auto
-      padding: 0 5px 5px 40px
-      border: none
-      font-weight: 400
-      margin: -22px 0 5px -5px
+
+#blog-list, #tweets
+  padding: 10px
+  margin-bottom: 20px
+  h3.header
+    width: auto
+    padding: 0 5px 5px 40px
+    border: none
+    font-weight: 400
+    margin: -24px 0 5px -5px
+    float: left
+    background: #EFEFED url(/assets/bubbles.png) no-repeat 5px -35px
+    background-size: 30px auto
+    color: #5b103b
+  p
+    clear: both
+
+#blog-list
+  border: 1px solid $dark-red
+  h3.header
+    color: $dark-red
+  .blog-post
+    clear: both
+    padding: 10px 10px 10px 70px
+    margin-bottom: 5px
+    background-color: white
+    +clearfix
+    position: relative
+    div.photo
+      background-image: image-url('author/mikel.jpg')
+      width: 50px
+      height: 62px
+      background-size: 50px
+      position: absolute
+      left: 10px
+    div.info
       float: left
-      background: #EFEFED url(/assets/bubbles.png) no-repeat 5px -35px
-      background-size: 30px auto
-      color: #5b103b
     p
-      clear: both
-  #blog
-    border: 1px solid $dark-red
+      margin: 0
+      font-size: .9em
+      &.date
+        color: #818181
+    h4 
+      font-weight: 400
+      margin: 1px 0 5px
+
+#tweets
+  border: 1px solid $twitter-blue
+  h3.header
+    color: $twitter-blue
+    background-position: 5px 3px
+
+
+
+aside#contact-us
+  h2
+    margin-bottom: 15px
+  h3
+    font-size: 1.3em
+    font-weight: 500
+    margin-top: 10px
+  ul
+    list-style: none
+    margin: 0 0 15px
+    padding: 0
+    li
+      margin: 7px 0 0 10px
+      line-height: 1em
+    span
+      display: block
+      font-size: .6em
+      font-weight: bold
+      display: block
+      line-height: 0.8em
+      text-transform: uppercase
+
+
+#locations img#globe
+  width: 100%
+
+#blog
+  #blog-text 
+    padding: 10px
+    background-color: white
+  header
+    border-bottom: 1px solid $bg-color
+    padding-bottom: 10px
+    div.photo
+      background-image: image-url('author/mikel.jpg')
+      width: 70px
+      height: 87px
+      background-size: 70px
+      float: right
+    h1
+      margin-top: 0
+    p
+      margin: 0
+    .date
+      color: #818181
+  #blog-list
+    border: none
+    padding: 0
     h3
+      margin-top: 0
       color: $dark-red
-  #tweets
-    border: 1px solid $twitter-blue
-    h3
-      color: $twitter-blue
-      background-position: 5px 3px
+      font-weight: 400
+      font-size: 1.4em
