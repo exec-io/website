@@ -12,18 +12,31 @@ $dark-red: #5B103B
 $bg-color: #efefed
 $twitter-blue: #2BA9E1
 
+$light: 'HelveticaNeueW01-45Ligh'
+$roman: 'HelveticaNeueW01-55Roma'
+$medium: 'HelveticaNeueW01-65Medi'
+$bold: 'HelveticaNeueW01-75Bold'
+$mediumCondensed: 'HelveticaNeueW01-67MdCn 692710'
+$boldCondensed: 'HelveticaNeueW01-77BdCn 692722'
+$heavyCondensed: 'HelveticaNeueW01-87HvCn 692734'
+
+
 html
   background-color: $bg-color
 
 body
-  padding-top: 20px
   background-color: transparent
-  font-family: "Ubuntu"
+  font-family: $roman
+  background: black image-url('earth.jpg') no-repeat 50% top
+  background-attachment: fixed
+  &.alpha, &.beta, &.gamma
+    background-image: none
 
 
 =colorful-links($dark-color, $light-color)
-  color: $dark-color
-  border-bottom: 1px solid $light-color
+  color: white
+  background-color: rgba(0,0,0,.75)
+  border-bottom: 3px solid $light-color
   text-decoration: none
   +transition(all 50ms linear)
   &:hover, &:active, &:focus
@@ -31,6 +44,8 @@ body
     color: white
     border-bottom-width: 3px
 
+a.black
+  +colorful-links(#333, #818181)  
 a.blue
   +colorful-links($dark-blue, $light-blue)  
 a.red
@@ -47,107 +62,85 @@ a.disabled
 
 
 h1, h2, h3, h4, h5, h6
-  font-family: "Lato"
+  // font-family: "Lato"
+  font-family: $bold
+  // font-weight: "700"
 h1, h2, h3
-  font-weight: 200
-header
-  margin-bottom: 17px
+  // font-weight: 200
+
+
+
+header#main-nav
+  position: fixed
+  top: 0px
+  right: 20px
+  z-index: 200
   nav#logo a
     background: transparent image-url('logo.png') no-repeat left 50%
     background-size: auto 50px
     height: 50px
     color: transparent
-    display: block
+    // display: block
+    display: none
+    float: left
+    width: 167px
 
   nav#links
-    position: relative
-    margin: 11px 0 0
-    text-align: right
+    float: right
     font-size: 1.1em
     a
-      padding: 0 2px
-      font-weight: 200
+      padding: 10px 5px 5px
       margin-left: 5px
-      display: inline-block
+      font-weight: 200
+      display: block
+      float: left
+      font-family: $mediumCondensed
+      
       &:hover, &:active, &:focus
         border-bottom-width: 5px
 
+section.home-panel
+  padding-top: 50px
+  // background-size: auto 100%
+  .white-block
+    padding: 10px
+    background-color: rgba(255,255,255,.85)
+    margin: 0 0 5px
+  &#splash
+    text-align: center
+    padding-top: 180px
+    background-color: transparent
+    #splash-logo
+      width: 300px
+      max-width: 100%
+      margin: 0 0 5px
+    h2, p
+      margin: 0 auto 5px
+      line-height: 1.15em
+      color: #333
+    h2
+      max-width: 733px
+    p
+      max-width: 300px
 
-section#quote
-  background: black image-url('earth.jpg') no-repeat 100% top
-  background-size: cover
-  padding: 30px 0
-  h1
-    text-shadow: 2px 2px 3px #000
-    margin-top: 10px
-    max-width: 765px
-    color: white
-    line-height: 1.3em
-  p.sub-title
-    text-shadow: 1px 1px 2px #000
-    color: #ccc
-
-section#about-pp
-  margin: 30px 0 60px
-  &.show-page
-    margin: 0 -15px 20px
-  img#pp-example
-    width: 100%
-    padding-top: 23px
+  &#about-pp
+    background: image-url('arrows.png') no-repeat left bottom
+    padding-top: 140px
+    body.alpha &
+      background-image: image-url('arrows.png'), image-url('earth.jpg')
+      background-position: left bottom, 50% top
+    img#pp-example
+      width: 100%
+    img#device-icons
+      float: left
+      clear: left
+  &#about-us
+    background-color: rgba($light-green, .5)
+  &#blog
+    display: none
 
 section#feeds
   margin-top: 30px
-
-#blog-list, #tweets
-  padding: 10px
-  margin-bottom: 20px
-  h3.header
-    width: auto
-    padding: 0 5px 5px 40px
-    border: none
-    font-weight: 400
-    margin: -24px 0 5px -5px
-    float: left
-    background: #EFEFED url(/assets/bubbles.png) no-repeat 5px -35px
-    background-size: 30px auto
-    color: #5b103b
-  p
-    clear: both
-
-#blog-list
-  border: 1px solid $dark-red
-  h3.header
-    color: $dark-red
-  .blog-post
-    clear: both
-    padding: 10px 10px 10px 70px
-    margin-bottom: 5px
-    background-color: white
-    +clearfix
-    position: relative
-    div.photo
-      background-image: image-url('author/mikel.jpg')
-      width: 50px
-      height: 62px
-      background-size: 50px
-      position: absolute
-      left: 10px
-    div.info
-      float: left
-    p
-      margin: 0
-      font-size: .9em
-      &.date
-        color: #818181
-    h4 
-      font-weight: 400
-      margin: 1px 0 5px
-
-#tweets
-  border: 1px solid $twitter-blue
-  h3.header
-    color: $twitter-blue
-    background-position: 5px 3px
 
 
 

@@ -1,57 +1,157 @@
-<section id='quote'>
+<section id='splash' class='home-panel'>
   <div class='container'>
     <div class='row'>
-      <section class='col-md-12'>
-        <h1 class='title'>
+      <div class='col-md-12'>
+        <img src='assets/logo.png'/ id="splash-logo">
+        <h2 class='title white-block'>
           <%= t('.quote') %>
-        </h1>
-        <p class='sub-title'>
+        </h2>
+        <p class='sub-title white-block'>
           <%= t('.founder') %>
         </p>
-      </section>
+        <%= link_to image_tag('down-arrow.png'), "section#about-pp" %>
+      </div>
     </div>
   </div>
 </section>
 
-<div class='container'>
-  <section id="about-pp" class='row'>
-    <article id='about-pp-text' class="col-md-7 col-sm-9 col-xs-12">
-      <h1>Cutting-edge applications that help to structure your organisations.</h1>
-      <p>
-        We at Exec i/o understand business. We use cutting edge administrative philosophy to create applications which can help your organisation reach new levels of efficiency and productivity.
-      </p>
-      <p>
-        Our flagship product, the <%= link_to(t('.prosperity_planner'), prosperity_planner_path, :class => 'green') %>, is an indispensable tool in this arsenal. Marrying organisational tools with high-concept business philosophy, this application can help you organise yourself, your team, or your entire company.
-      </p>
-      <p>
-        Check back here often for updates on new products and features on our <%= link_to(t('.blog'), blog_path, :class => 'red') %>.
-      </p>
-    </article>
-    <div class="col-md-4 col-md-offset-1 col-sm-3 col-xs-12">
-      <%= image_tag "pp-example.png", :id => 'pp-example' %>
-    </div>
-  </section>
+<section id="about-pp" class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <article id='about-pp-text' class="col-md-7 col-sm-9 col-xs-12">
+        <h1 class='white-block'>Cutting-edge applications that help to structure your organisations.</h1>
+        <div class='white-block'>
+          <p>
+            We at Exec i/o understand business. We use cutting edge administrative philosophy to create applications which can help your organisation reach new levels of efficiency and productivity.
+          </p>
+          <p>
+            Our flagship product, the <%= link_to(t('.prosperity_planner'), prosperity_planner_path, :class => 'green') %>, is an indispensable tool in this arsenal. Marrying organisational tools with high-concept business philosophy, this application can help you organise yourself, your team, or your entire company.
+          </p>
+          <p>Historically confined to physical books, the online version has all the tools that the physical version has, including Weekly and Daily Battle Plans, Calendar tools and over 40 Hubbard Management System topics covered in a fully searchable index.</p>
 
-  <section id="feeds" class='row'>
-    <div class='col-md-6 col-sm-6'>
-      <article id="blog-list">
-        <h3 class='header'>From the Exec i/o Blog</h3>
-        <%= render Post.latest(I18n.locale) %>
-        <%= render Post.latest(I18n.locale) %>
-        <%= render Post.latest(I18n.locale) %>
+          <p>Use of the Prosperity Planner App is free for all WISE members and comes with a 30 day free trial for anyone looking to become a WISE member.</p>
+        </div>
+        <!-- <img src='assets/devices.png'/ id="device-icons"> -->
       </article>
+
+      <div class="col-md-5 col-sm-3 col-xs-12">
+        <%= image_tag "pp-example.png", :id => 'pp-example' %>
+      </div>
     </div>
-    <div class='col-md-6 col-sm-6'>
-      <article id="tweets">
-        <h3 class='header'>Tweet @exec_io</h3>
-        <p>Some content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  </div>
+</section>
+
+
+<section id="about-us" class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <article class='col-md-8'>
+        <%= t('about_us.show.page_html',
+             { :wise_url => 'http://www.wise.org/',
+               :prosperity_planner_path => prosperity_planner_url} )
+        %>
+      </article>
+      <aside id="contact-us" class='col-md-4'>
+        <h2><%= t('.contact_us') %></h2>
+        <% enabled_locales.each do |locale| %>
+          <h3><%= t('contact_details.name', {:locale => locale}) %></h3>
+          <ul>
+            <li><span><%= t('.phone') %></span><%= t('contact_details.phone', {:locale => locale}) %></li>
+            <li><span><%= t('.email') %></span><%= mail_to t('contact_details.email', {:locale => locale}), t('contact_details.email', {:locale => locale}), :class => random_link_color %></li>
+            <li><span><%= t('.facebook') %></span><%= link_to(t('contact_details.facebook_url', {:locale => locale}), t('contact_details.facebook_url', {:locale => locale}), :class => random_link_color) %></li>
+            <li><span><%= t('.address') %></span><%= t('contact_details.address_html', {:locale => locale}) %></li>
+          </ul>
+
+        <% end %>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id='locations' class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <%= t('locations.show.page_html', { :world_map => image_url('globe.png') } ) %>
+    </div>
+  </div>
+</section>
+
+<section id='blog' class='home-panel'>
+  <div class='container'>
+    <div class='col-md-7'>
+      <article id="blog-text">
+        <header>
+          <div class='photo'></div>
+          <h1>A blog post</h1>
+          <p class='author'>by Mikel Lindsaar</p>
+          <p class='date'>posted 5 minutes ago.</p>
+        </header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article> 
     </div>
-  </section>
-</div>
+    <div class='col-md-5'>
+      <aside id="blog-list">
+        <h3>Previous Posts</h3>
+        <% Post.ordered(locale).each do |post| %>
+          <%= render post %>
+        <% end %>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<script type='text/javascript'>
+
+var setWindowHeight = function() {
+  var windowHeight = $(window).height();
+  $('section.home-panel').css("min-height", windowHeight);
+}
+
+var getPanelHeights = function() {
+  var heightP1 = $('section.home-panel:nth-child(10n+2)').height();
+  var heightP2 = $('section.home-panel:nth-child(10n+3)').height() + heightP1;
+  var heightP3 = $('section.home-panel:nth-child(10n+4)').height() + heightP2;
+}
+
+var resizeWindow = function() {
+  setWindowHeight();
+  getPanelHeights();
+}
+
+$(document).on('scroll', function(){
+  var heightP1 = $('section.home-panel:nth-child(10n+2)').outerHeight();
+  var heightP2 = $('section.home-panel:nth-child(10n+3)').outerHeight() + heightP1;
+  var heightP3 = $('section.home-panel:nth-child(10n+4)').outerHeight() + heightP2;
+  var scrollPos = $(window).scrollTop();
+  console.log(scrollPos);
+  if (scrollPos >= heightP3) {
+    console.log('Stage Gamma: ' + heightP3);
+    $('body').removeClass('alpha beta').addClass('gamma');
+  } else if (scrollPos >= heightP2) {
+    console.log('Stage Beta: ' + heightP2);
+    $('body').removeClass('alpha gamma').addClass('beta');
+  } else if (scrollPos >= heightP1) {
+    console.log('Stage Alpha: ' + heightP1);
+    $('body').removeClass('beta gamma').addClass('alpha');
+  } else if (scrollPos < heightP1) {
+    $('body').removeClass('alpha beta gamma');
+  }
+});
+
+resizeWindow();
+$(window).resize(resizeWindow);
+
+
+</script>
 
