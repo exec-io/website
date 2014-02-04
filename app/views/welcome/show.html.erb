@@ -3,29 +3,31 @@
     <div class='row'>
       <div class='col-md-12'>
         <img src='assets/logo.png'/ id="splash-logo">
-        <h2 class='title white-block'>
-          <%= t('.quote') %>
-        </h2>
-        <p class='sub-title white-block'>
+        <h1 class='title text-block'>
+          Intelligent applications to improve your organisations
+        </h1>
+        <p class='sub-title text-block'>
+          <%= t('.quote') %><br>
           <%= t('.founder') %>
+          
         </p>
-        <%= link_to image_tag('down-arrow.png'), "section#about-pp" %>
       </div>
     </div>
   </div>
+  <%= link_to image_tag('down-arrow-white.png'), "section#about-pp", :class => 'scroll-link next-arrow', "data-link" => "about-pp" %>
 </section>
 
 <section id="about-pp" class='home-panel'>
   <div class='container'>
     <div class='row'>
-      <article id='about-pp-text' class="col-md-7 col-sm-9 col-xs-12">
-        <h1 class='white-block'>Cutting-edge applications that help to structure your organisations.</h1>
-        <div class='white-block'>
+      <article id='about-pp-text' class="col-md-6 col-sm-9 col-xs-12">
+        <h1 class='text-block green'>The Prosperity Planner</h1>
+        <div class='text-block green'>
           <p>
             We at Exec i/o understand business. We use cutting edge administrative philosophy to create applications which can help your organisation reach new levels of efficiency and productivity.
           </p>
           <p>
-            Our flagship product, the <%= link_to(t('.prosperity_planner'), prosperity_planner_path, :class => 'green') %>, is an indispensable tool in this arsenal. Marrying organisational tools with high-concept business philosophy, this application can help you organise yourself, your team, or your entire company.
+            Our flagship product, the Prosperity Planner, is an indispensable tool in this arsenal. Marrying organisational tools with high-concept business philosophy, this application can help you organise yourself, your team, or your entire company.
           </p>
           <p>Historically confined to physical books, the online version has all the tools that the physical version has, including Weekly and Daily Battle Plans, Calendar tools and over 40 Hubbard Management System topics covered in a fully searchable index.</p>
 
@@ -34,11 +36,12 @@
         <!-- <img src='assets/devices.png'/ id="device-icons"> -->
       </article>
 
-      <div class="col-md-5 col-sm-3 col-xs-12">
+      <!-- <div class="col-md-5 col-sm-3 col-xs-12">
         <%= image_tag "pp-example.png", :id => 'pp-example' %>
-      </div>
+      </div> -->
     </div>
   </div>
+  <%= link_to image_tag('down-arrow-black.png'), "section#about-us", :class => 'scroll-link next-arrow', "data-link" => "about-us" %>
 </section>
 
 
@@ -46,14 +49,52 @@
   <div class='container'>
     <div class='row'>
       <article class='col-md-8'>
-        <%= t('about_us.show.page_html',
+        <h1 class=''>About Exec.IO</h1>
+        <div class=''>
+          <p>
+            Exec.IO was founded in Sydney Australia on the 20th of September, 2012 with the goal to
+            change the way the world operates by creating and providing organisational tools that are
+            effective, efficient and simple to use.
+          </p>
+          <p>
+            This idea of online organisational software is where our name came from.  "Exec" is
+            short for "Executive", and "IO" is the acronym for "Input" and "Output". So our software
+            takes data and information in, and outputs it in such a way to successfully execute
+            the expansion of an organisation.
+          </p>
+          <p>
+            From the beginning, we wanted to make systems that were easy to use, but multi lingual by
+            design.  We didn't want to make internationalization an after thought, instead all of our
+            products are built from the ground up to work in any language.
+          </p>
+          <p>
+            For our first project, we teamed up with <a href="http://www.wise.org/" class="orange">WISE</a> to produce
+            their online <a href="<%= prosperity_planner_url %>" class="blue">Prosperity Planner</a> and over
+            the coming year tweaked and improved the design until launch.
+          </p>
+          <p>
+            Now the Prosperity Planner is live, we are using the knowledge gained to release
+            more quality online organisational tools to the world.
+          </p>
+        </div>
+        <%#= t('about_us.show.page_html',
              { :wise_url => 'http://www.wise.org/',
                :prosperity_planner_path => prosperity_planner_url} )
         %>
       </article>
-      <aside id="contact-us" class='col-md-4'>
+      <div class='col-md-4'>
+        <div class='speech-bubble'>
+          <h2>Hello!</h2>
+        </div>
+      </div>
+    </div>
+
+    <aside id="contact-us" class='row'>
+      <div class='col-md-12'>
         <h2><%= t('.contact_us') %></h2>
-        <% enabled_locales.each do |locale| %>
+      </div>
+      <% enabled_locales.each do |locale| %>
+        <div class='col-md-4'>
           <h3><%= t('contact_details.name', {:locale => locale}) %></h3>
           <ul>
             <li><span><%= t('.phone') %></span><%= t('contact_details.phone', {:locale => locale}) %></li>
@@ -61,19 +102,32 @@
             <li><span><%= t('.facebook') %></span><%= link_to(t('contact_details.facebook_url', {:locale => locale}), t('contact_details.facebook_url', {:locale => locale}), :class => random_link_color) %></li>
             <li><span><%= t('.address') %></span><%= t('contact_details.address_html', {:locale => locale}) %></li>
           </ul>
-
-        <% end %>
-      </aside>
-    </div>
+        </div>
+      <% end %>
+    </aside>
   </div>
+  <%= link_to image_tag('down-arrow-white.png'), "section#locations", :class => 'scroll-link next-arrow', "data-link" => "locations" %>
 </section>
 
 <section id='locations' class='home-panel'>
   <div class='container'>
     <div class='row'>
-      <%= t('locations.show.page_html', { :world_map => image_url('globe.png') } ) %>
+      <%#= t('locations.show.page_html') %>
+      <article id="locations-text" class='col-md-7'>
+        <h1 class='text-block'>Exec i/o around the world</h1>
+        <div class='text-block orange'>
+          <p>
+            We are a multi lingual company, focusing on bringing the best organisational tools
+            in the world to as many languages as we can.
+            With our Language Managers spanning the globe, we can provide organisational software
+            allowing you to expand to any corner and still keep your staff informed, efficient
+            and online.
+          </p>
+        </div>
+      </article>
     </div>
   </div>
+  <%= link_to image_tag('down-arrow-black.png'), "section#splash", :class => 'scroll-link prev-arrow', "data-link" => "splash" %>
 </section>
 
 <section id='blog' class='home-panel'>
@@ -111,47 +165,4 @@
   </div>
 </section>
 
-<script type='text/javascript'>
-
-var setWindowHeight = function() {
-  var windowHeight = $(window).height();
-  $('section.home-panel').css("min-height", windowHeight);
-}
-
-var getPanelHeights = function() {
-  var heightP1 = $('section.home-panel:nth-child(10n+2)').height();
-  var heightP2 = $('section.home-panel:nth-child(10n+3)').height() + heightP1;
-  var heightP3 = $('section.home-panel:nth-child(10n+4)').height() + heightP2;
-}
-
-var resizeWindow = function() {
-  setWindowHeight();
-  getPanelHeights();
-}
-
-$(document).on('scroll', function(){
-  var heightP1 = $('section.home-panel:nth-child(10n+2)').outerHeight();
-  var heightP2 = $('section.home-panel:nth-child(10n+3)').outerHeight() + heightP1;
-  var heightP3 = $('section.home-panel:nth-child(10n+4)').outerHeight() + heightP2;
-  var scrollPos = $(window).scrollTop();
-  console.log(scrollPos);
-  if (scrollPos >= heightP3) {
-    console.log('Stage Gamma: ' + heightP3);
-    $('body').removeClass('alpha beta').addClass('gamma');
-  } else if (scrollPos >= heightP2) {
-    console.log('Stage Beta: ' + heightP2);
-    $('body').removeClass('alpha gamma').addClass('beta');
-  } else if (scrollPos >= heightP1) {
-    console.log('Stage Alpha: ' + heightP1);
-    $('body').removeClass('beta gamma').addClass('alpha');
-  } else if (scrollPos < heightP1) {
-    $('body').removeClass('alpha beta gamma');
-  }
-});
-
-resizeWindow();
-$(window).resize(resizeWindow);
-
-
-</script>
 

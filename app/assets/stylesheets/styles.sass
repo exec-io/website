@@ -12,13 +12,13 @@ $dark-red: #5B103B
 $bg-color: #efefed
 $twitter-blue: #2BA9E1
 
-$light: 'HelveticaNeueW01-45Ligh'
-$roman: 'HelveticaNeueW01-55Roma'
-$medium: 'HelveticaNeueW01-65Medi'
-$bold: 'HelveticaNeueW01-75Bold'
-$mediumCondensed: 'HelveticaNeueW01-67MdCn 692710'
-$boldCondensed: 'HelveticaNeueW01-77BdCn 692722'
-$heavyCondensed: 'HelveticaNeueW01-87HvCn 692734'
+$light: 'HelveticaNeueW01-45Ligh', helvetica, sans-serif
+$roman: 'HelveticaNeueW01-55Roma', helvetica, sans-serif
+$medium: 'HelveticaNeueW01-65Medi', helvetica, sans-serif
+$bold: 'HelveticaNeueW01-75Bold', helvetica, sans-serif
+$mediumCondensed: 'HelveticaNeueW01-67MdCn 692710', helvetica, sans-serif
+$boldCondensed: 'HelveticaNeueW01-77BdCn 692722', helvetica, sans-serif
+$heavyCondensed: 'HelveticaNeueW01-87HvCn 692734', helvetica, sans-serif
 
 
 html
@@ -42,28 +42,12 @@ body
   &:hover, &:active, &:focus
     background-color: $dark-color
     color: white
-    border-bottom-width: 3px
-
-a.black
-  +colorful-links(#333, #818181)  
-a.blue
-  +colorful-links($dark-blue, $light-blue)  
-a.red
-  +colorful-links($dark-red, $light-red)
-a.orange
-  +colorful-links($dark-orange, $light-orange)
-a.green
-  +colorful-links($dark-green, $light-green)
-a.disabled
-  color: #818181
-  border-bottom: 1px solid #ccc !important
-  text-decoration: none
-  cursor: default
+    border-bottom-width: 5px
 
 
 h1, h2, h3, h4, h5, h6
   // font-family: "Lato"
-  font-family: $bold
+  font-family: $boldCondensed
   // font-weight: "700"
 h1, h2, h3
   // font-weight: 200
@@ -90,22 +74,47 @@ header#main-nav
     font-size: 1.1em
     a
       padding: 10px 5px 5px
-      margin-left: 5px
+      margin: 0 0 0 5px
       font-weight: 200
       display: block
       float: left
       font-family: $mediumCondensed
-      
+      &.black
+        +colorful-links(#333, #818181)  
+      &.blue
+        +colorful-links($dark-blue, $light-blue)  
+      &.red
+        +colorful-links($dark-red, $light-red)
+      &.orange
+        +colorful-links($dark-orange, $light-orange)
+      &.green
+        +colorful-links($dark-green, $light-green)
       &:hover, &:active, &:focus
-        border-bottom-width: 5px
+        
 
 section.home-panel
-  padding-top: 50px
-  // background-size: auto 100%
-  .white-block
+  padding: 50px 0
+  position: relative
+  .next-arrow
+    position: absolute
+    bottom: 20px
+    right: 20px
+  .prev-arrow
+    @extend .next-arrow
+    +transform(rotate(180deg))
+  .text-block
     padding: 10px
-    background-color: rgba(255,255,255,.85)
+    background-color: rgba(255,255,255,1)
     margin: 0 0 5px
+    &.red
+      background-color: $dark-red
+      color: white
+    &.green
+      background-color: $light-green
+      color: white
+    &.blue
+      background-color: $dark-blue
+      color: white
   &#splash
     text-align: center
     padding-top: 180px
@@ -114,28 +123,103 @@ section.home-panel
       width: 300px
       max-width: 100%
       margin: 0 0 5px
-    h2, p
-      margin: 0 auto 5px
+    h1, p
+      margin: 0 auto 30px
       line-height: 1.15em
       color: #333
-    h2
-      max-width: 733px
+    h1
+      font-family: $boldCondensed
+      max-width: 500px
     p
+      display: none
       max-width: 300px
 
   &#about-pp
-    background: image-url('arrows.png') no-repeat left top
+    // background: image-url('arrows.png') no-repeat left top
+    background-image: image-url('arrows.png'), image-url('office.jpg')
+    background-position: left top, 50% 50%
     padding-top: 140px
+    background-size: cover
+    background-attachment: scroll, fixed
+    h1
+      font-family: $boldCondensed helvetica sans-serif
+      font-size: 3em
+      display: inline-block
+      color: white
+      background-color: rgba($light-green, 1)
     body.alpha &
-      background-image: image-url('arrows.png'), image-url('earth.jpg')
-      background-position: left top, 50% top
+      // background-image: image-url('arrows.png'), image-url('earth.jpg')
+      // background-position: left top, 50% top
     img#pp-example
       width: 100%
     img#device-icons
       float: left
       clear: left
   &#about-us
-    background-color: rgba($light-green, .5)
+    background-color: $dark-blue
+    background: $dark-blue image-url('nametag.png') no-repeat 86% 70px
+    background-size: 300px
+    color: white
+    h1
+      font-family: $boldCondensed helvetica sans-serif
+      font-size: 4em
+      text-transform: uppercase
+      // color: $light-blue
+      color: white
+    .speech-bubble
+      display: none
+      background: transparent image-url('speech-bubble.png') no-repeat
+      background-size: 100%
+      height: 225px
+      text-align: center
+      color: white
+      padding-top: 80px
+      margin-top: 80px
+      h2
+        font-family: $boldCondensed
+        font-size: 3.5em
+        display: block
+        margin: 0
+        height: 40px
+  #contact-us
+    h2
+      margin-bottom: 15px
+      text-transform: uppercase
+    h3
+      font-size: 1.3em
+      font-weight: 500
+      margin: 0px
+    ul
+      list-style: none
+      margin: 0 0 15px
+      padding: 0
+      border-left: 5px solid $light-blue
+      li
+        margin: 7px 0 0 10px
+        line-height: 1em
+      span
+        display: block
+        font-size: .75em
+        font-weight: bold
+        display: block
+        line-height: 0.8em
+        margin-bottom: 5px
+        font-family: $bold
+        text-transform: uppercase
+  &#locations
+    background: white image-url('world-map.jpg') no-repeat 50% 20%
+    background-attachment: fixed
+    background-size: cover
+    h1.text-block
+      font-family: $boldCondensed helvetica sans-serif
+      font-size: 3em
+      text-transform: uppercase
+      display: inline-block
+    .text-block
+      color: black
+      background-color: rgba(white, .85)
+
+
   &#blog
     display: none
 
@@ -144,27 +228,7 @@ section#feeds
 
 
 
-aside#contact-us
-  h2
-    margin-bottom: 15px
-  h3
-    font-size: 1.3em
-    font-weight: 500
-    margin-top: 10px
-  ul
-    list-style: none
-    margin: 0 0 15px
-    padding: 0
-    li
-      margin: 7px 0 0 10px
-      line-height: 1em
-    span
-      display: block
-      font-size: .6em
-      font-weight: bold
-      display: block
-      line-height: 0.8em
-      text-transform: uppercase
+
 
 
 #locations img#globe

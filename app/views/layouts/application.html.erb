@@ -18,30 +18,61 @@
       <%= link_to t('.exec_io'), root_path %>
     </nav>
     <nav id="links">
-      <%= link_to "Back to top", "section#splash", :class => 'red' %>
-
-      <%= link_to t('.prosperity_planner'), "section#about-pp", :class => 'green' %>
-
-      <%= link_to t('.about_us'), "section#about-us", :class => 'blue' %>
-      
-      <%= link_to t('.locations'), "section#locations", :class => 'orange' %>
-
-      <%= link_to t('.blog'), "section#blog", :class => 'red', :style => 'display: none' %>
+      <%= link_to "Home", "section#splash", :class => 'red scroll-link', "data-link" => "splash" %>
+      <%= link_to t('.prosperity_planner'), "section#about-pp", :class => 'green scroll-link', "data-link" => "about-pp" %>
+      <%= link_to t('.about_us'), "section#about-us", :class => 'blue scroll-link', "data-link" => "about-us" %>
+      <%= link_to t('.locations'), "section#locations", :class => 'orange scroll-link', "data-link" => "locations" %>
+      <%= link_to t('.blog'), "section#blog", :class => 'red scroll-link', :style => 'display: none', "data-link" => "blog" %>
     </nav>
   
   </header>
 
   <%= yield %>
 
-
-  <footer class='container'>
-    <div class='row'>
-      <p class='col-md-12'>
-        <%#= t('.footer_text_html', { :blog_path => blog_path,
-                                     :facebook_url => 'https://www.facebook.com/execiohq',
-                                     :twitter_url => 'https://www.twitter.com/exec_io' }) %>
-      </p>
-    </div>
-  </footer>
 </body>
+<script type='text/javascript'>
+
+  var setWindowHeight = function() {
+    var windowHeight = $(window).height();
+    $('section.home-panel').css("min-height", windowHeight);
+  }
+
+  var getPanelHeights = function() {
+    var heightP1 = $('section.home-panel:nth-child(10n+2)').height();
+    var heightP2 = $('section.home-panel:nth-child(10n+3)').height() + heightP1;
+    var heightP3 = $('section.home-panel:nth-child(10n+4)').height() + heightP2;
+  }
+
+  var resizeWindow = function() {
+    setWindowHeight();
+    getPanelHeights();
+  }
+
+  // $(document).on('scroll', function(){
+  //   var heightP1 = $('section.home-panel:nth-child(10n+2)').outerHeight();
+  //   var heightP2 = $('section.home-panel:nth-child(10n+3)').outerHeight() + heightP1;
+  //   var heightP3 = $('section.home-panel:nth-child(10n+4)').outerHeight() + heightP2;
+  //   var scrollPos = $(window).scrollTop();
+  //   if (scrollPos >= heightP3) {
+  //     $('body').removeClass('alpha beta').addClass('gamma');
+  //   } else if (scrollPos >= heightP2) {
+  //     $('body').removeClass('alpha gamma').addClass('beta');
+  //   } else if (scrollPos >= heightP1) {
+  //     $('body').removeClass('beta gamma').addClass('alpha');
+  //   } else if (scrollPos < heightP1) {
+  //     $('body').removeClass('alpha beta gamma');
+  //   }
+  // });
+
+  $('a.scroll-link').on('click', function(e){
+    e.preventDefault();
+    var target = "#" + $(this).data("link");
+    $('html, body').animate({ scrollTop: $(target).offset().top }, 2000, 'easeOutQuart');
+  });
+
+  resizeWindow();
+  $(window).resize(resizeWindow);
+
+</script>
+
 </html>
