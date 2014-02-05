@@ -39,7 +39,7 @@ body
   border-bottom: 3px solid $light-color
   text-decoration: none
   +transition(all 50ms linear)
-  &:hover, &:active, &:focus
+  &:hover, &:active, &:focus, &.active
     background-color: $dark-color
     color: white
     border-bottom-width: 5px
@@ -122,15 +122,13 @@ section.home-panel
       width: 300px
       max-width: 100%
       margin: 0 0 5px
-    h1, p
-      line-height: 1.15em
-      color: #333
     h1
+      padding: 5px 10px 10px
+      background-color: $light-red
+      color: white
       font-family: $boldCondensed
       max-width: 400px
-    p
-      display: none
-      max-width: 300px
+      line-height: 1.15em
 
   &#about-pp
     // background: image-url('arrows.png') no-repeat left top
@@ -138,7 +136,7 @@ section.home-panel
     background-position: 50% 50%
     padding-top: 140px
     background-size: cover
-    background-attachment: scroll, fixed
+    background-attachment: fixed
     h1
       font-family: $boldCondensed helvetica sans-serif
       font-size: 3em
@@ -148,6 +146,7 @@ section.home-panel
     body.alpha &
       // background-image: image-url('arrows.png'), image-url('earth.jpg')
       // background-position: left top, 50% top
+      background-attachment: scroll
     img#pp-example
       width: 100%
     img#device-icons
@@ -155,7 +154,7 @@ section.home-panel
       clear: left
   &#about-us
     background-color: $dark-blue
-    background: $dark-blue image-url('nametag.png') no-repeat 86% 70px
+    background: $dark-blue image-url('nametag.png') no-repeat 86% 150px
     background-size: 300px
     color: white
     h1
