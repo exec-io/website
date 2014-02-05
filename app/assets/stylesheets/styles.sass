@@ -40,9 +40,10 @@ body
   text-decoration: none
   +transition(all 50ms linear)
   &:hover, &:active, &:focus, &.active
+    border-bottom-width: 5px
+  &.active
     background-color: $dark-color
     color: white
-    border-bottom-width: 5px
 
 
 h1, h2, h3, h4, h5, h6
@@ -106,15 +107,8 @@ section.home-panel
     padding: 10px
     background-color: rgba(255,255,255,1)
     margin: 0 0 5px
-    &.red
-      background-color: $dark-red
-      color: white
-    &.green
-      background-color: $light-green
-      color: white
-    &.blue
-      background-color: $dark-blue
-      color: white
+    p:last-child
+      margin-bottom: 0
   &#splash
     padding-top: 180px
     background-color: transparent
@@ -122,6 +116,7 @@ section.home-panel
       width: 300px
       max-width: 100%
       margin: 0 0 5px
+      background-color: white
     h1
       padding: 5px 10px 10px
       background-color: $light-red
@@ -131,7 +126,6 @@ section.home-panel
       line-height: 1.15em
 
   &#about-pp
-    // background: image-url('arrows.png') no-repeat left top
     background-image: image-url('office.jpg')
     background-position: 50% 50%
     padding-top: 140px
@@ -144,8 +138,6 @@ section.home-panel
       color: white
       background-color: rgba($light-green, 1)
     body.alpha &
-      // background-image: image-url('arrows.png'), image-url('earth.jpg')
-      // background-position: left top, 50% top
       background-attachment: scroll
     img#pp-example
       width: 100%
@@ -155,7 +147,7 @@ section.home-panel
   &#about-us
     background-color: $dark-blue
     background: $dark-blue image-url('nametag.png') no-repeat 86% 150px
-    background-size: 300px
+    background-size: 288px 180px
     color: white
     h1
       font-family: $boldCondensed helvetica sans-serif
@@ -210,7 +202,7 @@ section.home-panel
     h1.text-block
       font-family: $boldCondensed helvetica sans-serif
       font-size: 3em
-      text-transform: uppercase
+      
       display: inline-block
     .text-block
       color: black
@@ -222,39 +214,3 @@ section.home-panel
 
 section#feeds
   margin-top: 30px
-
-
-
-
-
-
-#locations img#globe
-  width: 100%
-
-#blog
-  #blog-text 
-    padding: 10px
-    background-color: white
-  header
-    border-bottom: 1px solid $bg-color
-    padding-bottom: 10px
-    div.photo
-      background-image: image-url('author/mikel.jpg')
-      width: 70px
-      height: 87px
-      background-size: 70px
-      float: right
-    h1
-      margin-top: 0
-    p
-      margin: 0
-    .date
-      color: #818181
-  #blog-list
-    border: none
-    padding: 0
-    h3
-      margin-top: 0
-      color: $dark-red
-      font-weight: 400
-      font-size: 1.4em
