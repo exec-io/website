@@ -5,11 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ExecIo</title>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag "vendor/html5shiv" %>
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Lato:200,400,700|Ubuntu:400,500' rel='stylesheet' type='text/css'> -->
   <script type="text/javascript" src="http://fast.fonts.net/jsapi/aa402fef-5d8d-474d-ac01-d479c210d7cd.js"></script>
+  <%= csrf_meta_tags %>
 </head>
 <body>
 
