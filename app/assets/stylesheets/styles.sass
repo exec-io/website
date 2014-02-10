@@ -82,9 +82,9 @@ header#main-nav
       float: left
       font-family: $mediumCondensed
       &.black
-        +colorful-links(#333, #818181)  
+        +colorful-links(#333, #818181)
       &.blue
-        +colorful-links($dark-blue, $light-blue)  
+        +colorful-links($dark-blue, $light-blue)
       &.red
         +colorful-links($dark-red, $light-red)
       &.orange
@@ -92,11 +92,12 @@ header#main-nav
       &.green
         +colorful-links($dark-green, $light-green)
       &:hover, &:active, &:focus
-        
+
 
 section.home-panel
   padding: 50px 0
   position: relative
+  height: 1500px
   .next-arrow
     position: absolute
     bottom: 20px
@@ -123,7 +124,7 @@ section.home-panel
       background-color: $light-red
       color: white
       font-family: $boldCondensed
-      max-width: 400px
+      max-width: 600px
       line-height: 1.15em
 
   &#about-pp
@@ -146,6 +147,8 @@ section.home-panel
     img#device-icons
       float: left
       clear: left
+    a
+      color: $dark-green
   &#about-us
     background-color: $dark-blue
     background: $dark-blue image-url('nametag.png') no-repeat 86% 150px
@@ -203,7 +206,7 @@ section.home-panel
     h1.text-block
       font-family: $boldCondensed helvetica sans-serif
       font-size: 3em
-      
+
       display: inline-block
     .text-block
       color: black
