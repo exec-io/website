@@ -1,6 +1,6 @@
 module ApplicationHelper
   def enabled_locales
-    ["en", "ja", "zh-TW"].map(&:to_sym)
+    ["hu", "sk", "ru", "zh-TW"].map(&:to_sym)
   end
 
   def random_link_color

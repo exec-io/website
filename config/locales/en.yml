@@ -9,7 +9,7 @@ en:
     - Fri
     - Sat
     abbr_month_names:
-    -
+    - 
     - Jan
     - Feb
     - Mar
@@ -35,7 +35,7 @@ en:
       long: "%B %d, %Y"
       short: "%b %d"
     month_names:
-    -
+    - 
     - January
     - February
     - March
@@ -224,9 +224,9 @@ en:
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
-          unit: ''
+          unit: 
       format:
-        delimiter: ''
+        delimiter: 
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -242,20 +242,20 @@ en:
           tb: TB
     percentage:
       format:
-        delimiter: ''
+        delimiter: 
     precision:
       format:
-        delimiter: ''
+        delimiter: 
   posts:
     '1':
       author_name: Mikel Lindsaar
       body_html: "<p>This is a test post</p>"
-      created_at: 2014-01-13 09:24:01.000000000 +01:00
+      created_at: 2014-01-13 19:24:01.000000000 +11:00
       title: Welcome to our first post
     '2':
       author_name: Mikel Lindsaar
       body_html: "<p>This is the 2nd test post</p>"
-      created_at: 2014-01-14 13:31:35.000000000 +01:00
+      created_at: 2014-01-14 23:31:35.000000000 +11:00
       title: Welcome to our 2nd post
   support:
     array:
@@ -272,7 +272,6 @@ en:
   welcome:
     show:
       about_us:
-        panel_title: About Exec.IO
         address: Address
         contact_us: Get in touch with us
         email: Email
@@ -294,6 +293,7 @@ en:
             design.  We didn't want to make internationalization an after thought, instead all of our
             products are built from the ground up to work in any language.
           </p>
+        panel_title: About Exec.IO
         phone: Phone
       contact_details:
         address_html: |-
@@ -311,7 +311,6 @@ en:
         latest_from_the_blog: Latest from the Exec i/o Blog
         quote: Our goal is to change the way the world operates by creating and providing tools that are effective, efficient and simple to use.
       locations:
-        panel_title: Exec i/o around the world
         panel_html: |-
           <p>
             We are a multi lingual company, focusing on bringing the best organisational tools
@@ -322,8 +321,8 @@ en:
             allowing you to expand to any corner and still keep your staff informed, efficient
             and online.
           </p>
+        panel_title: Exec i/o around the world
       prosperity_planner:
-        panel_title: The Prosperity Planner
         panel_html: |-
           <p>
             We at Exec i/o understand business. We use cutting edge administrative philosophy
@@ -346,3 +345,4 @@ en:
             Use of the Prosperity Planner App is free for all <a href="%{wise_url}" class="orange">WISE</a>
             members and comes with a 30 day free trial for anyone looking to become a WISE member.
           </p>
+        panel_title: The Prosperity Planner
