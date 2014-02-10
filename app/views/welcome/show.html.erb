@@ -4,7 +4,7 @@
       <div class='col-md-12'>
         <img src='assets/logo.png'/ id="splash-logo">
         <h1 class='title text-block'>
-          Intelligent applications to improve your business
+          <%= t('.home.quote') %>
         </h1>
       </div>
     </div>
@@ -16,17 +16,11 @@
   <div class='container'>
     <div class='row'>
       <article id='about-pp-text' class="col-md-6 col-sm-9 col-xs-12">
-        <h1 class='text-block green'>The Prosperity Planner</h1>
+        <h1 class='text-block green'><%= t('.prosperity_planner.panel_title') %></h1>
         <div class='text-block green'>
-          <p>
-            We at Exec i/o understand business. We use cutting edge administrative philosophy to create applications which can help your organisation reach new levels of efficiency and productivity.
-          </p>
-          <p>
-            Our flagship product, the Prosperity Planner, is an indispensable tool in this arsenal. Marrying organisational tools with high-concept business philosophy, this application can help you organise yourself, your team, or your entire company.
-          </p>
-          <p>Historically confined to physical books, the online version has all the tools that the physical version has, including Weekly and Daily Battle Plans, Calendar tools and over 40 Hubbard Management System topics covered in a fully searchable index.</p>
-
-          <p>Use of the Prosperity Planner App is free for all WISE members and comes with a 30 day free trial for anyone looking to become a WISE member.</p>
+          <%= t('.prosperity_planner.panel_html',
+          { :wise_url => 'http://www.wise.org',
+            :prosperity_planner_app_url => 'https://www.prosperityplanner.net/' } ) %>
         </div>
         <!-- <img src='assets/devices.png'/ id="device-icons"> -->
       </article>
@@ -44,58 +38,28 @@
   <div class='container'>
     <div class='row'>
       <article class='col-md-8'>
-        <h1 class=''>About Us</h1>
+        <h1 class=''><%= t('.about_us.panel_title') %></h1>
         <div class=''>
-          <p>
-            Exec i/o was founded in Sydney Australia on the 20th of September, 2012 with the goal to
-            change the way the world operates by creating and providing organisational tools that are
-            effective, efficient and simple to use.
-          </p>
-          <p>
-            This idea of online organisational software is where our name came from.  "Exec" is
-            short for "Executive", and "i/o" is the acronym for "Input" and "Output". So our software
-            takes data and information in, and outputs it in such a way to successfully execute
-            the expansion of an organisation.
-          </p>
-          <p>
-            From the beginning, we wanted to make systems that were easy to use, but multi lingual by
-            design.  We didn't want to make internationalization an after thought, instead all of our
-            products are built from the ground up to work in any language.
-          </p>
-          <p>
-            For our first project, we teamed up with <a href="http://www.wise.org/" class="orange">WISE</a> to produce
-            their online <a href="<%= prosperity_planner_url %>" class="blue">Prosperity Planner</a> and over
-            the coming year tweaked and improved the design until launch.
-          </p>
-          <p>
-            Now the Prosperity Planner is live, we are using the knowledge gained to release
-            more quality online organisational tools to the world.
-          </p>
+          <%= t('.about_us.panel_html',
+                { :wise_url => 'http://www.wise.org/',
+                  :prosperity_planner_path => 'https://www.prosperityplanner.net/'} )
+          %>
         </div>
-        <%#= t('about_us.show.page_html',
-             { :wise_url => 'http://www.wise.org/',
-               :prosperity_planner_path => prosperity_planner_url} )
-        %>
       </article>
-      <div class='col-md-4'>
-        <div class='speech-bubble'>
-          <h2>Hello!</h2>
-        </div>
-      </div>
     </div>
 
     <aside id="contact-us" class='row'>
       <div class='col-md-12'>
-        <h2><%= t('.contact_us') %></h2>
+        <h2><%= t('.about_us.contact_us') %></h2>
       </div>
       <% enabled_locales.each do |locale| %>
         <div class='col-md-4 col-sm-4'>
-          <h3><%= t('contact_details.name', {:locale => locale}) %></h3>
+          <h3><%= t('.contact_details.name', {:locale => locale}) %></h3>
           <ul>
-            <li><span><%= t('.phone') %></span><%= t('contact_details.phone', {:locale => locale}) %></li>
-            <li><span><%= t('.email') %></span><%= mail_to t('contact_details.email', {:locale => locale}), t('contact_details.email', {:locale => locale}), :class => random_link_color %></li>
-            <li><span><%= t('.facebook') %></span><%= link_to(t('contact_details.facebook_url_short', {:locale => locale}), t('contact_details.facebook_url', {:locale => locale}), :class => random_link_color) %></li>
-            <li><span><%= t('.address') %></span><%= t('contact_details.address_html', {:locale => locale}) %></li>
+            <li><span><%= t('.phone') %></span><%= t('.contact_details.phone', {:locale => locale}) %></li>
+            <li><span><%= t('.email') %></span><%= mail_to t('.contact_details.email', {:locale => locale}), t('.contact_details.email', {:locale => locale}), :class => random_link_color %></li>
+            <li><span><%= t('.facebook') %></span><%= link_to(t('.contact_details.facebook_url_short', {:locale => locale}), t('.contact_details.facebook_url', {:locale => locale}), :class => random_link_color) %></li>
+            <li><span><%= t('.address') %></span><%= t('.contact_details.address_html', {:locale => locale}) %></li>
           </ul>
         </div>
       <% end %>
@@ -109,15 +73,9 @@
     <div class='row'>
       <%#= t('locations.show.page_html') %>
       <article id="locations-text" class='col-md-7'>
-        <h1 class='text-block'>Exec i/o around the world</h1>
+        <h1 class='text-block'><%= t('.locations.panel_title') %></h1>
         <div class='text-block orange'>
-          <p>
-            We are a multi lingual company, focusing on bringing the best organisational tools
-            in the world to as many languages as we can.
-            With our Language Managers spanning the globe, we can provide organisational software
-            allowing you to expand to any corner and still keep your staff informed, efficient
-            and online.
-          </p>
+          <%= t('.locations.panel_html') %>
         </div>
       </article>
     </div>

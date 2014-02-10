@@ -1,3 +1,0 @@
-class ProsperityPlannerController < ApplicationController
-
-end
