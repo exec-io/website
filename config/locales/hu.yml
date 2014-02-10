@@ -1,18 +1,4 @@
 hu:
-  about_us:
-    show:
-      address: 
-      contact_us: 
-      email: 
-      facebook: 
-      page_html: 
-      phone: 
-  contact_details:
-    address_html: 
-    email: 
-    facebook_url: 
-    name: 
-    phone: 
   date:
     abbr_day_names:
     - v.
@@ -23,7 +9,7 @@ hu:
     - p.
     - szo.
     abbr_month_names:
-    - 
+    -
     - jan.
     - febr.
     - márc.
@@ -49,7 +35,7 @@ hu:
       long: "%Y. %B %e."
       short: "%b %e."
     month_names:
-    - 
+    -
     - január
     - február
     - március
@@ -118,9 +104,9 @@ hu:
       already_authenticated: Már belépett.
       inactive: A fiók még nincs aktiválva.
       invalid: Hibás email cím vagy jelszó.
-      last_attempt: 
+      last_attempt:
       locked: A fiók zárolva lett.
-      not_found_in_database: 
+      not_found_in_database:
       timeout: A munkafolyamat lejárt. Újboli bejelentkezés szükséges.
       unauthenticated: A folytatáshoz bejelentkezés szükséges.
       unconfirmed: A folytatáshoz az email cím megerősítése szükséges.
@@ -162,7 +148,7 @@ hu:
       already_confirmed: már meg van erősítve
       blank: nincs megadva
       confirmation: nem egyezik
-      confirmation_period_expired: 
+      confirmation_period_expired:
       empty: nincs megadva
       equal_to: pontosan %{count} kell legyen
       even: páros kell legyen
@@ -201,16 +187,12 @@ hu:
       update: "%{model} Módosítása"
   layouts:
     application:
-      about_us: 
-      blog: 
-      contact: 
-      footer_text_html: 
-      home: 
-      locations: 
-      prosperity_planner: 
-  locations:
-    show:
-      page_html: 
+      about_us:
+      blog:
+      contact:
+      home:
+      locations:
+      prosperity_planner:
   number:
     currency:
       format:
@@ -260,18 +242,15 @@ hu:
         delimiter: ''
   posts:
     '1':
-      author_name: 
-      body_html: 
-      created_at: 
-      title: 
+      author_name:
+      body_html:
+      created_at:
+      title:
     '2':
-      author_name: 
-      body_html: 
-      created_at: 
-      title: 
-  prosperity_planner:
-    show:
-      page_html: 
+      author_name:
+      body_html:
+      created_at:
+      title:
   support:
     array:
       last_word_connector: " és "
@@ -286,7 +265,28 @@ hu:
     pm: du.
   welcome:
     show:
-      exec_io: 
-      founder: 
-      latest_from_the_blog: 
-      quote: 
+      about_us:
+        address:
+        contact_us:
+        email:
+        facebook:
+        panel_html:
+        panel_title:
+        phone:
+      contact_details:
+        address_html:
+        email: hungarian@exec.io
+        facebook_url: https://www.facebook.com/execiohungary
+        facebook_url_short: facebook.com/execiohungary
+        name: Exec.IO Hungry
+      home:
+        exec_io:
+        founder:
+        latest_from_the_blog:
+        quote:
+      locations:
+        panel_html:
+        panel_title:
+      prosperity_planner:
+        panel_html:
+        panel_title:

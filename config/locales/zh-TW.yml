@@ -1,18 +1,4 @@
 zh-TW:
-  about_us:
-    show:
-      address: 
-      contact_us: 
-      email: 
-      facebook: 
-      page_html: 
-      phone: 
-  contact_details:
-    address_html: "華美街63號, 台中市西區 403"
-    email: taiwanese@exec.io
-    facebook_url: https://www.facebook.com/execiotaiwan
-    name: ExecIO 台湾
-    phone: "+886 918914820"
   date:
     abbr_day_names:
     - "日"
@@ -23,7 +9,7 @@ zh-TW:
     - "五"
     - "六"
     abbr_month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月
@@ -49,7 +35,7 @@ zh-TW:
       long: "%Y年%b%d日"
       short: "%b%d日"
     month_names:
-    - 
+    -
     - "一月"
     - "二月"
     - "三月"
@@ -118,7 +104,7 @@ zh-TW:
       already_authenticated: "你已經登入。"
       inactive: "您的帳號尚未被啟用。"
       invalid: Email 或密碼是無效的。
-      last_attempt: 
+      last_attempt:
       locked: "您的帳號已被鎖定。"
       not_found_in_database: Email 或密碼是無效的。
       timeout: "您的登入時效過期，請重新登入，才能繼續。"
@@ -201,16 +187,12 @@ zh-TW:
       update: "更新%{model}"
   layouts:
     application:
-      about_us: 
-      blog: 
-      contact: 
-      footer_text_html: 
-      home: 
-      locations: 
-      prosperity_planner: 
-  locations:
-    show:
-      page_html: 
+      about_us:
+      blog:
+      contact:
+      home:
+      locations:
+      prosperity_planner:
   number:
     currency:
       format:
@@ -260,18 +242,15 @@ zh-TW:
         delimiter: ''
   posts:
     '1':
-      author_name: 
-      body_html: 
-      created_at: 
-      title: 
+      author_name:
+      body_html:
+      created_at:
+      title:
     '2':
-      author_name: 
-      body_html: 
-      created_at: 
-      title: 
-  prosperity_planner:
-    show:
-      page_html: 
+      author_name:
+      body_html:
+      created_at:
+      title:
   support:
     array:
       last_word_connector: ", 和 "
@@ -286,7 +265,29 @@ zh-TW:
     pm: "下午"
   welcome:
     show:
-      exec_io: 
-      founder: 
-      latest_from_the_blog: 
-      quote: 
+      about_us:
+        address:
+        contact_us:
+        email:
+        facebook:
+        panel_html:
+        panel_title:
+        phone:
+      contact_details:
+        address_html:
+        email: taiwanese@exec.io
+        facebook_url: https://www.facebook.com/execiotaiwan
+        facebook_url_short: facebook.com/execiotaiwan
+        name: Exec.IO 台湾
+        phone:
+      home:
+        exec_io:
+        founder:
+        latest_from_the_blog:
+        quote:
+      locations:
+        panel_html:
+        panel_title:
+      prosperity_planner:
+        panel_html:
+        panel_title:

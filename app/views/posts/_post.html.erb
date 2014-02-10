@@ -1,7 +1,11 @@
-<h1><%= post.title %></h1>
-<h2><%= post.author_name %></h2>
-<h3><%= post.created_at %></h3>
-<section>
-  <%= post.body_html.html_safe %>
-</section>
-
+<div class='blog-post preview' id="<%= post.author_name %>">
+  <div class='photo'></div>
+  <div class='info'>
+    <h4 class='title'><%= link_to post.title, "", :class => random_link_color %></h4>
+    <p class='author'>By <%= post.author_name %></p>
+    <p class='date'>Posted <%= time_ago_in_words(post.created_at) %> ago.</p>
+    <section style='display: none'>
+      <%= post.body_html.html_safe %>
+    </section>
+  </div>
+</div>

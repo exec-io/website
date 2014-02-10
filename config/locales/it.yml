@@ -1,18 +1,4 @@
 it:
-  about_us:
-    show:
-      address: 
-      contact_us: 
-      email: 
-      facebook: 
-      page_html: 
-      phone: 
-  contact_details:
-    address_html: 
-    email: 
-    facebook_url: 
-    name: 
-    phone: 
   date:
     abbr_day_names:
     - Dom
@@ -210,13 +196,9 @@ it:
       about_us: 
       blog: 
       contact: 
-      footer_text_html: 
       home: 
       locations: 
       prosperity_planner: 
-  locations:
-    show:
-      page_html: 
   number:
     currency:
       format:
@@ -275,9 +257,6 @@ it:
       body_html: 
       created_at: 
       title: 
-  prosperity_planner:
-    show:
-      page_html: 
   support:
     array:
       last_word_connector: " e "
@@ -292,7 +271,29 @@ it:
     pm: pm
   welcome:
     show:
-      exec_io: 
-      founder: 
-      latest_from_the_blog: 
-      quote: 
+      about_us:
+        address: 
+        contact_us: 
+        email: 
+        facebook: 
+        panel_html: 
+        panel_title: 
+        phone: 
+      contact_details:
+        address_html: 
+        email: 
+        facebook_url: 
+        facebook_url_short: 
+        name: 
+        phone: 
+      home:
+        exec_io: 
+        founder: 
+        latest_from_the_blog: 
+        quote: 
+      locations:
+        panel_html: 
+        panel_title: 
+      prosperity_planner:
+        panel_html: 
+        panel_title: 

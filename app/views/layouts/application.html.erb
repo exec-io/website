@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ExecIo</title>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag "vendor/html5shiv" %>
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/aa402fef-5d8d-474d-ac01-d479c210d7cd.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><%= link_to_unless_current(t('.home'), root_path) %></li>
-      <li><%= link_to_unless_current(t('.blog'), blog_path) %></li>
-      <li><%= link_to_unless_current(t('.about_us'), about_us_path) %></li>
-      <li><%= link_to_unless_current(t('.prosperity_planner'), prosperity_planner_path) %></li>
-      <li><%= link_to_unless_current(t('.locations'), locations_path) %></li>
-    </ul>
-  </nav>
+  <header id='main-nav'>
+    <nav id="logo">
+      <%= link_to t('.exec_io'), root_path %>
+    </nav>
+    <nav id="links">
+      <%= link_to t('.home'), "section#splash", :class => 'red scroll-link active', "data-link" => "splash" %>
+      <%= link_to t('.prosperity_planner'), "section#about-pp", :class => 'green scroll-link', "data-link" => "about-pp" %>
+      <%= link_to t('.about_us'), "section#about-us", :class => 'blue scroll-link', "data-link" => "about-us" %>
+      <%= link_to t('.locations'), "section#locations", :class => 'orange scroll-link', "data-link" => "locations" %>
+      <%= link_to t('.blog'), "section#blog", :class => 'red scroll-link', :style => 'display: none', "data-link" => "blog" %>
+    </nav>
+
+  </header>
 
   <%= yield %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
-
-  <footer>
-    <p>
-      <%= t('.footer_text_html', { :blog_path => blog_path,
-                                   :facebook_url => 'https://www.facebook.com/execiohq',
-                                   :twitter_url => 'https://www.twitter.com/exec_io' }) %>
-    </p>
-  </footer>
 </body>
+
 </html>
