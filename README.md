@@ -1,72 +1,77 @@
-exec.io Overview
+Application Name Overview
 ==============================================
 
-Brochure website for exec.io
+This is the exec.io website found at http://exec.io/
 
 
 Required Environment / Minimum Setup
 ----------------------------------------------
 
-Uses ruby 1.9.3.  Just bundle install with the following ruby version:
+* Ruby version 2.1.0
+* PostgreSQL database
 
-    $ cat .rvmrc
-    rvm use ruby-1.9.3-p125@exec-io --create
+Basic setup involves:
+
+    $ git clone git@github.com:exec-io/website.git
+    $ rake db:setup
+    $ rake db:seed
+    $ rails s
+
+Should get you running.
 
 
 Notable Deviations
 ----------------------------------------------
 
+This website is a multilingual website that is backed by localeapp.
+
+The exec.io website only uses the PostgreSQL database for local storage of blog
+posts at this point.  All blog posts are actually stored in the translation files
+and are updated via localeapp.  This allows for multiple translators to work
+on the website translations at once.
 
 
 Accessing the Site
 ----------------------------------------------
 
-Running on heroku, contact Mikel or Jason for access as needed.
+Site is a simple rails app responding on one domain name, exec.io.
+
+It does have multiple languages though.  You access these by adding the locale
+to the start of the path, for example, http://exec.io/de will give you the root
+page in German.
 
 
 Configuration
 ----------------------------------------------
 
-No configuration yet
+The app is hosted on Heroku.
 
 
 Walkthrough / Smoke Test
 ----------------------------------------------
 
-Boot it up, should have the home page and a /charges page work
+You should be able to visit each page.  You can also access the admin screen via
+the /admin path.  This uses ActiveAdmin.
 
 
 Testing
 ----------------------------------------------
 
-Usual.  Just uses rspec.
-
     $ rake spec
+
+Runs all of the specs.
 
 
 Staging Environment
 ----------------------------------------------
 
-No staging environment.
+No staging environment at this time.
 
 
 Production Environment
 ----------------------------------------------
 
-Simple, one host production environment on Heroku under reInteractive accounts
+Production is on Heroku.  Release via:
 
-
-Design
-----------------------------------------------
-
-
-
-
-Known Issues / Gotcha
-----------------------------------------------
-
-
-
-Extended Resources
-----------------------------------------------
+    $ git push heroku master:master
 

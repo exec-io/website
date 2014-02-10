@@ -1,0 +1,220 @@
+@import "compass"
+
+$light-blue: #126AAE
+$dark-blue: #0A3456
+$light-green: #588F40
+$dark-green: #245028
+$light-orange: #EE9622
+$dark-orange: #A15724
+$light-red: #CB214F
+$dark-red: #5B103B
+
+$bg-color: #efefed
+$twitter-blue: #2BA9E1
+
+$light: 'HelveticaNeueW01-45Ligh', helvetica, sans-serif
+$roman: 'HelveticaNeueW01-55Roma', helvetica, sans-serif
+$medium: 'HelveticaNeueW01-65Medi', helvetica, sans-serif
+$bold: 'HelveticaNeueW01-75Bold', helvetica, sans-serif
+$mediumCondensed: 'HelveticaNeueW01-67MdCn 692710', helvetica, sans-serif
+$boldCondensed: 'HelveticaNeueW01-77BdCn 692722', helvetica, sans-serif
+$heavyCondensed: 'HelveticaNeueW01-87HvCn 692734', helvetica, sans-serif
+
+
+html
+  background-color: $bg-color
+
+body
+  background-color: transparent
+  font-family: $roman
+  background: black image-url('earth.jpg') no-repeat 50% top
+  background-attachment: fixed
+  &.alpha, &.beta, &.gamma
+    background-image: none
+
+
+=colorful-links($dark-color, $light-color)
+  color: white
+  background-color: #333
+  background-color: rgba(0,0,0,.75)
+  border-bottom: 3px solid $light-color
+  text-decoration: none
+  +transition(all 50ms linear)
+  &:hover, &:active, &:focus, &.active
+    border-bottom-width: 5px
+  &.active
+    background-color: $dark-color
+    color: white
+
+
+h1, h2, h3, h4, h5, h6
+  // font-family: "Lato"
+  font-family: $boldCondensed
+  // font-weight: "700"
+h1, h2, h3
+  // font-weight: 200
+
+
+
+header#main-nav
+  position: fixed
+  top: 0px
+  right: 20px
+  z-index: 200
+  nav#logo a
+    background: transparent image-url('logo.png') no-repeat left 50%
+    background-size: auto 50px
+    height: 50px
+    color: transparent
+    // display: block
+    display: none
+    float: left
+    width: 167px
+
+  nav#links
+    float: right
+    font-size: 1.1em
+    a
+      padding: 10px 5px 5px
+      margin: 0 0 0 5px
+      font-weight: 200
+      display: block
+      float: left
+      font-family: $mediumCondensed
+      &.black
+        +colorful-links(#333, #818181)
+      &.blue
+        +colorful-links($dark-blue, $light-blue)
+      &.red
+        +colorful-links($dark-red, $light-red)
+      &.orange
+        +colorful-links($dark-orange, $light-orange)
+      &.green
+        +colorful-links($dark-green, $light-green)
+      &:hover, &:active, &:focus
+
+
+section.home-panel
+  padding: 50px 0
+  position: relative
+  min-height: 1500px
+  .next-arrow
+    position: absolute
+    bottom: 20px
+    right: 20px
+  .prev-arrow
+    @extend .next-arrow
+    +transform(rotate(180deg))
+  .text-block
+    padding: 10px
+    background-color: rgba(255,255,255,1)
+    margin: 0 0 5px
+    p:last-child
+      margin-bottom: 0
+  &#splash
+    padding-top: 180px
+    background-color: transparent
+    #splash-logo
+      width: 300px
+      max-width: 100%
+      margin: 0 0 5px
+      background-color: white
+    h1
+      padding: 5px 10px 10px
+      background-color: $light-red
+      color: white
+      font-family: $boldCondensed
+      max-width: 600px
+      line-height: 1.15em
+
+  &#about-pp
+    background-image: image-url('office.jpg')
+    background-position: 50% 50%
+    padding-top: 140px
+    background-size: cover
+    background-attachment: fixed
+    h1
+      font-family: $boldCondensed helvetica sans-serif
+      font-size: 3em
+      display: inline-block
+    h1, div.text-block
+      color: white
+      background-color: $light-green
+    body.alpha &
+      background-attachment: scroll
+    img#pp-example
+      width: 100%
+    img#device-icons
+      float: left
+      clear: left
+    a
+      color: $dark-green
+  &#about-us
+    background-color: $dark-blue
+    background: $dark-blue image-url('nametag.png') no-repeat 86% 150px
+    background-size: 288px 180px
+    color: white
+    h1
+      font-family: $boldCondensed helvetica sans-serif
+      font-size: 4em
+      text-transform: uppercase
+      color: white
+    .speech-bubble
+      display: none
+      background: transparent image-url('speech-bubble.png') no-repeat
+      background-size: 100%
+      height: 225px
+      text-align: center
+      color: white
+      padding-top: 80px
+      margin-top: 80px
+      h2
+        font-family: $boldCondensed
+        font-size: 3.5em
+        display: block
+        margin: 0
+        height: 40px
+  #contact-us
+    h2
+      margin-bottom: 15px
+      text-transform: uppercase
+    h3
+      font-size: 1.3em
+      font-weight: 500
+      margin: 0px
+    ul
+      list-style: none
+      margin: 0 0 15px
+      padding: 0
+      border-left: 5px solid $light-blue
+      li
+        margin: 7px 0 0 10px
+        line-height: 1em
+      span
+        display: block
+        font-size: .75em
+        font-weight: bold
+        display: block
+        line-height: 0.8em
+        margin-bottom: 5px
+        font-family: $bold
+        text-transform: uppercase
+  &#locations
+    background: white image-url('world-map.jpg') no-repeat 50% 20%
+    background-attachment: fixed
+    background-size: cover
+    h1.text-block
+      font-family: $boldCondensed helvetica sans-serif
+      font-size: 3em
+
+      display: inline-block
+    .text-block
+      color: black
+      background-color: rgba(white, .85)
+
+
+  &#blog
+    display: none
+
+section#feeds
+  margin-top: 30px

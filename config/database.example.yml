@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  database: exec_io_development
+  encoding: unicode
+  pool: 15
+  username: root
+  host: localhost
+  min_messages: warning
+
+test:
+  adapter: postgresql
+  database: exec_io_test
+  encoding: unicode
+  pool: 15
+  username: root
+  host: localhost
+  min_messages: warning

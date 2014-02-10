@@ -1,0 +1,91 @@
+<section id='splash' class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <img src='assets/logo.png'/ id="splash-logo">
+        <h1 class='title text-block'>
+          <%= t('.home.quote') %>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <%= link_to image_tag('down-arrow-white.png'), "section#about-pp", :class => 'scroll-link next-arrow', "data-link" => "about-pp" %>
+</section>
+
+<section id="about-pp" class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <article id='about-pp-text' class="col-md-6 col-sm-9 col-xs-12">
+        <h1 class='text-block green'><%= t('.prosperity_planner.panel_title') %></h1>
+        <div class='text-block green'>
+          <%= t('.prosperity_planner.panel_html',
+          { :wise_url => 'http://www.wise.org',
+            :prosperity_planner_app_url => 'https://www.prosperityplanner.net/' } ) %>
+        </div>
+        <!-- <img src='assets/devices.png'/ id="device-icons"> -->
+      </article>
+
+      <!-- <div class="col-md-5 col-sm-3 col-xs-12">
+        <%= image_tag "pp-example.png", :id => 'pp-example' %>
+      </div> -->
+    </div>
+  </div>
+  <%= link_to image_tag('down-arrow-black.png'), "section#about-us", :class => 'scroll-link next-arrow', "data-link" => "about-us" %>
+</section>
+
+
+<section id="about-us" class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <article class='col-md-8'>
+        <h1 class=''><%= t('.about_us.panel_title') %></h1>
+        <div class=''>
+          <%= t('.about_us.panel_html',
+                { :wise_url => 'http://www.wise.org/',
+                  :prosperity_planner_path => 'https://www.prosperityplanner.net/'} )
+          %>
+        </div>
+      </article>
+    </div>
+
+    <aside id="contact-us" class='row'>
+      <div class='col-md-12'>
+        <h2><%= t('.about_us.contact_us') %></h2>
+      </div>
+      <div class='col-md-4 col-sm-4'>
+        <h3><%= t('.contact_details.name', {:locale => :en}) %></h3>
+        <ul>
+          <li><span><%= t('.phone') %></span><%= t('.contact_details.phone', {:locale => :en}) %></li>
+          <li><span><%= t('.email') %></span><%= mail_to t('.contact_details.email', {:locale => :en}), t('.contact_details.email', {:locale => :en}), :class => random_link_color %></li>
+          <li><span><%= t('.facebook') %></span><%= link_to(t('.contact_details.facebook_url_short', {:locale => :en}), t('.contact_details.facebook_url', {:locale => :en}), :class => random_link_color) %></li>
+          <li><span><%= t('.address') %></span><%= t('.contact_details.address_html', {:locale => :en}) %></li>
+        </ul>
+      </div>
+      <% enabled_locales.each do |locale| %>
+        <div class='col-md-4 col-sm-4'>
+          <h3><%= t('.contact_details.name', {:locale => locale}) %></h3>
+          <ul>
+            <li><span><%= t('.email') %></span><%= mail_to t('.contact_details.email', {:locale => locale}), t('.contact_details.email', {:locale => locale}), :class => random_link_color %></li>
+            <li><span><%= t('.facebook') %></span><%= link_to(t('.contact_details.facebook_url_short', {:locale => locale}), t('.contact_details.facebook_url', {:locale => locale}), :class => random_link_color) %></li>
+          </ul>
+        </div>
+      <% end %>
+    </aside>
+  </div>
+  <%= link_to image_tag('down-arrow-white.png'), "section#locations", :class => 'scroll-link next-arrow', "data-link" => "locations" %>
+</section>
+
+<section id='locations' class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <%#= t('locations.show.page_html') %>
+      <article id="locations-text" class='col-md-7'>
+        <h1 class='text-block'><%= t('.locations.panel_title') %></h1>
+        <div class='text-block orange'>
+          <%= t('.locations.panel_html') %>
+        </div>
+      </article>
+    </div>
+  </div>
+  <%= link_to image_tag('down-arrow-black.png'), "section#splash", :class => 'scroll-link prev-arrow', "data-link" => "splash" %>
+</section>

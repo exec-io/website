@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exec-Io</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExecIo</title>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag "vendor/html5shiv" %>
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/aa402fef-5d8d-474d-ac01-d479c210d7cd.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class='container'>
-    <header>
-      <h1 class='logo'>
-        <a href="<%= root_path %>">exec.io</a>
-      </h1>
-      <p class='description'>
-        Exec.io is a new company with a simple goal, to build excellent online applications to help your business flourish! Watch this space for our new, exciting offerings!
-      </p>
-    </header>
-    
-    <%= yield %>
 
+  <header id='main-nav'>
+    <nav id="logo">
+      <%= link_to t('.exec_io'), root_path %>
+    </nav>
+    <nav id="links">
+      <%= link_to t('.home'), "section#splash", :class => 'red scroll-link active', "data-link" => "splash" %>
+      <%= link_to t('.prosperity_planner'), "section#about-pp", :class => 'green scroll-link', "data-link" => "about-pp" %>
+      <%= link_to t('.about_us'), "section#about-us", :class => 'blue scroll-link', "data-link" => "about-us" %>
+      <%= link_to t('.locations'), "section#locations", :class => 'orange scroll-link', "data-link" => "locations" %>
+      <%= link_to t('.blog'), "section#blog", :class => 'red scroll-link', :style => 'display: none', "data-link" => "blog" %>
+    </nav>
 
-    <footer>
-      <div class='column'>
-        <p>
-          <strong>Email:</strong>
-          <a href='mailto:info@exec.io' type='email'>info@exec.io</a>
-        </p>
-        <p>
-          <strong>Phone:</strong>
-          +61 2 8912 2197
-        </p>
-      </div>
-      <div class='column last'>
-        <p>
-          <strong>Address:</strong>
-          Level 32, 101 Miller Street,<br>
-          North Sydney, NSW, 2060
-        </p>
-      </div>
-    </footer>
+  </header>
 
-  </div>
+  <%= yield %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
 </body>
+
 </html>
