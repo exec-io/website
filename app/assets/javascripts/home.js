@@ -44,6 +44,6 @@ $('a.scroll-link').on('click', function(e){
   $('html, body').animate({ scrollTop: $(target).offset().top }, 1500, 'easeInOutQuart');
 });
 
-resizeWindow();
 $(window).resize(resizeWindow);
 
+$(document).ready(function() { resizeWindow() });
