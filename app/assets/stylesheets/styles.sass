@@ -98,7 +98,13 @@ section.home-panel
   padding: 50px 0
   position: relative
   min-height: 1500px
+  a
+    background-color: rgba(0,0,0,.5)
+    color: white
+    padding: 2px 2px
+    text-decoration: none
   .next-arrow
+    background-color: transparent !important
     position: absolute
     bottom: 20px
     right: 20px
@@ -148,17 +154,20 @@ section.home-panel
       float: left
       clear: left
     a
-      color: $dark-green
+      background-color: rgba($dark-green, .75)
+      &:hover
+        background-color: rgba($dark-green, .5)
   &#about-us
     background-color: $dark-blue
-    background: $dark-blue image-url('nametag.png') no-repeat 86% 150px
-    background-size: 288px 180px
     color: white
     h1
       font-family: $boldCondensed helvetica sans-serif
       font-size: 4em
       text-transform: uppercase
       color: white
+    img#nametag
+      width: 100%
+      margin-top: 30px
     .speech-bubble
       display: none
       background: transparent image-url('speech-bubble.png') no-repeat
@@ -174,6 +183,12 @@ section.home-panel
         display: block
         margin: 0
         height: 40px
+    a
+      background-color: rgba($light-blue, .4)
+      &:hover
+        background-color: rgba($light-blue, .65)
+    ul a
+      display: inline-block
   #contact-us
     h2
       margin-bottom: 15px
