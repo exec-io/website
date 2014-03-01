@@ -32,7 +32,6 @@ body
   &.alpha, &.beta, &.gamma
     background-image: none
 
-
 =colorful-links($dark-color, $light-color)
   color: white
   background-color: #333
@@ -91,11 +90,27 @@ header#main-nav
         +colorful-links($dark-orange, $light-orange)
       &.green
         +colorful-links($dark-green, $light-green)
-      &:hover, &:active, &:focus
+
+
+@-webkit-keyframes pulse
+  0%
+    font-size: 2.5em
+  50% 
+    font-size: 3em
+  100% 
+    font-size: 2.5em
+  
+@keyframes pulse 
+  0%
+    font-size: 2.5em
+  50% 
+    font-size: 3em
+  100% 
+    font-size: 2.5em
 
 
 section.home-panel
-  padding: 50px 0
+  padding: 80px 0 50px
   position: relative
   min-height: 1500px
   a
@@ -103,14 +118,33 @@ section.home-panel
     color: white
     padding: 2px 2px
     text-decoration: none
-  .next-arrow
-    background-color: transparent !important
+  
+  a.nav-arrow
     position: absolute
     bottom: 20px
     right: 20px
-  .prev-arrow
-    @extend .next-arrow
-    +transform(rotate(180deg))
+    width: 65px
+    font-size: 2.5em
+    text-align: center
+    background-color: transparent !important
+    -webkit-animation: pulse 1s infinite
+    +transition(color 100ms linear)
+    &.dark
+      color: black
+    &:hover
+      -webkit-animation: none
+
+    &.white:hover
+      color: #818181
+    &.red:hover
+      color: $light-red
+    &.green:hover
+      color: lighten($light-green, 20%)
+    &.blue:hover
+      color: $light-blue
+    &.orange:hover
+      color: $light-orange
+    
   .text-block
     padding: 10px
     background-color: rgba(255,255,255,1)
@@ -146,7 +180,7 @@ section.home-panel
     h1, div.text-block
       color: white
       background-color: $light-green
-    body.alpha &
+    body.s1 &
       background-attachment: scroll
     img#pp-example
       width: 100%
@@ -158,11 +192,12 @@ section.home-panel
       &:hover
         background-color: rgba($dark-green, .5)
   &#about-us
-    background-color: $dark-blue
+    background-color: rgba($dark-blue, .75)
     color: white
     h1
       font-family: $boldCondensed helvetica sans-serif
       font-size: 4em
+      margin: 0 0 10px
       text-transform: uppercase
       color: white
     img#nametag
@@ -214,6 +249,48 @@ section.home-panel
         margin-bottom: 5px
         font-family: $bold
         text-transform: uppercase
+  &#our-board
+    background-color: black
+    background-image: image-url('boardroom.jpg')
+    background-size: cover
+    background-position: 50%
+    color: white
+    h2
+      font-size: 3em
+      display: inline-block
+      margin: 0 0 10px
+      background-color: #5b103b
+      padding: 5px
+    article.boardmember
+      background-color: $dark-red
+      +background-image(linear-gradient(left,#000, #000 90px, $dark-red 91px))
+      width: 100%
+      vertical-align: middle
+      +clearfix
+      position: relative
+      margin-bottom: 10px
+      min-height: 104px
+      h3
+        margin: 0 0 5px
+        padding: 3px 3px 3px 100px
+        
+      p
+        margin: 5px 0 5px 100px
+        color: white
+      img
+        position: absolute
+        top: 0
+        width: 90px
+        +border-radius(0)
+        +transition(all 100ms linear)
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale") /* Firefox 3.5+ */
+        filter: gray /* IE6-9 */
+        -webkit-filter: grayscale(100%)
+      &:hover img
+        filter: none
+        -webkit-filter: grayscale(0%)
+        
+
   &#locations
     background: white image-url('world-map.jpg') no-repeat 50% 20%
     background-attachment: fixed
@@ -221,7 +298,6 @@ section.home-panel
     h1.text-block
       font-family: $boldCondensed helvetica sans-serif
       font-size: 3em
-
       display: inline-block
     .text-block
       color: black
@@ -233,3 +309,20 @@ section.home-panel
 
 section#feeds
   margin-top: 30px
+
+@font-face
+  font-family: 'icons'
+  src: asset-url('icons.eot')
+  src: asset-url('icons.eot?#iefix') format('embedded-opentype'), asset-url('icons.woff') format('woff'), asset-url('icons.ttf') format('truetype'), asset-url('icons.svg#icons') format('svg')
+  font-weight: normal
+  font-style: normal
+
+[data-icon]:before
+  font-family: 'icons' !important
+  content: attr(data-icon)
+  speak: none
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  -webkit-font-smoothing: antialiased

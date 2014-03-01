@@ -193,11 +193,12 @@ en:
       update: Update %{model}
   layouts:
     application:
-      about_us: About Exec i/o
+      about_us: About Us
       blog: Blog
       contact: Contact
       home: Home
       locations: Locations
+      our_board: Our Board
       prosperity_planner: Prosperity Planner
   number:
     currency:
@@ -250,12 +251,12 @@ en:
     '1':
       author_name: Mikel Lindsaar
       body_html: "<p>This is a test post</p>"
-      created_at: 2014-01-13 19:24:01.000000000 +11:00
+      created_at: 2014-01-13 09:24:01.000000000 +01:00
       title: Welcome to our first post
     '2':
       author_name: Mikel Lindsaar
       body_html: "<p>This is the 2nd test post</p>"
-      created_at: 2014-01-14 23:31:35.000000000 +11:00
+      created_at: 2014-01-14 13:31:35.000000000 +01:00
       title: Welcome to our 2nd post
   support:
     array:
@@ -322,6 +323,12 @@ en:
             and online.
           </p>
         panel_title: Exec i/o around the world
+      our_board:
+        maren_copy: Arte Maren has been an International Keynote Speaker, Corporate Trainer and private Consultant for almost 3 decades reaching hundreds of thousands of professionals through his Seminars, Radio and Television appearances. Arte authored the book The Natural Laws of Management.
+        runow_copy: 'Marten Runow is the CEO of the top Human Resources company on the planet and has been a major driving force for LRH Admin Tech dissemination internationally for nearly 30 years. With offices in over 20 countries, Marten and his team have introduced tens of thousands of professionals to LRH tech. '
+        terrenzi_copy: Mr. Nick Terrenzi is the Executive Director of the Hubbard College of Administration. As faculty of the HCA for 20 years, Nick has been the driving force behind the HCA network’s biggest boom in history since becoming the Executive Director. He has expanded the worldwide network of colleges to its largest scope ever, with now 52 colleges internationally. He is a world renowned speaker and has reached tens of thousands of professionals with Hubbard Administrative Technology for nearly 3 decades.
+        the_board: The Exec i/o Board
+        valtin_copy: 'Mr. Patrick Valtin is an accomplished Entrepreneur and Author with nearly 3 decades as a successful coach, consultant, sales and leadership Trainer AND as an internationally renowned speaker in more than 35 countries, having helped now over one hundred thousand professionals in the areas of recruitment, sales, marketing, organization and leadership. '
       prosperity_planner:
         panel_html: |-
           <p>
