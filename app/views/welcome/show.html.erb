@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  <%= link_to image_tag('down-arrow-white.png'), "section#about-pp", :class => 'scroll-link next-arrow', "data-link" => "about-pp" %>
+  <a href="section#about-pp" data-link="about-pp" aria-hidden="true" data-icon="&#xe602;" class="scroll-link nav-arrow white"></a>
 </section>
 
 <section id="about-pp" class='home-panel'>
@@ -25,7 +25,7 @@
       </article>
     </div>
   </div>
-  <%= link_to image_tag('down-arrow-black.png'), "section#about-us", :class => 'scroll-link next-arrow', "data-link" => "about-us" %>
+  <a href="section#about-us" data-link="about-us" aria-hidden="true" data-icon="&#xe602;" class="scroll-link nav-arrow dark green"></a>
 </section>
 
 
@@ -70,7 +70,48 @@
       <% end %>
     </aside>
   </div>
-  <%= link_to image_tag('down-arrow-white.png'), "section#locations", :class => 'scroll-link next-arrow', "data-link" => "locations" %>
+  <a href="section#our-board" data-link="our-board" aria-hidden="true" data-icon="&#xe602;" class="scroll-link nav-arrow blue"></a>
+</section>
+
+<section id='our-board' class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <h2><%= t('.our_board.the_board') %></h2>
+        <article class='boardmember'>
+          <%= image_tag "boardmembers/patrick-valtin.jpg" %>
+          <h3>Patrick Valtin</h3>
+          <p>
+            <%= t('.our_board.valtin_copy') %>
+          </p>
+        </article>
+        
+        <article class='boardmember'>
+          <%= image_tag "boardmembers/nick_terrenzi.gif" %>
+          <h3>Nick Terrenzi</h3>
+          <p>
+            <%= t('.our_board.terrenzi_copy') %>
+          </p>
+        </article>
+        <article class='boardmember'>
+          <%= image_tag "boardmembers/arte-maren.jpg" %>
+          <h3>Arte Maren</h3>
+          <p>
+            <%= t('.our_board.maren_copy') %>
+          </p>
+        </article>
+        <article class='boardmember'>
+
+          <%= image_tag "boardmembers/marten_runow.gif" %>
+          <h3>Marten Runow</h3>
+          <p>
+            <%= t('.our_board.runow_copy') %>
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+  <a href="section#locations" data-link="locations" aria-hidden="true" data-icon="&#xe602;" class="scroll-link nav-arrow red"></a>
 </section>
 
 <section id='locations' class='home-panel'>
@@ -84,5 +125,6 @@
       </article>
     </div>
   </div>
-  <%= link_to image_tag('down-arrow-black.png'), "section#splash", :class => 'scroll-link prev-arrow', "data-link" => "splash" %>
+  
+  <a href="section#splash" data-link="splash" aria-hidden="true" data-icon="&#xe600;" class="scroll-link nav-arrow dark orange"></a>
 </section>

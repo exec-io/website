@@ -9,7 +9,7 @@ ja:
     - "金"
     - "土"
     abbr_month_names:
-    -
+    - 
     - 1月
     - 2月
     - 3月
@@ -35,7 +35,7 @@ ja:
       long: "%Y年%m月%d日(%a)"
       short: "%m/%d"
     month_names:
-    -
+    - 
     - 1月
     - 2月
     - 3月
@@ -185,12 +185,13 @@ ja:
       update: "%{model}を更新"
   layouts:
     application:
-      about_us:
-      blog:
-      contact:
-      home:
-      locations:
-      prosperity_planner:
+      about_us: 
+      blog: 
+      contact: 
+      home: 
+      locations: 
+      our_board: 
+      prosperity_planner: 
   number:
     currency:
       format:
@@ -216,9 +217,9 @@ ja:
           quadrillion: "千兆"
           thousand: "千"
           trillion: "兆"
-          unit: ''
+          unit: 
       format:
-        delimiter: ''
+        delimiter: 
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -232,21 +233,21 @@ ja:
           tb: "テラバイト"
     percentage:
       format:
-        delimiter: ''
+        delimiter: 
     precision:
       format:
-        delimiter: ''
+        delimiter: 
   posts:
     '1':
-      author_name:
-      body_html:
-      created_at:
-      title:
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
     '2':
-      author_name:
-      body_html:
-      created_at:
-      title:
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
   support:
     array:
       last_word_connector: "と"
@@ -262,28 +263,34 @@ ja:
   welcome:
     show:
       about_us:
-        address:
-        contact_us:
-        email:
-        facebook:
-        panel_html:
-        panel_title:
-        phone:
+        address: 
+        contact_us: 
+        email: 
+        facebook: 
+        panel_html: 
+        panel_title: 
+        phone: 
       contact_details:
-        address_html:
+        address_html: 
         email: japanese@exec.io
         facebook_url: https://www.facebook.com/execiojapan
         facebook_url_short: facebook.com/execiojapan
         name: Exec.IOジャパン
-        phone:
+        phone: 
       home:
-        exec_io:
-        founder:
-        latest_from_the_blog:
-        quote:
+        exec_io: 
+        founder: 
+        latest_from_the_blog: 
+        quote: 
       locations:
-        panel_html:
-        panel_title:
+        panel_html: 
+        panel_title: 
+      our_board:
+        maren_copy: 
+        runow_copy: 
+        terrenzi_copy: 
+        the_board: 
+        valtin_copy: 
       prosperity_planner:
-        panel_html:
-        panel_title:
+        panel_html: 
+        panel_title: 
