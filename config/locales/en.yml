@@ -279,15 +279,14 @@ en:
         facebook: Facebook
         panel_html: |-
           <p>
-            Exec.IO was founded in Sydney Australia on the 20th of September, 2012 with the goal to
-            change the way the world operates by creating and providing organisational tools that are
-            effective, efficient and simple to use.
+            Exec.IO was founded in Sydney Australia on the 20th of September, 2012 to
+            create a new category of online tool; the Organisational Management System (OMS).
           </p>
           <p>
-            This idea of online organisational software is where our name came from.  "Exec" is
-            short for "Executive", and "IO" is the acronym for "Input" and "Output". So our software
+            This idea for an OMS is where our name came from.  "Exec" is short for "Executive" or
+            "Execute", and "I/O" is the acronym for "Input" and "Output". So our OMS software
             takes data and information in, and outputs it in such a way to successfully execute
-            the expansion of an organisation.
+            the expansion of your organisation.
           </p>
           <p>
             From the beginning, we wanted to make systems that were easy to use, but multi lingual by
@@ -310,7 +309,9 @@ en:
         exec_io: Exec i/o
         founder: Mikel Lindsaar, Founder of Exec i/o
         latest_from_the_blog: Latest from the Exec i/o Blog
-        quote: Our goal is to change the way the world operates by creating and providing tools that are effective, efficient and simple to use.
+        quote: |-
+          Our goal is to change the way the world operates by creating and providing tools
+          that are effective, efficient and simple to use.
       locations:
         panel_html: |-
           <p>
@@ -333,19 +334,23 @@ en:
           Business WISE TV</a>.
         mikel_copy_html: |-
           Mikel is a successful speaker, entrepreneur and business person having bootstrapped exec.io,
-          <a href="http://reinteractive.net/">reInteractive</a> and <a href="http://flood.io/">Flood.IO</a>
-          all in the last 3 years.  He knows how to get an organisation into production and achieving
-          it's goals.  Mikel draws on his two decades of Hubbard Management System training and has
-          a passion for increasing productivity through co-ordination and trust.
+          <a href="http://reinteractive.net/" target="_blank">reInteractive</a> and
+          <a href="http://flood.io/" target="_blank">Flood.IO</a>
+          all in the last 3 years as well as successfully creating and exiting from
+          <a href="https://stillalive.com/" target="_blank">stillalive.com</a> and
+          <a href="https://statushub.io/" target="_blank">statushub.io</a>.  He knows how to get
+          an organisation exchanging it's product and achieving it's goals by getting it into effective and
+          co-ordinated action. Mikel draws on his two decades of Hubbard Management System
+          training and experience to drive and build exec.io into a global player.
         runow_copy_html: |-
           Marten Runow is the CEO of one of the worlds top Human Resources companys,
-          <a href="http://www.performia.net/public/">Performia International</a>.  He has also been a
-          major driving force for the adoption of the Hubbard Management System internationally
-          for nearly 30 years helping introduce tens of thousands of professionals to the
-          Hubbard Management System.
+          <a href="http://www.performia.net/public/" target="_blank">Performia International</a>
+          now with offices in over 20 countries. He has also been a major driving force for the
+          adoption of the Hubbard Management System internationally for nearly 30 years
+          introducing tens of thousands to the Hubbard Management System.
         terrenzi_copy_html: |-
           Nick Terrenzi is the Executive Director of the
-          <a href="http://www.hubbardcollege.org/">Hubbard College of Administration</a>.
+          <a href="http://www.hubbardcollege.org/" target="_blank">Hubbard College of Administration</a>.
           He has expanded the worldwide network of colleges to 52 colleges internationally.
           He is a world renowned speaker and has reached tens of thousands of
           professionals with Hubbard Administrative Technology for nearly 3 decades.
@@ -366,13 +371,13 @@ en:
           </p>
           <p>
             Our first product, the <a href="%{prosperity_planner_app_url}" class="green">Prosperity Planner App</a>,
-            is an indispensable tool in this arsenal. Marrying organisational tools with
-            high-concept business philosophy, this application can help you organise yourself,
-            your team, or your entire company.
+            provides a first glimpse at where we are taking the concept of an OMS.  This application
+            can help you organise yourself, your team, and your entire company by providing a single
+            location to manage and update your day to day and week to week battle plans.
           </p>
           <p>
-            Historically confined to physical books, the online version has all the tools
-            that the physical version has, including Weekly and Daily Battle Plans, Calendar
+            The online version has all the tools included in the physical book Prosperity Planner
+            available to all WISE members, including Weekly and Daily Battle Plans, Calendar
             tools and over 40 Hubbard Management System topics covered in a fully searchable
             index.
           </p>
