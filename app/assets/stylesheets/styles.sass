@@ -127,11 +127,13 @@ section.home-panel
     font-size: 2.5em
     text-align: center
     background-color: transparent !important
+    animation: pulse 1s infinite
     -webkit-animation: pulse 1s infinite
     +transition(color 100ms linear)
     &.dark
       color: black
     &:hover
+      animation: none
       -webkit-animation: none
 
     &.white:hover
@@ -257,29 +259,34 @@ section.home-panel
     color: white
     body.s3 &, body.s4 &
       background-attachment: fixed
-    h2
-      font-size: 3em
+    h2,h3
       display: inline-block
       margin: 0 0 10px
       background-color: #5b103b
       padding: 5px
+    h2
+      font-size: 2.5em
     article.boardmember
       background-color: $dark-red
-      +background-image(linear-gradient(left,#000, #000 90px, $dark-red 91px))
+      // +background-image(linear-gradient(left,darken($dark-red, 10%), darken($dark-red, 10%) 90px, $dark-red 91px))
       width: 100%
+      padding-right: 5px
       vertical-align: middle
       +clearfix
       position: relative
       margin-bottom: 10px
       min-height: 104px
       h3
-        margin: 0 0 5px
+        margin: 0
         padding: 3px 3px 3px 100px
-        
       p
+        font-size: .9em
         margin: 5px 0 5px 100px
         color: white
+      &.full-width 
+        margin-bottom: 40px
       img
+        border: 2px solid $dark-red
         position: absolute
         top: 0
         width: 90px
