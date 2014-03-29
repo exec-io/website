@@ -290,11 +290,12 @@ es:
         panel_html: 
         panel_title: 
       our_board:
-        maren_copy: 
-        runow_copy: 
-        terrenzi_copy: 
+        maren_copy_html: 
+        mikel_copy_html: 
+        runow_copy_html: 
+        terrenzi_copy_html: 
         the_board: 
-        valtin_copy: 
+        valtin_copy_html: 
       prosperity_planner:
         panel_html: 
         panel_title: 

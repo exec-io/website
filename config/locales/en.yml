@@ -9,7 +9,7 @@ en:
     - Fri
     - Sat
     abbr_month_names:
-    -
+    - 
     - Jan
     - Feb
     - Mar
@@ -35,7 +35,7 @@ en:
       long: "%B %d, %Y"
       short: "%b %d"
     month_names:
-    -
+    - 
     - January
     - February
     - March
@@ -225,9 +225,9 @@ en:
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
-          unit:
+          unit: 
       format:
-        delimiter:
+        delimiter: 
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -243,20 +243,20 @@ en:
           tb: TB
     percentage:
       format:
-        delimiter:
+        delimiter: 
     precision:
       format:
-        delimiter:
+        delimiter: 
   posts:
     '1':
       author_name: Mikel Lindsaar
       body_html: "<p>This is a test post</p>"
-      created_at: 2014-01-13 09:24:01.000000000 +01:00
+      created_at: 2014-01-13 18:24:01.000000000 +10:00
       title: Welcome to our first post
     '2':
       author_name: Mikel Lindsaar
       body_html: "<p>This is the 2nd test post</p>"
-      created_at: 2014-01-14 13:31:35.000000000 +01:00
+      created_at: 2014-01-14 22:31:35.000000000 +10:00
       title: Welcome to our 2nd post
   support:
     array:
@@ -356,13 +356,11 @@ en:
           professionals with Hubbard Administrative Technology for nearly 3 decades.
         the_board: The Exec i/o Board
         valtin_copy_html: |-
-          Patrick Valtin is an accomplished Entrepreneur and Author with nearly 3 decades as
-          a successful coach, consultant, and trainer. He is a renowned speaker in more than
-          35 countries helping over one hundred thousand professionals with recruitment, sales,
-          marketing, organization and leadership. Patrick is the Chairman of
-          <a href="http://www.uman.be/">U-Man Belgium</a>,
-          the largest European Hubbard Management System training company and also the CEO of USA based
-          <a href="http://www.neweramanagement.com/">New Era Management International</a>
+          Patrick Valtin is an accomplished Entrepreneur and Author with nearly 3 decades
+          as a successful coach, consultant, sales and leadership Trainer AND as an internationally
+          renowned speaker in more than 35 countries helping over one hundred
+          thousand professionals in the areas of recruitment, sales, marketing,
+          organization and leadership.
       prosperity_planner:
         panel_html: |-
           <p>
