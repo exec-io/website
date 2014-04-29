@@ -192,6 +192,7 @@ de:
       contact: 
       home: 
       locations: 
+      our_board: 
       prosperity_planner: 
   number:
     currency:
@@ -222,9 +223,9 @@ de:
             other: Billiarden
           thousand: Tausend
           trillion: Billionen
-          unit: ''
+          unit: 
       format:
-        delimiter: ''
+        delimiter: 
         precision: 1
         significant: true
         strip_insignificant_zeros: true
@@ -240,10 +241,10 @@ de:
           tb: TB
     percentage:
       format:
-        delimiter: ''
+        delimiter: 
     precision:
       format:
-        delimiter: ''
+        delimiter: 
   posts:
     '1':
       author_name: 
@@ -292,6 +293,12 @@ de:
       locations:
         panel_html: 
         panel_title: 
+      our_board:
+        maren_copy: 
+        runow_copy: 
+        terrenzi_copy: 
+        the_board: 
+        valtin_copy: 
       prosperity_planner:
         panel_html: 
         panel_title: 

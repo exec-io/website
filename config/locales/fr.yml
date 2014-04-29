@@ -200,6 +200,7 @@ fr:
       contact: 
       home: 
       locations: 
+      our_board: 
       prosperity_planner: 
   number:
     currency:
@@ -296,6 +297,12 @@ fr:
       locations:
         panel_html: 
         panel_title: 
+      our_board:
+        maren_copy: 
+        runow_copy: 
+        terrenzi_copy: 
+        the_board: 
+        valtin_copy: 
       prosperity_planner:
         panel_html: 
         panel_title: 

@@ -9,7 +9,7 @@ zh-TW:
     - "五"
     - "六"
     abbr_month_names:
-    -
+    - 
     - 1月
     - 2月
     - 3月
@@ -35,7 +35,7 @@ zh-TW:
       long: "%Y年%b%d日"
       short: "%b%d日"
     month_names:
-    -
+    - 
     - "一月"
     - "二月"
     - "三月"
@@ -104,7 +104,7 @@ zh-TW:
       already_authenticated: "你已經登入。"
       inactive: "您的帳號尚未被啟用。"
       invalid: Email 或密碼是無效的。
-      last_attempt:
+      last_attempt: 
       locked: "您的帳號已被鎖定。"
       not_found_in_database: Email 或密碼是無效的。
       timeout: "您的登入時效過期，請重新登入，才能繼續。"
@@ -187,12 +187,13 @@ zh-TW:
       update: "更新%{model}"
   layouts:
     application:
-      about_us:
-      blog:
-      contact:
-      home:
-      locations:
-      prosperity_planner:
+      about_us: 
+      blog: 
+      contact: 
+      home: 
+      locations: 
+      our_board: 
+      prosperity_planner: 
   number:
     currency:
       format:
@@ -218,9 +219,9 @@ zh-TW:
           quadrillion: "千兆"
           thousand: "千"
           trillion: "兆"
-          unit: ''
+          unit: 
       format:
-        delimiter: ''
+        delimiter: 
         precision: 1
         significant: false
         strip_insignificant_zeros: false
@@ -236,21 +237,21 @@ zh-TW:
           tb: TB
     percentage:
       format:
-        delimiter: ''
+        delimiter: 
     precision:
       format:
-        delimiter: ''
+        delimiter: 
   posts:
     '1':
-      author_name:
-      body_html:
-      created_at:
-      title:
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
     '2':
-      author_name:
-      body_html:
-      created_at:
-      title:
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
   support:
     array:
       last_word_connector: ", 和 "
@@ -266,28 +267,34 @@ zh-TW:
   welcome:
     show:
       about_us:
-        address:
-        contact_us:
-        email:
-        facebook:
-        panel_html:
-        panel_title:
-        phone:
+        address: 
+        contact_us: 
+        email: 
+        facebook: 
+        panel_html: 
+        panel_title: 
+        phone: 
       contact_details:
-        address_html:
+        address_html: 
         email: taiwanese@exec.io
         facebook_url: https://www.facebook.com/execiotaiwan
         facebook_url_short: facebook.com/execiotaiwan
         name: Exec.IO 台湾
-        phone:
+        phone: 
       home:
-        exec_io:
-        founder:
-        latest_from_the_blog:
-        quote:
+        exec_io: 
+        founder: 
+        latest_from_the_blog: 
+        quote: 
       locations:
-        panel_html:
-        panel_title:
+        panel_html: 
+        panel_title: 
+      our_board:
+        maren_copy: 
+        runow_copy: 
+        terrenzi_copy: 
+        the_board: 
+        valtin_copy: 
       prosperity_planner:
-        panel_html:
-        panel_title:
+        panel_html: 
+        panel_title: 

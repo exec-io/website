@@ -9,7 +9,7 @@ en:
     - Fri
     - Sat
     abbr_month_names:
-    - 
+    -
     - Jan
     - Feb
     - Mar
@@ -35,7 +35,7 @@ en:
       long: "%B %d, %Y"
       short: "%b %d"
     month_names:
-    - 
+    -
     - January
     - February
     - March
@@ -193,11 +193,12 @@ en:
       update: Update %{model}
   layouts:
     application:
-      about_us: About Exec i/o
+      about_us: About Us
       blog: Blog
       contact: Contact
       home: Home
       locations: Locations
+      our_board: Our Board
       prosperity_planner: Prosperity Planner
   number:
     currency:
@@ -224,9 +225,9 @@ en:
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
-          unit: 
+          unit:
       format:
-        delimiter: 
+        delimiter:
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -242,20 +243,20 @@ en:
           tb: TB
     percentage:
       format:
-        delimiter: 
+        delimiter:
     precision:
       format:
-        delimiter: 
+        delimiter:
   posts:
     '1':
       author_name: Mikel Lindsaar
       body_html: "<p>This is a test post</p>"
-      created_at: 2014-01-13 19:24:01.000000000 +11:00
+      created_at: 2014-01-13 09:24:01.000000000 +01:00
       title: Welcome to our first post
     '2':
       author_name: Mikel Lindsaar
       body_html: "<p>This is the 2nd test post</p>"
-      created_at: 2014-01-14 23:31:35.000000000 +11:00
+      created_at: 2014-01-14 13:31:35.000000000 +01:00
       title: Welcome to our 2nd post
   support:
     array:
@@ -278,15 +279,14 @@ en:
         facebook: Facebook
         panel_html: |-
           <p>
-            Exec.IO was founded in Sydney Australia on the 20th of September, 2012 with the goal to
-            change the way the world operates by creating and providing organisational tools that are
-            effective, efficient and simple to use.
+            Exec.IO was founded in Sydney Australia on the 20th of September, 2012 to
+            create a new category of online tool; the Organisational Management System (OMS).
           </p>
           <p>
-            This idea of online organisational software is where our name came from.  "Exec" is
-            short for "Executive", and "IO" is the acronym for "Input" and "Output". So our software
+            This idea for an OMS is where our name came from.  "Exec" is short for "Executive" or
+            "Execute", and "I/O" is the acronym for "Input" and "Output". So our OMS software
             takes data and information in, and outputs it in such a way to successfully execute
-            the expansion of an organisation.
+            the expansion of your organisation.
           </p>
           <p>
             From the beginning, we wanted to make systems that were easy to use, but multi lingual by
@@ -309,7 +309,9 @@ en:
         exec_io: Exec i/o
         founder: Mikel Lindsaar, Founder of Exec i/o
         latest_from_the_blog: Latest from the Exec i/o Blog
-        quote: Our goal is to change the way the world operates by creating and providing tools that are effective, efficient and simple to use.
+        quote: |-
+          Our goal is to change the way the world operates by creating and providing tools
+          that are effective, efficient and simple to use.
       locations:
         panel_html: |-
           <p>
@@ -322,6 +324,44 @@ en:
             and online.
           </p>
         panel_title: Exec i/o around the world
+      our_board:
+        maren_copy_html: |-
+          Arte Maren has been an International Keynote Speaker, Corporate Trainer and private Consultant
+          for almost 3 decades reaching hundreds of thousands of professionals through his Seminars,
+          Radio and Television appearances. Arte authored the book
+          <a href="http://www.youtube.com/watch?v=bFiZ62gm100">The Natural Laws of Management</a>
+          and is the host of <a href="http://www.youtube.com/user/BusinessWiseTVShow">
+          Business WISE TV</a>.
+        mikel_copy_html: |-
+          Mikel is a successful speaker, entrepreneur and business person having bootstrapped exec.io,
+          <a href="http://reinteractive.net/" target="_blank">reInteractive</a> and
+          <a href="http://flood.io/" target="_blank">Flood.IO</a>
+          all in the last 3 years as well as successfully creating and exiting from
+          <a href="https://stillalive.com/" target="_blank">stillalive.com</a> and
+          <a href="https://statushub.io/" target="_blank">statushub.io</a>.  He knows how to get
+          an organisation exchanging it's product and achieving it's goals by getting it into effective and
+          co-ordinated action. Mikel draws on his two decades of Hubbard Management System
+          training and experience to drive and build exec.io into a global player.
+        runow_copy_html: |-
+          Marten Runow is the CEO of one of the worlds top Human Resources companys,
+          <a href="http://www.performia.net/public/" target="_blank">Performia International</a>
+          now with offices in over 20 countries. He has also been a major driving force for the
+          adoption of the Hubbard Management System internationally for nearly 30 years
+          introducing tens of thousands to the Hubbard Management System.
+        terrenzi_copy_html: |-
+          Nick Terrenzi is the Executive Director of the
+          <a href="http://www.hubbardcollege.org/" target="_blank">Hubbard College of Administration</a>.
+          He has expanded the worldwide network of colleges to 52 colleges internationally.
+          He is a world renowned speaker and has reached tens of thousands of
+          professionals with Hubbard Administrative Technology for nearly 3 decades.
+        the_board: The Exec i/o Board
+        valtin_copy_html: |-
+          Patrick Valtin is an accomplished Entrepreneur and Author with nearly 3 decades
+          as a successful coach, consultant, sales and leadership Trainer AND as an internationally
+          renowned speaker in more than 35 countries helping over one hundred
+          thousand professionals in the areas of recruitment, sales, marketing,
+          organization and leadership.
+
       prosperity_planner:
         panel_html: |-
           <p>
@@ -331,13 +371,13 @@ en:
           </p>
           <p>
             Our first product, the <a href="%{prosperity_planner_app_url}" class="green">Prosperity Planner App</a>,
-            is an indispensable tool in this arsenal. Marrying organisational tools with
-            high-concept business philosophy, this application can help you organise yourself,
-            your team, or your entire company.
+            provides a first glimpse at where we are taking the concept of an OMS.  This application
+            can help you organise yourself, your team, and your entire company by providing a single
+            location to manage and update your day to day and week to week battle plans.
           </p>
           <p>
-            Historically confined to physical books, the online version has all the tools
-            that the physical version has, including Weekly and Daily Battle Plans, Calendar
+            The online version has all the tools included in the physical book Prosperity Planner
+            available to all WISE members, including Weekly and Daily Battle Plans, Calendar
             tools and over 40 Hubbard Management System topics covered in a fully searchable
             index.
           </p>

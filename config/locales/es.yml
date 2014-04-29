@@ -192,6 +192,7 @@ es:
       contact: 
       home: 
       locations: 
+      our_board: 
       prosperity_planner: 
   number:
     currency:
@@ -218,9 +219,9 @@ es:
           quadrillion: mil billones
           thousand: mil
           trillion: billón
-          unit: ''
+          unit: 
       format:
-        delimiter: ''
+        delimiter: 
         precision: 1
         significant: true
         strip_insignificant_zeros: true
@@ -236,10 +237,10 @@ es:
           tb: TB
     percentage:
       format:
-        delimiter: ''
+        delimiter: 
     precision:
       format:
-        delimiter: ''
+        delimiter: 
   posts:
     '1':
       author_name: 
@@ -288,6 +289,12 @@ es:
       locations:
         panel_html: 
         panel_title: 
+      our_board:
+        maren_copy: 
+        runow_copy: 
+        terrenzi_copy: 
+        the_board: 
+        valtin_copy: 
       prosperity_planner:
         panel_html: 
         panel_title: 

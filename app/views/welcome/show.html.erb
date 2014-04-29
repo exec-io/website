@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  <%= link_to image_tag('down-arrow-white.png'), "section#about-pp", :class => 'scroll-link next-arrow', "data-link" => "about-pp" %>
+  <a href="section#about-pp" data-link="about-pp" aria-hidden="true" data-icon="&#xe602;" class="scroll-link nav-arrow white"></a>
 </section>
 
 <section id="about-pp" class='home-panel'>
@@ -22,22 +22,17 @@
           { :wise_url => 'http://www.wise.org',
             :prosperity_planner_app_url => 'https://www.prosperityplanner.net/' } ) %>
         </div>
-        <!-- <img src='assets/devices.png'/ id="device-icons"> -->
       </article>
-
-      <!-- <div class="col-md-5 col-sm-3 col-xs-12">
-        <%= image_tag "pp-example.png", :id => 'pp-example' %>
-      </div> -->
     </div>
   </div>
-  <%= link_to image_tag('down-arrow-black.png'), "section#about-us", :class => 'scroll-link next-arrow', "data-link" => "about-us" %>
+  <a href="section#about-us" data-link="about-us" aria-hidden="true" data-icon="&#xe602;" class="scroll-link nav-arrow dark green"></a>
 </section>
 
 
 <section id="about-us" class='home-panel'>
   <div class='container'>
     <div class='row'>
-      <article class='col-md-8'>
+      <article class='col-md-8 col-sm-7'>
         <h1 class=''><%= t('.about_us.panel_title') %></h1>
         <div class=''>
           <%= t('.about_us.panel_html',
@@ -46,13 +41,16 @@
           %>
         </div>
       </article>
+      <div class='col-md-4 col-sm-5 hidden-xs'>
+        <%= image_tag "nametag.png", :id => 'nametag' %>
+      </div>
     </div>
 
     <aside id="contact-us" class='row'>
       <div class='col-md-12'>
         <h2><%= t('.about_us.contact_us') %></h2>
       </div>
-      <div class='col-md-4 col-sm-4'>
+      <div class='col-md-4 col-sm-4 col-xs-6'>
         <h3><%= t('.contact_details.name', {:locale => :en}) %></h3>
         <ul>
           <li><span><%= t('.phone') %></span><%= t('.contact_details.phone', {:locale => :en}) %></li>
@@ -62,7 +60,7 @@
         </ul>
       </div>
       <% enabled_locales.each do |locale| %>
-        <div class='col-md-4 col-sm-4'>
+        <div class='col-md-4 col-sm-4 col-xs-12'>
           <h3><%= t('.contact_details.name', {:locale => locale}) %></h3>
           <ul>
             <li><span><%= t('.email') %></span><%= mail_to t('.contact_details.email', {:locale => locale}), t('.contact_details.email', {:locale => locale}), :class => random_link_color %></li>
@@ -72,13 +70,73 @@
       <% end %>
     </aside>
   </div>
-  <%= link_to image_tag('down-arrow-white.png'), "section#locations", :class => 'scroll-link next-arrow', "data-link" => "locations" %>
+  <a href="section#our-board" data-link="our-board" aria-hidden="true" data-icon="&#xe602;" class="scroll-link nav-arrow blue"></a>
+</section>
+
+<section id='our-board' class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <h2><%#= t('.our_board.the_board') %>
+          Our CEO
+        </h2>
+        <article class='boardmember full-width'>
+          <%= image_tag "boardmembers/mikel-lindsaar.jpg" %>
+          <h3>Mikel Lindsaar</h3>
+          <p>
+            <%= t('.our_board.mikel_copy_html') %>
+          </p>
+        </article>
+      </div>
+      <div class='col-md-12'>
+        <h3><%#= t('.our_board.the_board') %>
+          Our Advisory Board
+        </h3>
+      </div>
+      <div class='col-md-6'>
+        <article class='boardmember'>
+          <%= image_tag "boardmembers/arte-maren.jpg" %>
+          <h3>Arte Maren</h3>
+          <p>
+            <%= t('.our_board.maren_copy_html') %>
+          </p>
+        </article>
+      </div>
+      <div class='col-md-6'>
+        <article class='boardmember'>
+          <%= image_tag "boardmembers/marten_runow.gif" %>
+          <h3>Marten Runow</h3>
+          <p>
+            <%= t('.our_board.runow_copy_html') %>
+          </p>
+        </article>
+      </div>
+      <div class='col-md-6'>
+        <article class='boardmember'>
+          <%= image_tag "boardmembers/nick_terrenzi.gif" %>
+          <h3>Nick Terrenzi</h3>
+          <p>
+            <%= t('.our_board.terrenzi_copy_html') %>
+          </p>
+        </article>
+      </div>
+      <div class='col-md-6'>
+        <article class='boardmember'>
+          <%= image_tag "boardmembers/patrick-valtin.jpg" %>
+          <h3>Patrick Valtin</h3>
+          <p>
+            <%= t('.our_board.valtin_copy_html') %>
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+  <a href="section#locations" data-link="locations" aria-hidden="true" data-icon="&#xe602;" class="scroll-link nav-arrow red"></a>
 </section>
 
 <section id='locations' class='home-panel'>
   <div class='container'>
     <div class='row'>
-      <%#= t('locations.show.page_html') %>
       <article id="locations-text" class='col-md-7'>
         <h1 class='text-block'><%= t('.locations.panel_title') %></h1>
         <div class='text-block orange'>
@@ -87,5 +145,6 @@
       </article>
     </div>
   </div>
-  <%= link_to image_tag('down-arrow-black.png'), "section#splash", :class => 'scroll-link prev-arrow', "data-link" => "splash" %>
+
+  <a href="section#splash" data-link="splash" aria-hidden="true" data-icon="&#xe600;" class="scroll-link nav-arrow dark orange"></a>
 </section>
