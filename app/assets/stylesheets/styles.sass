@@ -70,9 +70,15 @@ header#main-nav
     float: left
     width: 167px
 
-  nav#links
+  ul#links
     float: right
+    padding: 0
+    margin: 0
     font-size: 1.1em
+    li
+      display: inline
+      &.dropdown-title
+        display: none
     a
       padding: 10px 5px 5px
       margin: 0 0 0 5px
@@ -146,6 +152,8 @@ section.home-panel
       color: $light-blue
     &.orange:hover
       color: $light-orange
+    &.dark-orange:hover
+      color: $dark-orange
     
   .text-block
     padding: 10px
@@ -193,8 +201,61 @@ section.home-panel
       background-color: rgba($dark-green, .75)
       &:hover
         background-color: rgba($dark-green, .5)
-  &#about-us
+
+
+  &#about-real-statistics
     background-color: rgba($dark-blue, .75)
+    .text-block
+      background-color: $light-blue
+      color: white
+    
+  &#about-rethink-training
+    background-color: rgba($light-orange, 1)
+    .text-block
+      background-color: $light-orange
+      color: white
+    #rethink-graphic
+      max-width: 120px
+    a
+      background-color: $dark-orange
+      &:hover
+        background-color: darken($light-orange, 10%)
+
+  .box-section
+    padding: 20px 0
+    margin-bottom: 30px
+    h1.text-block
+      display: inline-block
+      font-family: $boldCondensed helvetica sans-serif
+      font-size: 2.5em
+      img
+        max-width: 150px
+        width: auto
+
+    img.logo
+      margin: 15px 0
+
+      
+    .image-container img
+      width: 100%
+  .arrow-box 
+    position: relative
+  .arrow-box:after 
+    top: 100%
+    left: 50%
+    border: solid transparent
+    content: " "
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+    border-color: rgba(white, 0)
+    border-top-color: rgba(white, .85)
+    border-width: 20px
+    margin-left: -20px
+    
+  &#about-us
+    background-color: rgba($dark-red, .75)
     color: white
     h1
       font-family: $boldCondensed helvetica sans-serif
@@ -221,9 +282,9 @@ section.home-panel
         margin: 0
         height: 40px
     a
-      background-color: rgba($light-blue, .4)
+      background-color: rgba($dark-red, .4)
       &:hover
-        background-color: rgba($light-blue, .65)
+        background-color: rgba($light-red, .65)
     ul a
       display: inline-block
   #contact-us
@@ -238,7 +299,7 @@ section.home-panel
       list-style: none
       margin: 0 0 15px
       padding: 0
-      border-left: 5px solid $light-blue
+      border-left: 5px solid $light-red
       li
         margin: 7px 0 0 10px
         line-height: 1em
@@ -251,6 +312,7 @@ section.home-panel
         margin-bottom: 5px
         font-family: $bold
         text-transform: uppercase
+
   &#our-board
     background-color: black
     background-image: image-url('boardroom.jpg')
@@ -262,12 +324,12 @@ section.home-panel
     h2,h3
       display: inline-block
       margin: 0 0 10px
-      background-color: #5b103b
+      background-color: $dark-green
       padding: 5px
     h2
       font-size: 2.5em
     article.boardmember
-      background-color: $dark-red
+      background-color: $dark-green
       // +background-image(linear-gradient(left,darken($dark-red, 10%), darken($dark-red, 10%) 90px, $dark-red 91px))
       width: 100%
       padding-right: 5px
@@ -286,7 +348,7 @@ section.home-panel
       &.full-width 
         margin-bottom: 40px
       img
-        border: 2px solid $dark-red
+        border: 2px solid $dark-green
         position: absolute
         top: 0
         width: 90px
