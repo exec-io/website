@@ -48,20 +48,12 @@ $(document).on('scroll', function(){
   }
 });
 
-
-
 $('a[data-link]').on('click', function(e){
   e.preventDefault();
-  // $('#links').removeClass('active');
+  $('#links').removeClass('active');
   var target = "#" + $(this).data("link");
   $('html, body').animate({ scrollTop: $(target).offset().top }, 1500, 'easeInOutQuart');
 });
-
-// $('#links.active a[data-link]').on('click', function(e){
-//   $('#links').removeClass('active');
-//   alert('blah');
-//   // $('html, body').animate({ scrollTop: $(target).offset().top }, 1500, 'easeInOutQuart');
-// });
 
 
 $('a[data-dropdown="toggle"]').on("click", function(e){
