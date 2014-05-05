@@ -33,7 +33,9 @@
     <div class='container'>
       <div class='row'>
         <article class="col-md-6">
-          <h1 class='text-block blue'>Real Statistics<%= image_tag "real-stats-graphic.png" %></h1>
+
+          <%= image_tag "real-stats-logo.png", :id => 'real-stats-logo' %>
+
           <div class='text-block blue'>
             <p>
               Managing by statistics is the proven method to increase productivity, revenue and boom
@@ -70,8 +72,10 @@
   <section id='rethink' class='box-section'>
     <div class='container'>
       <div class='row'>
-        <article class="col-md-8">
-          <h1 class='text-block'>Rethink Training</h1>
+        <div class='col-md-12'>
+          <%= image_tag "rethink-training-logo.png", :id => 'rethink-training-logo' %>
+        </div>
+        <article class="col-md-6">
           <div class='text-block'>
           <%#= image_tag "rethink-training-logo.png", :class => 'logo' %>
             <p>
@@ -87,10 +91,10 @@
               Your <%= link_to "14-day free trial sign up", "http://www.rethinktraining.com/pricing/" %> is only a click away, see how Rethink Training can improve your workplace training requirements!
             </p>
           </div>
-
-          <%= image_tag "rethink-graphic.png", :id => 'rethink-graphic' %>
-
         </article>
+        <div class='col-md-6'>
+          <%= image_tag "rethink-example.png", :id => 'rethink-example' %>
+        </div>
       </div>
     </div>
   </section>
