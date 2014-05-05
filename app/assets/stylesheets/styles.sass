@@ -212,6 +212,10 @@ section.home-panel
     img.screenshot
       width: auto
       max-width: 100%
+    a
+      background-color: $dark-blue
+      &:hover
+        background-color: darken($light-blue, 10%)
     
   &#about-rethink-training
     background-color: rgba($light-orange, 1)
@@ -242,27 +246,10 @@ section.home-panel
         max-width: 150px
         width: auto
     img.logo
-      margin: 15px 0
-
-      
+      margin: 15px 0      
     .image-container img
       width: 100%
-  .arrow-box 
-    position: relative
-  .arrow-box:after 
-    top: 100%
-    left: 50%
-    border: solid transparent
-    content: " "
-    height: 0
-    width: 0
-    position: absolute
-    pointer-events: none
-    border-color: rgba(white, 0)
-    border-top-color: rgba(white, .85)
-    border-width: 20px
-    margin-left: -20px
-    
+
   &#about-us
     background-color: rgba($dark-red, .75)
     color: white
@@ -291,11 +278,12 @@ section.home-panel
         margin: 0
         height: 40px
     a
-      background-color: rgba($dark-red, .4)
+      background-color: darken($light-red, 10%)
       &:hover
-        background-color: rgba($light-red, .65)
+        background-color: $light-red
     ul a
       display: inline-block
+
   #contact-us
     h2
       margin-bottom: 15px
@@ -321,6 +309,10 @@ section.home-panel
         margin-bottom: 5px
         font-family: $bold
         text-transform: uppercase
+    a
+      background-color: darken($light-red, 10%)
+      &:hover
+        background-color: $light-red
 
   &#our-board
     background-color: black
@@ -368,6 +360,10 @@ section.home-panel
       &:hover img
         filter: none
         -webkit-filter: grayscale(0%)
+    a
+      background-color: darken($light-green, 10%)
+      &:hover
+        background-color: $light-green
         
 
   &#locations
