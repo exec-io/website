@@ -202,6 +202,11 @@ section.home-panel
 
   &#about-real-statistics
     background-color: rgba($dark-blue, .75)
+    background: transparent image-url('real-stats-example-c.png') no-repeat 50% 50%
+    background-size: cover
+    background-attachment: fixed
+    body.s2 &
+      background-attachment: scroll
     #real-stats-logo
       max-width: 300px
       background: white
@@ -209,6 +214,7 @@ section.home-panel
     .text-block
       background-color: $light-blue
       color: white
+      margin-bottom: 10px
     img.screenshot
       width: auto
       max-width: 100%
@@ -219,10 +225,20 @@ section.home-panel
     
   &#about-rethink-training
     background-color: rgba($light-orange, 1)
+    background-image: image-url('rethink-bg.png')
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: cover
+    body.s3 &
+      background-attachment: fixed
     #rethink-training-logo
       max-width: 300px
       background: white
       margin-bottom: 10px
+      width: 100%
+    .rethink-example
+      width: 100%
+      margin-top: 20px
     #rethink-example
       max-width: 100%
     .text-block
@@ -368,7 +384,6 @@ section.home-panel
 
   &#locations
     background: white image-url('world-map.jpg') no-repeat 50% 20%
-    background-attachment: fixed
     background-size: cover
     h1.text-block
       font-family: $boldCondensed helvetica sans-serif
