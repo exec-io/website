@@ -43,15 +43,13 @@ body
     border-bottom-width: 5px
   &.active
     background-color: $dark-color
+    box-shadow: 0 0 3px $dark-color
     color: white
 
 
 h1, h2, h3, h4, h5, h6
-  // font-family: "Lato"
   font-family: $boldCondensed
-  // font-weight: "700"
 h1, h2, h3
-  // font-weight: 200
 
 
 
@@ -65,14 +63,19 @@ header#main-nav
     background-size: auto 50px
     height: 50px
     color: transparent
-    // display: block
     display: none
     float: left
     width: 167px
 
-  nav#links
+  ul#links
     float: right
+    padding: 0
+    margin: 0
     font-size: 1.1em
+    li
+      display: inline
+      &.dropdown-title
+        display: none
     a
       padding: 10px 5px 5px
       margin: 0 0 0 5px
@@ -137,15 +140,17 @@ section.home-panel
       -webkit-animation: none
 
     &.white:hover
-      color: #818181
+      color: #818181 !important
     &.red:hover
-      color: $light-red
+      color: $light-red !important
     &.green:hover
-      color: lighten($light-green, 20%)
+      color: lighten($light-green, 20%) !important
     &.blue:hover
-      color: $light-blue
+      color: $light-blue !important
     &.orange:hover
-      color: $light-orange
+      color: $light-orange !important
+    &.dark-orange:hover
+      color: $dark-orange !important
     
   .text-block
     padding: 10px
@@ -193,8 +198,76 @@ section.home-panel
       background-color: rgba($dark-green, .75)
       &:hover
         background-color: rgba($dark-green, .5)
-  &#about-us
+
+
+  &#about-real-statistics
     background-color: rgba($dark-blue, .75)
+    background: transparent image-url('real-stats-bg.jpg') no-repeat 50% 50%
+    background-size: cover
+    background-attachment: fixed
+    body.s2 &
+      background-attachment: scroll
+    #real-stats-logo
+      max-width: 300px
+      background: white
+      margin-bottom: 10px
+    .text-block
+      background-color: $light-blue
+      color: white
+      margin-bottom: 10px
+    img.screenshot
+      width: auto
+      max-width: 100%
+    a
+      background-color: $dark-blue
+      &:hover
+        background-color: darken($light-blue, 10%)
+    
+  &#about-rethink-training
+    background-color: rgba($light-orange, 1)
+    background-image: image-url('rethink-bg.jpg')
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: cover
+    body.s3 &
+      background-attachment: fixed
+    #rethink-training-logo
+      max-width: 300px
+      background: white
+      margin-bottom: 10px
+      width: 100%
+    .rethink-example
+      width: 100%
+      margin-top: 20px
+    #rethink-example
+      max-width: 100%
+    .text-block
+      background-color: white
+      color: $dark-orange
+    #rethink-graphic
+      max-width: 120px
+    a
+      background-color: $light-orange
+      &:hover
+        background-color: $dark-orange
+
+  .box-section
+    padding: 20px 0
+    margin-bottom: 30px
+    h1.text-block
+      display: inline-block
+      font-family: $boldCondensed helvetica sans-serif
+      font-size: 2.5em
+      img
+        max-width: 150px
+        width: auto
+    img.logo
+      margin: 15px 0      
+    .image-container img
+      width: 100%
+
+  &#about-us
+    background-color: rgba($dark-red, .75)
     color: white
     h1
       font-family: $boldCondensed helvetica sans-serif
@@ -221,11 +294,12 @@ section.home-panel
         margin: 0
         height: 40px
     a
-      background-color: rgba($light-blue, .4)
+      background-color: darken($light-red, 10%)
       &:hover
-        background-color: rgba($light-blue, .65)
+        background-color: $light-red
     ul a
       display: inline-block
+
   #contact-us
     h2
       margin-bottom: 15px
@@ -238,7 +312,7 @@ section.home-panel
       list-style: none
       margin: 0 0 15px
       padding: 0
-      border-left: 5px solid $light-blue
+      border-left: 5px solid $light-red
       li
         margin: 7px 0 0 10px
         line-height: 1em
@@ -251,6 +325,11 @@ section.home-panel
         margin-bottom: 5px
         font-family: $bold
         text-transform: uppercase
+    a
+      background-color: darken($light-red, 10%)
+      &:hover
+        background-color: $light-red
+
   &#our-board
     background-color: black
     background-image: image-url('boardroom.jpg')
@@ -262,13 +341,12 @@ section.home-panel
     h2,h3
       display: inline-block
       margin: 0 0 10px
-      background-color: #5b103b
+      background-color: $dark-green
       padding: 5px
     h2
       font-size: 2.5em
     article.boardmember
-      background-color: $dark-red
-      // +background-image(linear-gradient(left,darken($dark-red, 10%), darken($dark-red, 10%) 90px, $dark-red 91px))
+      background-color: $dark-green
       width: 100%
       padding-right: 5px
       vertical-align: middle
@@ -286,23 +364,26 @@ section.home-panel
       &.full-width 
         margin-bottom: 40px
       img
-        border: 2px solid $dark-red
+        border: 2px solid $dark-green
         position: absolute
         top: 0
         width: 90px
         +border-radius(0)
         +transition(all 100ms linear)
-        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale") /* Firefox 3.5+ */
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http:www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale") /* Firefox 3.5+ */
         filter: gray /* IE6-9 */
         -webkit-filter: grayscale(100%)
       &:hover img
         filter: none
         -webkit-filter: grayscale(0%)
+    a
+      background-color: darken($light-green, 10%)
+      &:hover
+        background-color: $light-green
         
 
   &#locations
     background: white image-url('world-map.jpg') no-repeat 50% 20%
-    background-attachment: fixed
     background-size: cover
     h1.text-block
       font-family: $boldCondensed helvetica sans-serif
