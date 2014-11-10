@@ -8,6 +8,7 @@ gem 'pg'
 
 # Waiting for Rails 4 version to be released
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
 
 gem 'localeapp'
 
@@ -17,6 +18,7 @@ gem 'unicorn'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails'
+gem 'sprockets', '2.11.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

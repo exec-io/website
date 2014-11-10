@@ -9,7 +9,7 @@
     <%= javascript_include_tag "vendor/html5shiv" %>
     <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
   <![endif]-->
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", {:media => "all", "data-turbolinks-track" => true} %>
   <script type="text/javascript" src="http://fast.fonts.net/jsapi/aa402fef-5d8d-474d-ac01-d479c210d7cd.js"></script>
   <%= csrf_meta_tags %>
 </head>
@@ -19,7 +19,7 @@
     <nav id="logo">
       <%= link_to t('.exec_io'), root_path %>
     </nav>
-    
+
     <ul id="links">
       <li class='dropdown-title'><a class="scroll-link black" data-dropdown="toggle">Menu</a></li>
       <li><%= link_to t('.home'), "section#splash", :class => 'red scroll-link active', "data-link" => "splash" %></li>
