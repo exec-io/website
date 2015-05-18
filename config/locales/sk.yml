@@ -9,7 +9,7 @@ sk:
     - Pi
     - So
     abbr_month_names:
-    - 
+    -
     - Jan
     - Feb
     - Mar
@@ -35,7 +35,7 @@ sk:
       long: "%d. %B %Y"
       short: "%d %b"
     month_names:
-    - 
+    -
     - Január
     - Február
     - Marec
@@ -115,7 +115,7 @@ sk:
       already_authenticated: Už ste prihlásený.
       inactive: Váš účet ešte nebol aktivovaný.
       invalid: Nesprávny email alebo heslo.
-      last_attempt: 
+      last_attempt:
       locked: Váš účet je zamknutý.
       not_found_in_database: Nesprávny email alebo heslo.
       timeout: Vaša session vypršala. Na pokračovanie sa prosím znovu prihláste.
@@ -200,13 +200,13 @@ sk:
       update: Aktualizovať %{model}
   layouts:
     application:
-      about_us: 
-      blog: 
-      contact: 
-      home: 
-      locations: 
-      our_board: 
-      prosperity_planner: 
+      about_us:
+      blog:
+      contact:
+      home:
+      locations:
+      our_board:
+      prosperity_planner:
   number:
     currency:
       format:
@@ -232,9 +232,9 @@ sk:
           quadrillion: Biliarda
           thousand: Tisíc
           trillion: Bilión
-          unit: 
+          unit:
       format:
-        delimiter: 
+        delimiter:
         precision: 1
         significant: false
         strip_insignificant_zeros: false
@@ -254,18 +254,18 @@ sk:
         delimiter: " "
     precision:
       format:
-        delimiter: 
+        delimiter:
   posts:
     '1':
-      author_name: 
-      body_html: 
-      created_at: 
-      title: 
+      author_name:
+      body_html:
+      created_at:
+      title:
     '2':
-      author_name: 
-      body_html: 
-      created_at: 
-      title: 
+      author_name:
+      body_html:
+      created_at:
+      title:
   support:
     array:
       last_word_connector: " a "
@@ -281,35 +281,35 @@ sk:
   welcome:
     show:
       about_us:
-        address: 
-        contact_us: 
-        email: 
-        facebook: 
-        panel_html: 
-        panel_title: 
-        phone: 
+        address:
+        contact_us:
+        email:
+        facebook:
+        panel_html:
+        panel_title:
+        phone:
       contact_details:
-        address_html: 
+        address_html:
         email: slovak@exec.io
         facebook_url: https://www.facebook.com/execioslovensko
         facebook_url_short: facebook.com/execioslovensko
-        name: Exec.IO Slovensko
-        phone: 
+        name: exec.io Slovensko
+        phone:
       home:
-        exec_io: 
-        founder: 
-        latest_from_the_blog: 
-        quote: 
+        exec_io:
+        founder:
+        latest_from_the_blog:
+        quote:
       locations:
-        panel_html: 
-        panel_title: 
+        panel_html:
+        panel_title:
       our_board:
-        maren_copy_html: 
-        mikel_copy_html: 
-        runow_copy_html: 
-        terrenzi_copy_html: 
-        the_board: 
-        valtin_copy_html: 
+        maren_copy_html:
+        mikel_copy_html:
+        runow_copy_html:
+        terrenzi_copy_html:
+        the_board:
+        valtin_copy_html:
       prosperity_planner:
-        panel_html: 
-        panel_title: 
+        panel_html:
+        panel_title:

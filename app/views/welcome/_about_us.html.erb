@@ -1,0 +1,61 @@
+<section id="about-us" class='home-panel'>
+  <div class='container'>
+    <div class='row'>
+      <article class='col-md-8 col-sm-7'>
+        <h1 class=''><%= t('welcome.show.about_us.panel_title') %></h1>
+        <div class=''>
+          <%= t('welcome.show.about_us.panel_html',
+                { :wise_url => 'http://www.wise.org/',
+                  :prosperity_planner_path => 'https://www.prosperityplanner.net/'} )
+          %>
+        </div>
+      </article>
+      <div class='col-md-4 col-sm-5 hidden-xs'>
+        <%= image_tag "nametag.png", :id => 'nametag' %>
+      </div>
+    </div>
+
+    <aside id="contact-us" class='row'>
+      <div class='col-md-12'>
+        <h2><%= t('welcome.show.about_us.contact_us') %></h2>
+      </div>
+      <div class='col-md-4 col-sm-4 col-xs-6'>
+        <h3><%= t('welcome.show.contact_details.name', {:locale => :en}) %></h3>
+        <ul>
+          <li>
+            <span><%= t('welcome.show.phone') %></span>
+            <%= t('welcome.show.contact_details.phone', {:locale => :en}) %>
+          </li>
+          <li>
+            <span><%= t('welcome.show.email') %>
+            </span><%= mail_to t('welcome.show.contact_details.email', {:locale => :en}), t('welcome.show.contact_details.email', {:locale => :en}), :class => random_link_color %>
+          </li>
+          <li>
+            <span><%= t('welcome.show.facebook') %></span>
+            <%= link_to(t('welcome.show.contact_details.facebook_url_short', {:locale => :en}), t('welcome.show.contact_details.facebook_url', {:locale => :en}), :class => random_link_color) %>
+          </li>
+          <li>
+            <span><%= t('welcome.show.address') %></span><%= t('welcome.show.contact_details.address_html', {:locale => :en}) %>
+          </li>
+          <li><span>ABN</span>51 160 446 846</li>
+        </ul>
+      </div>
+      <% enabled_locales.each do |locale| %>
+        <div class='col-md-4 col-sm-4 col-xs-12'>
+          <h3><%= t('welcome.show.contact_details.name', {:locale => locale}) %></h3>
+          <ul>
+            <li>
+              <span><%= t('welcome.show.email') %>
+              </span><%= mail_to t('welcome.show.contact_details.email', {:locale => locale}), t('welcome.show.contact_details.email', {:locale => locale}), :class => random_link_color %>
+            </li>
+            <li>
+              <span><%= t('welcome.show.facebook') %></span>
+              <%= link_to(t('welcome.show.contact_details.facebook_url_short', {:locale => locale}), t('welcome.show.contact_details.facebook_url', {:locale => locale}), :class => random_link_color) %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+    </aside>
+  </div>
+  <a href="section#our-board" data-link="our-board" aria-hidden="true" data-icon="&#xe602;" class="scroll-link nav-arrow red"></a>
+</section>
