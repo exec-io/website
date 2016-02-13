@@ -9,7 +9,7 @@ hu:
     - p.
     - szo.
     abbr_month_names:
-    -
+    - 
     - jan.
     - febr.
     - márc.
@@ -35,7 +35,7 @@ hu:
       long: "%Y. %B %e."
       short: "%b %e."
     month_names:
-    -
+    - 
     - január
     - február
     - március
@@ -104,9 +104,9 @@ hu:
       already_authenticated: Már belépett.
       inactive: A fiók még nincs aktiválva.
       invalid: Hibás email cím vagy jelszó.
-      last_attempt:
+      last_attempt: 
       locked: A fiók zárolva lett.
-      not_found_in_database:
+      not_found_in_database: 
       timeout: A munkafolyamat lejárt. Újboli bejelentkezés szükséges.
       unauthenticated: A folytatáshoz bejelentkezés szükséges.
       unconfirmed: A folytatáshoz az email cím megerősítése szükséges.
@@ -148,7 +148,7 @@ hu:
       already_confirmed: már meg van erősítve
       blank: nincs megadva
       confirmation: nem egyezik
-      confirmation_period_expired:
+      confirmation_period_expired: 
       empty: nincs megadva
       equal_to: pontosan %{count} kell legyen
       even: páros kell legyen
@@ -187,17 +187,17 @@ hu:
       update: "%{model} Módosítása"
   layouts:
     application:
-      about_us:
-      blog:
-      contact:
-      home:
-      locations:
-      our_board:
-      prosperity_planner:
+      about_us: 
+      blog: 
+      contact: 
+      home: 
+      locations: 
+      our_board: 
+      prosperity_planner: 
   number:
     currency:
       format:
-        delimiter:
+        delimiter: 
         format: "%n %u"
         precision: 0
         separator: ","
@@ -219,9 +219,9 @@ hu:
           quadrillion: Kvadrillió
           thousand: Ezer
           trillion: Trillió
-          unit:
+          unit: 
       format:
-        delimiter:
+        delimiter: 
         precision: 1
         significant: true
         strip_insignificant_zeros: true
@@ -237,21 +237,21 @@ hu:
           tb: TB
     percentage:
       format:
-        delimiter:
+        delimiter: 
     precision:
       format:
-        delimiter:
+        delimiter: 
   posts:
     '1':
-      author_name:
-      body_html:
-      created_at:
-      title:
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
     '2':
-      author_name:
-      body_html:
-      created_at:
-      title:
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
   support:
     array:
       last_word_connector: " és "
@@ -267,35 +267,35 @@ hu:
   welcome:
     show:
       about_us:
-        address:
-        contact_us:
-        email:
-        facebook:
-        panel_html:
-        panel_title:
-        phone:
+        address: 
+        contact_us: 
+        email: 
+        facebook: 
+        panel_html: 
+        panel_title: 
+        phone: 
       contact_details:
-        address_html:
+        address_html: 
         email: hungarian@exec.io
         facebook_url: https://www.facebook.com/execiohungary
         facebook_url_short: facebook.com/execiohungary
-        name: exec.io Hungary
-        phone:
+        name: Exec.IO Hungary
+        phone: 
       home:
-        exec_io:
-        founder:
-        latest_from_the_blog:
-        quote:
+        exec_io: 
+        founder: 
+        latest_from_the_blog: 
+        quote: 
       locations:
-        panel_html:
-        panel_title:
+        panel_html: 
+        panel_title: 
       our_board:
-        maren_copy_html:
-        mikel_copy_html:
-        runow_copy_html:
-        terrenzi_copy_html:
-        the_board:
-        valtin_copy_html:
+        maren_copy_html: 
+        mikel_copy_html: 
+        runow_copy_html: 
+        terrenzi_copy_html: 
+        the_board: 
+        valtin_copy_html: 
       prosperity_planner:
-        panel_html:
-        panel_title:
+        panel_html: 
+        panel_title: 

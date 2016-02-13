@@ -9,7 +9,7 @@ ru:
     - "Пт"
     - "Сб"
     abbr_month_names:
-    -
+    - 
     - "янв."
     - "февр."
     - "марта"
@@ -35,7 +35,7 @@ ru:
       long: "%d %B %Y"
       short: "%d %b"
     month_names:
-    -
+    - 
     - "января"
     - "февраля"
     - "марта"
@@ -126,7 +126,7 @@ ru:
       already_authenticated: "Вы уже вошли в систему."
       inactive: "Ваша учётная запись ещё не активирована."
       invalid: "Неверный адрес e-mail или пароль."
-      last_attempt:
+      last_attempt: 
       locked: "Ваша учётная запись заблокирована."
       not_found_in_database: "Неверный адрес e-mail или пароль."
       timeout: "Ваш сеанс закончился. Пожалуйста, войдите в систему снова."
@@ -140,7 +140,7 @@ ru:
       unlock_instructions:
         subject: "Инструкции по разблокировке учётной записи"
     omniauth_callbacks:
-      failure: "Вы не можете войти в систему с учётной записью из %{kind}, т.к. \"%{reason}\"."
+      failure: Вы не можете войти в систему с учётной записью из %{kind}, т.к. "%{reason}".
       success: "Вход в систему выполнен с учётной записью из %{kind}."
     passwords:
       no_token: "Доступ к этой странице возможен только по ссылке из письма о восстановлении пароля. Если Вы пришли по такой ссылке, пожалуйста убедитесь что Вы скопировали всю ссылку целиком."
@@ -225,13 +225,13 @@ ru:
       update: "Сохранить %{model}"
   layouts:
     application:
-      about_us:
-      blog:
-      contact:
-      home:
-      locations:
-      our_board:
-      prosperity_planner:
+      about_us: 
+      blog: 
+      contact: 
+      home: 
+      locations: 
+      our_board: 
+      prosperity_planner: 
   number:
     currency:
       format:
@@ -277,9 +277,9 @@ ru:
             many: "триллионов"
             one: "триллион"
             other: "триллионов"
-          unit:
+          unit: 
       format:
-        delimiter:
+        delimiter: 
         precision: 1
         significant: false
         strip_insignificant_zeros: false
@@ -297,21 +297,21 @@ ru:
           tb: "ТБ"
     percentage:
       format:
-        delimiter:
+        delimiter: 
     precision:
       format:
-        delimiter:
+        delimiter: 
   posts:
     '1':
-      author_name:
-      body_html:
-      created_at:
-      title:
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
     '2':
-      author_name:
-      body_html:
-      created_at:
-      title:
+      author_name: 
+      body_html: 
+      created_at: 
+      title: 
   support:
     array:
       last_word_connector: " и "
@@ -327,35 +327,35 @@ ru:
   welcome:
     show:
       about_us:
-        address:
-        contact_us:
-        email:
-        facebook:
-        panel_html:
-        panel_title:
-        phone:
+        address: 
+        contact_us: 
+        email: 
+        facebook: 
+        panel_html: 
+        panel_title: 
+        phone: 
       contact_details:
-        address_html:
+        address_html: 
         email: russian@exec.io
         facebook_url: https://www.facebook.com/exec.io.russia
         facebook_url_short: facebook.com/exec.io.russia
-        name: exec.io Россия
-        phone:
+        name: Exec.IO Россия
+        phone: 
       home:
-        exec_io:
-        founder:
-        latest_from_the_blog:
-        quote:
+        exec_io: 
+        founder: 
+        latest_from_the_blog: 
+        quote: 
       locations:
-        panel_html:
-        panel_title:
+        panel_html: 
+        panel_title: 
       our_board:
-        maren_copy_html:
-        mikel_copy_html:
-        runow_copy_html:
-        terrenzi_copy_html:
-        the_board:
-        valtin_copy_html:
+        maren_copy_html: 
+        mikel_copy_html: 
+        runow_copy_html: 
+        terrenzi_copy_html: 
+        the_board: 
+        valtin_copy_html: 
       prosperity_planner:
-        panel_html:
-        panel_title:
+        panel_html: 
+        panel_title: 

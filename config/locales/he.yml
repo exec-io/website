@@ -120,7 +120,7 @@ he:
       unlock_instructions:
         subject: "הוראות להסרת נעילה"
     omniauth_callbacks:
-      failure: "לא הצלחנו לאמת את זהותך מסוג %{kind} בגלל \"%{reason}\""
+      failure: לא הצלחנו לאמת את זהותך מסוג %{kind} בגלל "%{reason}"
       success: 
     passwords:
       no_token: "אינך יכול/ה לגשת לעמוד זה אם לא הופנת מאימייל לשינוי סיסמא. אם את/ה כן מגיע משם, אנא ודא/י שהשתמשת בכתובת אינטרנט המלאה."
