@@ -279,7 +279,7 @@ en:
         facebook: Facebook
         panel_html: |-
           <p>
-            Exec.IO was founded in Sydney Australia on the 20th of September, 2012 to
+            exec.io was founded in Sydney Australia on the 20th of September, 2012 to
             create a new category of online tool; the Organisational Management System (OMS).
           </p>
           <p>
@@ -293,7 +293,7 @@ en:
             design.  We didn't want to make internationalization an after thought, instead all of our
             products are built from the ground up to work in any language.
           </p>
-        panel_title: About Exec.IO
+        panel_title: About exec.io
         phone: Phone
       contact_details:
         address_html: |-
@@ -303,15 +303,13 @@ en:
         email: info@exec.io
         facebook_url: https://facebook.com/execiohq
         facebook_url_short: facebook.com/execiohq
-        name: Exec i/o International
+        name: exec.io International
         phone: "+61 2 8912 2197"
       home:
-        exec_io: Exec i/o
-        founder: Mikel Lindsaar, Founder of Exec i/o
-        latest_from_the_blog: Latest from the Exec i/o Blog
-        quote: |-
-          Our goal is to change the way the world operates by creating and providing tools
-          that are effective, efficient and simple to use.
+        exec_io: exec.io
+        founder: Mikel Lindsaar, Founder of exec.io
+        latest_from_the_blog: Latest from the exec.io Blog
+        quote: Our purpose is <span>to bring understanding to Humanity</span>.
       locations:
         panel_html: |-
           <p>
@@ -323,7 +321,7 @@ en:
             allowing you to expand to any corner and still keep your staff informed, efficient
             and online.
           </p>
-        panel_title: Exec i/o around the world
+        panel_title: exec.io around the world
       our_board:
         maren_copy_html: |-
           Arte Maren has been an International Keynote Speaker, Corporate Trainer and private Consultant
@@ -354,7 +352,7 @@ en:
           He has expanded the worldwide network of colleges to 52 colleges internationally.
           He is a world renowned speaker and has reached tens of thousands of
           professionals with Hubbard Administrative Technology for nearly 3 decades.
-        the_board: The Exec i/o Board
+        the_board: The exec.io Board
         valtin_copy_html: |-
           Patrick Valtin is an accomplished Entrepreneur and Author with nearly 3 decades
           as a successful coach, consultant, sales and leadership Trainer AND as an internationally
@@ -364,7 +362,7 @@ en:
       prosperity_planner:
         panel_html: |-
           <p>
-            We at Exec i/o understand business. We use cutting edge administrative philosophy
+            We at exec.io understand business. We use cutting edge administrative philosophy
             to create applications which can help your organisation reach new levels of
             efficiency and productivity.
           </p>
