@@ -9,7 +9,7 @@ en:
     - Fri
     - Sat
     abbr_month_names:
-    - 
+    -
     - Jan
     - Feb
     - Mar
@@ -35,7 +35,7 @@ en:
       long: "%B %d, %Y"
       short: "%b %d"
     month_names:
-    - 
+    -
     - January
     - February
     - March
@@ -225,9 +225,9 @@ en:
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
-          unit: 
+          unit:
       format:
-        delimiter: 
+        delimiter:
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -243,10 +243,10 @@ en:
           tb: TB
     percentage:
       format:
-        delimiter: 
+        delimiter:
     precision:
       format:
-        delimiter: 
+        delimiter:
   posts:
     '1':
       author_name: Mikel Lindsaar
@@ -309,7 +309,7 @@ en:
         exec_io: exec.io
         founder: Mikel Lindsaar, Founder of exec.io
         latest_from_the_blog: Latest from the exec.io Blog
-        quote: Our purpose is <span>to bring understanding to Humanity</span>.
+        quote: Our goal is <span>to bring understanding to Humanity</span>.
       locations:
         panel_html: |-
           <p>
