@@ -87,6 +87,8 @@ header#main-nav
         +colorful-links(#333, #818181)
       &.blue
         +colorful-links($dark-blue, $light-blue)
+      &.blue
+        +colorful-links($dark-blue, $light-blue)
       &.red
         +colorful-links($dark-red, $light-red)
       &.orange
@@ -222,33 +224,29 @@ section.home-panel
       &:hover
         background-color: darken($light-blue, 10%)
 
-  &#about-rethink-training
-    background-color: rgba($light-orange, 1)
+  &#about-enlight
+    background-color: rgba($light-blue, 1)
     background-image: image-url('rethink-bg.jpg')
     background-repeat: no-repeat
     background-position: 50% 50%
     background-size: cover
     body.s3 &
       background-attachment: fixed
-    #rethink-training-logo
-      max-width: 300px
-      background: white
-      margin-bottom: 10px
-      width: 100%
-    .rethink-example
+    .enlight-example
       width: 100%
       margin-top: 20px
-    #rethink-example
+    #enlight-example
       max-width: 100%
     .text-block
       background-color: white
-      color: $dark-orange
-    #rethink-graphic
-      max-width: 120px
+      color: $dark-blue
+    img.screenshot
+      width: auto
+      max-width: 100%
     a
-      background-color: $light-orange
+      background-color: $dark-blue
       &:hover
-        background-color: $dark-orange
+        background-color: darken($light-blue, 10%)
 
   .box-section
     padding: 20px 0

@@ -29,7 +29,6 @@
     <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
   <![endif]-->
   <%= stylesheet_link_tag    "application", {:media => "all", "data-turbolinks-track" => true} %>
-  <script type="text/javascript" src="http://fast.fonts.net/jsapi/aa402fef-5d8d-474d-ac01-d479c210d7cd.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -42,6 +41,7 @@
     <ul id="links">
       <li class='dropdown-title'><a class="scroll-link black" data-dropdown="toggle">Menu</a></li>
       <li><%= link_to t('.home'), "section#splash", :class => 'red scroll-link active', "data-link" => "splash" %></li>
+      <li><%= link_to t('.enlight'), "section#about-enlight", :class => 'orange scroll-link', "data-link" => "about-enlight" %></li>
       <li><%= link_to t('.envisage'), "section#about-envisage", :class => 'blue scroll-link', "data-link" => "about-envisage" %></li>
       <li><%= link_to t('.prosperity_planner'), "section#about-pp", :class => 'green scroll-link', "data-link" => "about-pp" %></li>
       <li><%= link_to t('.about_us'), "section#about-us", :class => 'red scroll-link', "data-link" => "about-us" %></li>
