@@ -309,7 +309,7 @@ en:
         exec_io: exec.io
         founder: Mikel Lindsaar, Founder of exec.io
         latest_from_the_blog: Latest from the exec.io Blog
-        quote: Our goal is <span>to bring understanding to Humanity</span>.
+        quote: Our goal is <span>to bring understanding</span>.
       locations:
         panel_html: |-
           <p>
