@@ -7,7 +7,7 @@ gem 'rails', '4.0.11'
 gem 'pg', '0.11'
 
 # Waiting for Rails 4 version to be released
-gem 'activeadmin', git: 'https://github.com/gregbell/active_admin', ref: '73f6ba2b0c13d4363fe416270cf719a276ea2165'
+#gem 'activeadmin', git: 'https://github.com/gregbell/active_admin', ref: '73f6ba2b0c13d4363fe416270cf719a276ea2165'
 gem 'devise'
 
 gem 'localeapp'
