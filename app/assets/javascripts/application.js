@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require active_admin
 //= require jquery.easing.1.3.min
 //= require vendor/css3-mediaqueries
 //= require home
